@@ -1,0 +1,343 @@
+{
+  "ticker": "TSLA",
+  "key": "TSLA_Q1_2025",
+  "year": 2025,
+  "quarter": 1,
+  "verified_at": "2026-02-13T12:10:17.492489",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "unit": "dollars",
+        "speaker": "Vaibhav Taneja",
+        "confidence": 1,
+        "period": "Q1 2025",
+        "metric_type": "other",
+        "claim_id": "claim_001",
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "claimed_value": -472,
+        "quote_start_char": 16919,
+        "is_approximate": false,
+        "scale": "millions",
+        "metric_context": "Bitcoin mark to market loss",
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "quote_text": "$472 million drop",
+        "quote_end_char": 16936,
+        "claimed_value_raw": "$472 million drop"
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": -472,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "speaker": "Vaibhav Taneja",
+        "unit": "percent",
+        "claim_id": "claim_002",
+        "metric_type": "other",
+        "period": "Q1 2025",
+        "claim_type": "absolute",
+        "gaap_classification": "unknown",
+        "claimed_value": 85,
+        "quote_start_char": 17653,
+        "is_approximate": true,
+        "scale": "ones",
+        "metric_context": "US vehicle lineup USMCA compliance",
+        "qualifiers": [
+          "approximately"
+        ],
+        "speaker_role": "cfo",
+        "quote_text": "approximately on a weighted average basis 85%",
+        "quote_end_char": 17698,
+        "claimed_value_raw": "85%"
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 85,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value": 10,
+        "gaap_classification": "gaap",
+        "claim_type": "guidance",
+        "period": "FY 2025",
+        "metric_type": "capital_expenditures",
+        "claim_id": "claim_003",
+        "confidence": 1,
+        "speaker": "Vaibhav Taneja",
+        "unit": "dollars",
+        "claimed_value_raw": "10 billion",
+        "quote_end_char": 19595,
+        "speaker_role": "cfo",
+        "qualifiers": [
+          "in excess of"
+        ],
+        "quote_text": "forecasted to be still in excess of 10 billion this year",
+        "metric_context": "Total",
+        "scale": "billions",
+        "quote_start_char": 19539,
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_003",
+        "claimed_value": 10,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "high-volume vehicle programs have over 85% North America content",
+        "qualifiers": [
+          "over"
+        ],
+        "speaker_role": "cfo",
+        "quote_end_char": 39053,
+        "claimed_value_raw": "85%",
+        "is_approximate": false,
+        "quote_start_char": 38989,
+        "scale": "ones",
+        "metric_context": "North America vehicle content",
+        "claim_type": "absolute",
+        "gaap_classification": "unknown",
+        "claimed_value": 85,
+        "confidence": 1,
+        "speaker": "Vaibhav Taneja",
+        "unit": "percent",
+        "claim_id": "claim_004",
+        "metric_type": "other",
+        "period": "Q1 2025"
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 85,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "unit": "percent",
+        "speaker": "Vaibhav Taneja",
+        "confidence": 1,
+        "period": "Q1 2025",
+        "metric_type": "other",
+        "claim_id": "claim_005",
+        "claim_type": "absolute",
+        "gaap_classification": "unknown",
+        "claimed_value": 95,
+        "is_approximate": false,
+        "quote_start_char": 39058,
+        "scale": "ones",
+        "metric_context": "Shanghai vehicle local content",
+        "quote_text": "Shanghai vehicles have over 95% local content",
+        "qualifiers": [
+          "over"
+        ],
+        "speaker_role": "cfo",
+        "quote_end_char": 39103,
+        "claimed_value_raw": "95%"
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 95,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": true,
+        "quote_start_char": 31156,
+        "metric_context": "Robotaxi market share",
+        "scale": "ones",
+        "quote_text": "99% market share",
+        "qualifiers": [
+          "ridiculous"
+        ],
+        "speaker_role": "ceo",
+        "claimed_value_raw": "99%",
+        "quote_end_char": 31172,
+        "unit": "percent",
+        "speaker": "Elon Musk",
+        "confidence": 1,
+        "period": "FY 2026",
+        "metric_type": "other",
+        "claim_id": "claim_006",
+        "gaap_classification": "unknown",
+        "claim_type": "absolute",
+        "claimed_value": 99
+      },
+      "verification": {
+        "claim_id": "claim_006",
+        "claimed_value": 99,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "ones",
+        "metric_context": "FSD subscription price",
+        "quote_start_char": 57648,
+        "is_approximate": false,
+        "claimed_value_raw": "$99",
+        "quote_end_char": 57692,
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "quote_text": "current pricing is too cheap because for $99",
+        "period": "Q1 2025",
+        "metric_type": "revenue",
+        "claim_id": "claim_007",
+        "speaker": "Vaibhav Taneja",
+        "unit": "dollars",
+        "confidence": 1,
+        "claimed_value": 99,
+        "claim_type": "absolute",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 99,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a FSD subscription price revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "ones",
+        "metric_context": "India import tariff",
+        "is_approximate": false,
+        "quote_start_char": 59579,
+        "quote_end_char": 59630,
+        "claimed_value_raw": "70%",
+        "quote_text": "subject to 70% tariff. Also, like, a 30% luxury tax",
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "period": "Q1 2025",
+        "metric_type": "other",
+        "claim_id": "claim_008",
+        "unit": "percent",
+        "speaker": "Vaibhav Taneja",
+        "confidence": 1,
+        "claimed_value": 70,
+        "claim_type": "absolute",
+        "gaap_classification": "unknown"
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 70,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "verified": 0,
+    "close_match": 0,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 8
+  }
+}

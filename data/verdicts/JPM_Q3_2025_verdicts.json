@@ -1,0 +1,1324 @@
+{
+  "ticker": "JPM",
+  "key": "JPM_Q3_2025",
+  "year": 2025,
+  "quarter": 3,
+  "verified_at": "2026-02-13T12:10:17.501798",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "metric_type": "net_income",
+        "quote_end_char": 1018,
+        "speaker": "Jeremy Barnum",
+        "confidence": 1,
+        "quote_start_char": 1005,
+        "scale": "billions",
+        "is_approximate": false,
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "claimed_value_raw": "$14.4 billion",
+        "quote_text": "$14.4 billion",
+        "claim_id": "claim_001",
+        "claimed_value": 14.4,
+        "metric_context": "Total",
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "period": "Q3 2025",
+        "unit": "dollars"
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 14.4,
+        "actual_value": 14393000000,
+        "difference": 7000000.0,
+        "difference_pct": 0.04863475300493295,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 14,400,000,000.00 vs Actual 14,393,000,000.00. Diff: 0.05% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|14,400,000,000.00 - 14,393,000,000.00| / |14,393,000,000.00|",
+            "result": 0.00048634753004932955,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "net_income",
+            "fy": 2025,
+            "fq": 3,
+            "value": 14393000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 14,400,000,000.00 vs actual 14,393,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q3 2025",
+        "speaker_role": "cfo",
+        "metric_context": "Total",
+        "claim_type": "absolute",
+        "quote_end_char": 1035,
+        "speaker": "Jeremy Barnum",
+        "metric_type": "eps_diluted",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "confidence": 1,
+        "quote_start_char": 1030,
+        "claimed_value": 5.07,
+        "qualifiers": [],
+        "unit": "per_share",
+        "scale": null,
+        "quote_text": "$5.07",
+        "claimed_value_raw": "$5.07",
+        "claim_id": "claim_002"
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 5.07,
+        "actual_value": 5.07,
+        "difference": 0.0,
+        "difference_pct": 0.0,
+        "tolerance_used": 0.015,
+        "computation_detail": "EPS: claimed $5.07 vs actual $5.07. Diff $0.000 within $0.015 tolerance.",
+        "computation_steps": [
+          {
+            "step": "EPS absolute comparison",
+            "formula": "|5.07 - 5.07| = 0.000",
+            "result": 0.0,
+            "threshold": 0.015
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "eps_diluted",
+            "fy": 2025,
+            "fq": 3,
+            "value": 5.07
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed $5.07 matches actual $5.07.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "unit": "percent",
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "speaker_role": "cfo",
+        "quote_start_char": 1052,
+        "scale": null,
+        "period": "Q3 2025",
+        "confidence": 1,
+        "quote_text": "20%",
+        "gaap_classification": "non_gaap",
+        "claimed_value": 20,
+        "metric_type": "other",
+        "quote_end_char": 1055,
+        "qualifiers": [],
+        "claimed_value_raw": "20%",
+        "claim_id": "claim_003",
+        "speaker": "Jeremy Barnum",
+        "metric_context": "Total"
+      },
+      "verification": {
+        "claim_id": "claim_003",
+        "claimed_value": 20,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "gaap_classification": "gaap",
+        "claimed_value": 47.1,
+        "metric_type": "revenue",
+        "speaker_role": "cfo",
+        "is_approximate": false,
+        "quote_start_char": 1069,
+        "quote_end_char": 1082,
+        "confidence": 1,
+        "unit": "dollars",
+        "metric_context": "Total",
+        "qualifiers": [],
+        "claimed_value_raw": "$47.1 billion",
+        "period": "Q3 2025",
+        "scale": "billions",
+        "claim_id": "claim_004",
+        "quote_text": "$47.1 billion",
+        "claim_type": "absolute",
+        "speaker": "Jeremy Barnum"
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 47.1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "revenue_definition_mismatch"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Claimed revenue ($47.1B) is 66% of data source revenue ($71.9B). This likely reflects a difference in revenue definition (e.g., net revenue vs gross revenue for financial institutions).",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 1090,
+        "is_approximate": false,
+        "qualifiers": [],
+        "claimed_value": 9,
+        "quote_text": "9%",
+        "unit": "percent",
+        "scale": null,
+        "claimed_value_raw": "9%",
+        "gaap_classification": "gaap",
+        "metric_type": "revenue",
+        "claim_id": "claim_005",
+        "speaker_role": "cfo",
+        "period": "Q3 2025",
+        "quote_end_char": 1092,
+        "confidence": 1,
+        "speaker": "Jeremy Barnum",
+        "metric_context": "Total",
+        "claim_type": "yoy_growth",
+        "comparison_period": "Q3 2024"
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q3 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 1361,
+        "period": "Q3 2025",
+        "speaker": "Jeremy Barnum",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "metric_type": "operating_expenses",
+        "metric_context": "Total",
+        "quote_text": "$24.3 billion",
+        "claim_id": "claim_006",
+        "claimed_value": 24.3,
+        "is_approximate": false,
+        "confidence": 1,
+        "quote_end_char": 1374,
+        "scale": "billions",
+        "claimed_value_raw": "$24.3 billion",
+        "claim_type": "absolute",
+        "speaker_role": "cfo",
+        "unit": "dollars"
+      },
+      "verification": {
+        "claim_id": "claim_006",
+        "claimed_value": 24.3,
+        "actual_value": 24281000000,
+        "difference": 19000000.0,
+        "difference_pct": 0.07825048391746633,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 24,300,000,000.00 vs Actual 24,281,000,000.00. Diff: 0.08% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|24,300,000,000.00 - 24,281,000,000.00| / |24,281,000,000.00|",
+            "result": 0.0007825048391746633,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_expenses",
+            "fy": 2025,
+            "fq": 3,
+            "value": 24281000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 24,300,000,000.00 vs actual 24,281,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "claim_id": "claim_007",
+        "gaap_classification": "gaap",
+        "period": "Q3 2025",
+        "metric_type": "operating_expenses",
+        "claimed_value": 8,
+        "is_approximate": false,
+        "scale": null,
+        "confidence": 1,
+        "speaker": "Jeremy Barnum",
+        "claimed_value_raw": "8%",
+        "comparison_period": "Q3 2024",
+        "quote_start_char": 1383,
+        "quote_text": "8%",
+        "speaker_role": "cfo",
+        "claim_type": "yoy_growth",
+        "unit": "percent",
+        "quote_end_char": 1385,
+        "qualifiers": [],
+        "metric_context": "Total"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q3 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_id": "claim_008",
+        "scale": "billions",
+        "claimed_value_raw": "$3.4 billion",
+        "gaap_classification": "unknown",
+        "metric_context": "Total",
+        "metric_type": "other",
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "unit": "dollars",
+        "qualifiers": [],
+        "speaker": "Jeremy Barnum",
+        "period": "Q3 2025",
+        "speaker_role": "cfo",
+        "quote_end_char": 1579,
+        "confidence": 1,
+        "quote_text": "$3.4 billion",
+        "quote_start_char": 1567,
+        "claimed_value": 3.4
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 3.4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "speaker": "Jeremy Barnum",
+        "claim_type": "absolute",
+        "period": "Q3 2025",
+        "claim_id": "claim_009",
+        "metric_context": "Total",
+        "quote_start_char": 1604,
+        "unit": "dollars",
+        "confidence": 1,
+        "qualifiers": [],
+        "gaap_classification": "unknown",
+        "quote_end_char": 1616,
+        "claimed_value": 2.6,
+        "is_approximate": false,
+        "speaker_role": "cfo",
+        "quote_text": "$2.6 billion",
+        "metric_type": "other",
+        "claimed_value_raw": "$2.6 billion"
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 2.6,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 1656,
+        "gaap_classification": "unknown",
+        "qualifiers": [],
+        "speaker": "Jeremy Barnum",
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "metric_type": "other",
+        "claimed_value": 810,
+        "claimed_value_raw": "$810 million",
+        "claim_type": "absolute",
+        "scale": "millions",
+        "metric_context": "Total",
+        "quote_start_char": 1644,
+        "period": "Q3 2025",
+        "quote_text": "$810 million",
+        "is_approximate": false,
+        "claim_id": "claim_010",
+        "unit": "dollars"
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 810,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Total",
+        "claim_type": "absolute",
+        "metric_type": "other",
+        "speaker": "Jeremy Barnum",
+        "claimed_value": 14.8,
+        "scale": null,
+        "quote_text": "14.8%",
+        "claim_id": "claim_011",
+        "gaap_classification": "unknown",
+        "is_approximate": false,
+        "quote_end_char": 1985,
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "unit": "percent",
+        "claimed_value_raw": "14.8%",
+        "qualifiers": [],
+        "period": "Q3 2025",
+        "quote_start_char": 1980
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 14.8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "cfo",
+        "claim_type": "qoq_growth",
+        "metric_type": "other",
+        "quote_end_char": 2007,
+        "qualifiers": [
+          "down"
+        ],
+        "unit": "basis_points",
+        "claimed_value": 30,
+        "gaap_classification": "unknown",
+        "scale": null,
+        "is_approximate": false,
+        "confidence": 1,
+        "period": "Q3 2025",
+        "quote_start_char": 1992,
+        "speaker": "Jeremy Barnum",
+        "comparison_period": "Q2 2025",
+        "claimed_value_raw": "30 basis points",
+        "metric_context": "CET1 ratio",
+        "claim_id": "claim_012",
+        "quote_text": "30 basis points"
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 30,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "unit": "dollars",
+        "metric_type": "net_income",
+        "quote_text": "$5 billion",
+        "gaap_classification": "gaap",
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "metric_context": "CCB",
+        "speaker_role": "cfo",
+        "claimed_value_raw": "$5 billion",
+        "confidence": 1,
+        "claimed_value": 5,
+        "quote_end_char": 2296,
+        "quote_start_char": 2286,
+        "claim_id": "claim_013",
+        "qualifiers": [],
+        "speaker": "Jeremy Barnum",
+        "period": "Q3 2025"
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": 5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a CCB net income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Jeremy Barnum",
+        "period": "Q3 2025",
+        "unit": "dollars",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "qualifiers": [],
+        "scale": "billions",
+        "metric_type": "revenue",
+        "quote_start_char": 2309,
+        "quote_text": "$19.5 billion",
+        "claim_id": "claim_014",
+        "gaap_classification": "gaap",
+        "claimed_value_raw": "$19.5 billion",
+        "quote_end_char": 2322,
+        "claimed_value": 19.5,
+        "is_approximate": false,
+        "metric_context": "CCB",
+        "speaker_role": "cfo"
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 19.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a CCB revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 3110,
+        "claimed_value": 6.9,
+        "unit": "dollars",
+        "speaker": "Jeremy Barnum",
+        "period": "Q3 2025",
+        "gaap_classification": "gaap",
+        "claim_type": "absolute",
+        "claim_id": "claim_016",
+        "metric_type": "net_income",
+        "quote_end_char": 3122,
+        "metric_context": "CIB",
+        "confidence": 1,
+        "qualifiers": [],
+        "is_approximate": false,
+        "claimed_value_raw": "$6.9 billion",
+        "quote_text": "$6.9 billion",
+        "speaker_role": "cfo",
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_016",
+        "claimed_value": 6.9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a CIB net income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_id": "claim_017",
+        "speaker": "Jeremy Barnum",
+        "claimed_value_raw": "$19.9 billion",
+        "metric_type": "revenue",
+        "unit": "dollars",
+        "period": "Q3 2025",
+        "scale": "billions",
+        "metric_context": "CIB",
+        "speaker_role": "cfo",
+        "confidence": 1,
+        "qualifiers": [],
+        "quote_end_char": 3148,
+        "is_approximate": false,
+        "quote_text": "$19.9 billion",
+        "claim_type": "absolute",
+        "claimed_value": 19.9,
+        "quote_start_char": 3135,
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_017",
+        "claimed_value": 19.9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a CIB revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q3 2025",
+        "scale": null,
+        "claim_id": "claim_018",
+        "quote_text": "17%",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "qualifiers": [],
+        "claimed_value_raw": "17%",
+        "comparison_period": "Q3 2024",
+        "quote_end_char": 3159,
+        "metric_context": "CIB",
+        "quote_start_char": 3156,
+        "speaker": "Jeremy Barnum",
+        "metric_type": "revenue",
+        "speaker_role": "cfo",
+        "claim_type": "yoy_growth",
+        "confidence": 1,
+        "unit": "percent",
+        "claimed_value": 17
+      },
+      "verification": {
+        "claim_id": "claim_018",
+        "claimed_value": 17,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a CIB revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "comparison_period": "Q3 2024",
+        "scale": null,
+        "claim_id": "claim_019",
+        "claimed_value_raw": "16%",
+        "quote_end_char": 3304,
+        "quote_text": "16%",
+        "claim_type": "yoy_growth",
+        "claimed_value": 16,
+        "qualifiers": [],
+        "quote_start_char": 3301,
+        "metric_context": "IB fees",
+        "is_approximate": false,
+        "period": "Q3 2025",
+        "speaker": "Jeremy Barnum",
+        "metric_type": "revenue",
+        "confidence": 1,
+        "gaap_classification": "gaap",
+        "speaker_role": "cfo",
+        "unit": "percent"
+      },
+      "verification": {
+        "claim_id": "claim_019",
+        "claimed_value": 16,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a IB fees revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "yoy_growth",
+        "gaap_classification": "gaap",
+        "claimed_value_raw": "21%",
+        "period": "Q3 2025",
+        "quote_end_char": 3600,
+        "quote_start_char": 3597,
+        "claimed_value": 21,
+        "speaker_role": "cfo",
+        "scale": null,
+        "confidence": 1,
+        "speaker": "Jeremy Barnum",
+        "metric_context": "Markets Fixed Income",
+        "comparison_period": "Q3 2024",
+        "unit": "percent",
+        "metric_type": "revenue",
+        "is_approximate": false,
+        "claim_id": "claim_020",
+        "quote_text": "21%",
+        "qualifiers": []
+      },
+      "verification": {
+        "claim_id": "claim_020",
+        "claimed_value": 21,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Markets Fixed Income revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "yoy_growth",
+        "claimed_value_raw": "33%",
+        "speaker": "Jeremy Barnum",
+        "metric_context": "Markets Equities",
+        "metric_type": "revenue",
+        "claim_id": "claim_021",
+        "comparison_period": "Q3 2024",
+        "quote_text": "33%",
+        "qualifiers": [],
+        "confidence": 1,
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "quote_start_char": 3727,
+        "quote_end_char": 3730,
+        "period": "Q3 2025",
+        "scale": null,
+        "claimed_value": 33,
+        "speaker_role": "cfo",
+        "unit": "percent"
+      },
+      "verification": {
+        "claim_id": "claim_021",
+        "claimed_value": 33,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Markets Equities revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "gaap_classification": "gaap",
+        "claim_id": "claim_022",
+        "quote_start_char": 3886,
+        "unit": "dollars",
+        "period": "Q3 2025",
+        "metric_context": "Asset and Wealth Management",
+        "claimed_value": 1.7,
+        "quote_text": "$1.7 billion",
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "quote_end_char": 3898,
+        "scale": "billions",
+        "speaker": "Jeremy Barnum",
+        "metric_type": "net_income",
+        "claimed_value_raw": "$1.7 billion",
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "qualifiers": []
+      },
+      "verification": {
+        "claim_id": "claim_022",
+        "claimed_value": 1.7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Asset and Wealth Management net income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "quote_text": "36%",
+        "metric_context": "Asset and Wealth Management",
+        "speaker": "Jeremy Barnum",
+        "quote_start_char": 3923,
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "speaker_role": "cfo",
+        "period": "Q3 2025",
+        "scale": null,
+        "unit": "percent",
+        "claimed_value_raw": "36%",
+        "quote_end_char": 3926,
+        "is_approximate": false,
+        "metric_type": "operating_margin",
+        "claim_type": "margin",
+        "claim_id": "claim_023",
+        "claimed_value": 36
+      },
+      "verification": {
+        "claim_id": "claim_023",
+        "claimed_value": 36,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Asset and Wealth Management operating margin claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "$6.1 billion",
+        "claimed_value": 6.1,
+        "claim_type": "absolute",
+        "scale": "billions",
+        "unit": "dollars",
+        "claim_id": "claim_024",
+        "is_approximate": false,
+        "quote_text": "$6.1 billion",
+        "speaker": "Jeremy Barnum",
+        "qualifiers": [
+          "Record"
+        ],
+        "confidence": 1,
+        "quote_start_char": 3946,
+        "gaap_classification": "gaap",
+        "metric_context": "Asset and Wealth Management",
+        "speaker_role": "cfo",
+        "quote_end_char": 3958,
+        "period": "Q3 2025",
+        "metric_type": "revenue"
+      },
+      "verification": {
+        "claim_id": "claim_024",
+        "claimed_value": 6.1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Asset and Wealth Management revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "yoy_growth",
+        "unit": "percent",
+        "quote_text": "12%",
+        "quote_start_char": 3966,
+        "scale": null,
+        "quote_end_char": 3969,
+        "claim_id": "claim_025",
+        "speaker_role": "cfo",
+        "comparison_period": "Q3 2024",
+        "gaap_classification": "gaap",
+        "metric_type": "revenue",
+        "claimed_value_raw": "12%",
+        "confidence": 1,
+        "speaker": "Jeremy Barnum",
+        "qualifiers": [],
+        "claimed_value": 12,
+        "is_approximate": false,
+        "period": "Q3 2025",
+        "metric_context": "Asset and Wealth Management"
+      },
+      "verification": {
+        "claim_id": "claim_025",
+        "claimed_value": 12,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Asset and Wealth Management revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "absolute",
+        "confidence": 1,
+        "claimed_value": 72,
+        "quote_start_char": 4156,
+        "speaker_role": "cfo",
+        "period": "Q3 2025",
+        "unit": "dollars",
+        "speaker": "Jeremy Barnum",
+        "qualifiers": [],
+        "scale": "billions",
+        "claimed_value_raw": "$72 billion",
+        "metric_context": "Asset and Wealth Management",
+        "quote_text": "$72 billion",
+        "gaap_classification": "unknown",
+        "is_approximate": false,
+        "quote_end_char": 4167,
+        "claim_id": "claim_026",
+        "metric_type": "other"
+      },
+      "verification": {
+        "claim_id": "claim_026",
+        "claimed_value": 72,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "cfo",
+        "unit": "dollars",
+        "speaker": "Jeremy Barnum",
+        "claimed_value": 4.6,
+        "is_approximate": false,
+        "qualifiers": [],
+        "claim_id": "claim_027",
+        "gaap_classification": "unknown",
+        "claimed_value_raw": "$4.6 trillion",
+        "quote_text": "$4.6 trillion",
+        "metric_context": "AUM",
+        "claim_type": "absolute",
+        "scale": "trillions",
+        "quote_start_char": 4225,
+        "metric_type": "other",
+        "period": "Q3 2025",
+        "quote_end_char": 4238,
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_027",
+        "claimed_value": 4.6,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "gaap_classification": "gaap",
+        "confidence": 1,
+        "qualifiers": [],
+        "period": "Q3 2025",
+        "quote_text": "$820 million",
+        "unit": "dollars",
+        "speaker": "Jeremy Barnum",
+        "scale": "millions",
+        "speaker_role": "cfo",
+        "quote_end_char": 4457,
+        "claimed_value_raw": "$820 million",
+        "quote_start_char": 4445,
+        "metric_type": "net_income",
+        "claimed_value": 820,
+        "claim_id": "claim_028",
+        "metric_context": "Corporate"
+      },
+      "verification": {
+        "claim_id": "claim_028",
+        "claimed_value": 820,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Corporate net income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Jeremy Barnum",
+        "metric_context": "NII ex markets",
+        "quote_end_char": 4845,
+        "claim_id": "claim_029",
+        "speaker_role": "cfo",
+        "claim_type": "guidance",
+        "quote_start_char": 4832,
+        "confidence": 1,
+        "unit": "dollars",
+        "period": "Q4 2025",
+        "is_approximate": true,
+        "claimed_value_raw": "$23.5 billion",
+        "quote_text": "$23.5 billion",
+        "qualifiers": [
+          "approximately"
+        ],
+        "gaap_classification": "gaap",
+        "scale": "billions",
+        "claimed_value": 23.5,
+        "metric_type": "other"
+      },
+      "verification": {
+        "claim_id": "claim_029",
+        "claimed_value": 23.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "other",
+        "claim_id": "claim_030",
+        "is_approximate": true,
+        "scale": "billions",
+        "claim_type": "guidance",
+        "metric_context": "Total NII",
+        "unit": "dollars",
+        "period": "Q4 2025",
+        "confidence": 1,
+        "quote_start_char": 4887,
+        "speaker": "Jeremy Barnum",
+        "claimed_value": 25,
+        "gaap_classification": "gaap",
+        "qualifiers": [
+          "about"
+        ],
+        "quote_text": "$25 billion",
+        "claimed_value_raw": "$25 billion",
+        "speaker_role": "cfo",
+        "quote_end_char": 4898
+      },
+      "verification": {
+        "claim_id": "claim_030",
+        "claimed_value": 25,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "gaap_classification": "non_gaap",
+        "speaker": "Jeremy Barnum",
+        "claimed_value": 24.5,
+        "speaker_role": "cfo",
+        "unit": "dollars",
+        "quote_text": "$24.5 billion",
+        "period": "Q4 2025",
+        "scale": "billions",
+        "is_approximate": true,
+        "confidence": 1,
+        "metric_type": "operating_expenses",
+        "qualifiers": [
+          "approximately"
+        ],
+        "metric_context": "Total adjusted expense",
+        "claim_id": "claim_031",
+        "claim_type": "guidance",
+        "claimed_value_raw": "$24.5 billion",
+        "quote_start_char": 4962,
+        "quote_end_char": 4975
+      },
+      "verification": {
+        "claim_id": "claim_031",
+        "claimed_value": 24.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_id": "claim_032",
+        "unit": "dollars",
+        "claimed_value": 170,
+        "scale": "millions",
+        "claim_type": "guidance",
+        "claimed_value_raw": "$170 million",
+        "quote_end_char": 11985,
+        "period": "Q3 2025",
+        "qualifiers": [],
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "quote_text": "$170 million",
+        "metric_type": "other",
+        "speaker": "Jeremy Barnum",
+        "metric_context": "Tricolor charge-offs",
+        "quote_start_char": 11973
+      },
+      "verification": {
+        "claim_id": "claim_032",
+        "claimed_value": 170,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 31,
+    "verified": 3,
+    "close_match": 0,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 28
+  }
+}

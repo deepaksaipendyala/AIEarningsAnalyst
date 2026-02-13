@@ -1,0 +1,769 @@
+{
+  "ticker": "GOOGL",
+  "key": "GOOGL_Q3_2025",
+  "year": 2025,
+  "quarter": 3,
+  "verified_at": "2026-02-13T12:10:17.483765",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "claimed_value": 100,
+        "qualifiers": [
+          "first ever"
+        ],
+        "claim_id": "claim_001",
+        "quote_text": "We delivered our first ever $100 billion quarter.",
+        "claim_type": "comparison",
+        "quote_start_char": 268,
+        "speaker_role": "ceo",
+        "metric_context": "Total",
+        "confidence": 1,
+        "speaker": "Sundar Pichai",
+        "period": "Q3 2025",
+        "quote_end_char": 317,
+        "scale": "billions",
+        "unit": "dollars",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "metric_type": "revenue",
+        "claimed_value_raw": "$100 billion"
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 100,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "unsupported_claim_type_comparison"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Claim type 'comparison' is not verifiable in the current system.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "metric_context": "Cloud",
+        "qualifiers": [],
+        "unit": "dollars",
+        "scale": "billions",
+        "quote_end_char": 1024,
+        "gaap_classification": "unknown",
+        "metric_type": "other",
+        "claim_id": "claim_002",
+        "claimed_value_raw": "$155 billion",
+        "claimed_value": 155,
+        "quote_text": "Cloud backlog grew 46% quarter-over-quarter to $155 billion.",
+        "speaker_role": "ceo",
+        "quote_start_char": 964,
+        "period": "Q3 2025",
+        "speaker": "Sundar Pichai",
+        "is_approximate": false,
+        "claim_type": "absolute"
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 155,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "ones",
+        "comparison_period": "Q3 2024",
+        "qualifiers": [
+          "more than"
+        ],
+        "quote_end_char": 6901,
+        "claimed_value": 200,
+        "claim_id": "claim_004",
+        "metric_context": "Cloud Generative AI",
+        "claim_type": "yoy_growth",
+        "quote_text": "In Q3, revenue from products built on our generative AI models grew more than 200% year-over-year.",
+        "unit": "percent",
+        "metric_type": "revenue",
+        "quote_start_char": 6803,
+        "period": "Q3 2025",
+        "speaker_role": "ceo",
+        "claimed_value_raw": "200%",
+        "is_approximate": false,
+        "speaker": "Sundar Pichai",
+        "gaap_classification": "gaap",
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 200,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Cloud Generative AI revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q3 2025",
+        "quote_text": "Google Services revenues were $87 billion for the quarter, up 14% year-on-year",
+        "claim_type": "absolute",
+        "quote_start_char": 9866,
+        "quote_end_char": 9944,
+        "confidence": 1,
+        "speaker_role": "management",
+        "gaap_classification": "gaap",
+        "speaker": "Philipp Schindler",
+        "claimed_value_raw": "$87 billion",
+        "scale": "billions",
+        "is_approximate": false,
+        "metric_context": "Google Services",
+        "qualifiers": [],
+        "claim_id": "claim_005",
+        "metric_type": "revenue",
+        "claimed_value": 87,
+        "unit": "dollars"
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 87,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Google Services revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "qualifiers": [
+          "over"
+        ],
+        "claim_id": "claim_007",
+        "claimed_value": 56,
+        "quote_start_char": 10389,
+        "speaker_role": "management",
+        "scale": "billions",
+        "quote_end_char": 10490,
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "speaker": "Philipp Schindler",
+        "gaap_classification": "gaap",
+        "quote_text": "Starting with Search and other revenues, which delivered over $56 billion in revenue for the quarter.",
+        "metric_context": "Search and other",
+        "period": "Q3 2025",
+        "metric_type": "revenue",
+        "unit": "dollars",
+        "claimed_value_raw": "$56 billion"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 56,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Search and other revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "interactive direct response ads, leading to an annual revenue run rate exceeding $1 billion globally for this format.",
+        "claim_type": "absolute",
+        "metric_type": "revenue",
+        "quote_end_char": 13671,
+        "metric_context": "YouTube Interactive Direct Response Ads",
+        "claimed_value": 1,
+        "claimed_value_raw": "$1 billion",
+        "speaker": "Philipp Schindler",
+        "period": "FY 2025",
+        "confidence": 1,
+        "quote_start_char": 13554,
+        "claim_id": "claim_008",
+        "gaap_classification": "gaap",
+        "qualifiers": [
+          "annual revenue run rate exceeding"
+        ],
+        "scale": "billions",
+        "speaker_role": "management",
+        "unit": "dollars",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "metric_type": "revenue",
+        "speaker": "Anat Ashkenazi",
+        "claimed_value": 102.3,
+        "period": "Q3 2025",
+        "scale": "billions",
+        "quote_text": "Consolidated revenue reached $102.3 billion",
+        "claim_type": "absolute",
+        "claimed_value_raw": "$102.3 billion",
+        "quote_end_char": 17069,
+        "confidence": 1,
+        "quote_start_char": 17026,
+        "metric_context": "Total",
+        "gaap_classification": "gaap",
+        "speaker_role": "cfo",
+        "claim_id": "claim_009",
+        "unit": "dollars",
+        "qualifiers": []
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 102.3,
+        "actual_value": 102346000000,
+        "difference": -46000000.0,
+        "difference_pct": 0.044945576768999275,
+        "tolerance_used": 0.005,
+        "computation_detail": "Claimed 102,300,000,000.00 vs Actual 102,346,000,000.00. Diff: 0.04% (threshold: 0.5%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|102,300,000,000.00 - 102,346,000,000.00| / |102,346,000,000.00|",
+            "result": 0.00044945576768999276,
+            "threshold": 0.005
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 3,
+            "value": 102346000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 102,300,000,000.00 vs actual 102,346,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Anat Ashkenazi",
+        "qualifiers": [],
+        "period": "Q3 2025",
+        "speaker_role": "cfo",
+        "metric_type": "operating_income",
+        "quote_end_char": 17846,
+        "quote_text": "Operating income increased 9% this quarter to $31.2 billion",
+        "scale": "billions",
+        "metric_context": "Total",
+        "confidence": 1,
+        "claim_id": "claim_010",
+        "claimed_value_raw": "$31.2 billion",
+        "claim_type": "absolute",
+        "quote_start_char": 17787,
+        "claimed_value": 31.2,
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "unit": "dollars"
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 31.2,
+        "actual_value": 31228000000,
+        "difference": -28000000.0,
+        "difference_pct": 0.0896631228384783,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 31,200,000,000.00 vs Actual 31,228,000,000.00. Diff: 0.09% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|31,200,000,000.00 - 31,228,000,000.00| / |31,228,000,000.00|",
+            "result": 0.0008966312283847829,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_income",
+            "fy": 2025,
+            "fq": 3,
+            "value": 31228000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 31,200,000,000.00 vs actual 31,228,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "period": "Q3 2025",
+        "metric_context": "Total",
+        "claim_id": "claim_011",
+        "gaap_classification": "gaap",
+        "quote_start_char": 17852,
+        "scale": "ones",
+        "claim_type": "margin",
+        "metric_type": "operating_margin",
+        "claimed_value_raw": "30.5%",
+        "quote_text": "operating margin was 30.5%.",
+        "claimed_value": 30.5,
+        "unit": "percent",
+        "is_approximate": false,
+        "quote_end_char": 17879,
+        "speaker": "Anat Ashkenazi",
+        "qualifiers": []
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 30.5,
+        "actual_value": 30.512184159615423,
+        "difference": -0.01218415961542263,
+        "difference_pct": 0.01218415961542263,
+        "tolerance_used": 0.3,
+        "computation_detail": "Claimed 30.5%. Actual: 31,228,000,000 / 102,346,000,000 = 30.51%. Diff: 0.01 pp (threshold: 0.3 pp)",
+        "computation_steps": [
+          {
+            "step": "Compute operating_margin",
+            "formula": "31,228,000,000 / 102,346,000,000 * 100",
+            "result": 30.512184159615423
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_income",
+            "fy": 2025,
+            "fq": 3,
+            "value": 31228000000
+          },
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 3,
+            "value": 102346000000
+          }
+        ],
+        "evidence_source": "fmp (operating_income), fmp (revenue)",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Margin claim: 30.5% claimed. Computed: 31,228,000,000 / 102,346,000,000 = 30.51%.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "unit": "dollars",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "quote_end_char": 18317,
+        "speaker": "Anat Ashkenazi",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "claimed_value": 35,
+        "quote_start_char": 18278,
+        "metric_context": "Total",
+        "claim_id": "claim_012",
+        "quote_text": "Net income increased 33% to $35 billion",
+        "is_approximate": false,
+        "metric_type": "net_income",
+        "confidence": 1,
+        "claimed_value_raw": "$35 billion",
+        "period": "Q3 2025",
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 35,
+        "actual_value": 34979000000,
+        "difference": 21000000,
+        "difference_pct": 0.06003602161296778,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 35,000,000,000.00 vs Actual 34,979,000,000.00. Diff: 0.06% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|35,000,000,000.00 - 34,979,000,000.00| / |34,979,000,000.00|",
+            "result": 0.0006003602161296778,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "net_income",
+            "fy": 2025,
+            "fq": 3,
+            "value": 34979000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 35,000,000,000.00 vs actual 34,979,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "$2.87",
+        "is_approximate": false,
+        "quote_end_char": 18365,
+        "quote_start_char": 18323,
+        "quote_text": "earnings per share increased 35% to $2.87.",
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "confidence": 1,
+        "gaap_classification": "gaap",
+        "scale": null,
+        "claimed_value": 2.87,
+        "period": "Q3 2025",
+        "metric_context": "Total",
+        "claim_type": "absolute",
+        "metric_type": "eps_diluted",
+        "speaker": "Anat Ashkenazi",
+        "claim_id": "claim_013",
+        "unit": "per_share"
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": 2.87,
+        "actual_value": 2.87,
+        "difference": 0.0,
+        "difference_pct": 0.0,
+        "tolerance_used": 0.015,
+        "computation_detail": "EPS: claimed $2.87 vs actual $2.87. Diff $0.000 within $0.015 tolerance.",
+        "computation_steps": [
+          {
+            "step": "EPS absolute comparison",
+            "formula": "|2.87 - 2.87| = 0.000",
+            "result": 0.0,
+            "threshold": 0.015
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "eps_diluted",
+            "fy": 2025,
+            "fq": 3,
+            "value": 2.87
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed $2.87 matches actual $2.87.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "free_cash_flow",
+        "claimed_value_raw": "$24.5 billion",
+        "is_approximate": false,
+        "claim_type": "absolute",
+        "quote_start_char": 18369,
+        "quote_end_char": 18410,
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "unit": "dollars",
+        "speaker": "Anat Ashkenazi",
+        "scale": "billions",
+        "period": "Q3 2025",
+        "gaap_classification": "unknown",
+        "qualifiers": [],
+        "claim_id": "claim_014",
+        "quote_text": "generated free cash flow of $24.5 billion",
+        "metric_context": "Total",
+        "claimed_value": 24.5
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 24.5,
+        "actual_value": 24461000000,
+        "difference": 39000000.0,
+        "difference_pct": 0.1594374718940354,
+        "tolerance_used": 0.02,
+        "computation_detail": "Claimed 24,500,000,000.00 vs Actual 24,461,000,000.00. Diff: 0.16% (threshold: 2.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|24,500,000,000.00 - 24,461,000,000.00| / |24,461,000,000.00|",
+            "result": 0.001594374718940354,
+            "threshold": 0.02
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "free_cash_flow",
+            "fy": 2025,
+            "fq": 3,
+            "value": 24461000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 24,500,000,000.00 vs actual 24,461,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 20105,
+        "is_approximate": false,
+        "claim_id": "claim_015",
+        "period": "Q3 2025",
+        "unit": "dollars",
+        "scale": "billions",
+        "gaap_classification": "gaap",
+        "speaker": "Anat Ashkenazi",
+        "speaker_role": "cfo",
+        "metric_context": "Cloud",
+        "quote_start_char": 20037,
+        "claimed_value": 15.2,
+        "qualifiers": [],
+        "confidence": 1,
+        "claimed_value_raw": "$15.2 billion",
+        "quote_text": "Cloud revenue increased by 34% to $15.2 billion in the third quarter",
+        "metric_type": "revenue",
+        "claim_type": "absolute"
+      },
+      "verification": {
+        "claim_id": "claim_015",
+        "claimed_value": 15.2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Cloud revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "operating_income",
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "metric_context": "Cloud",
+        "confidence": 1,
+        "quote_start_char": 20695,
+        "claimed_value_raw": "$3.6 billion",
+        "scale": "billions",
+        "unit": "dollars",
+        "speaker": "Anat Ashkenazi",
+        "claimed_value": 3.6,
+        "qualifiers": [],
+        "quote_text": "Cloud operating income increased by 85% to $3.6 billion",
+        "period": "Q3 2025",
+        "quote_end_char": 20750,
+        "speaker_role": "cfo",
+        "claim_id": "claim_016",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_016",
+        "claimed_value": 3.6,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Cloud operating income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value": 24,
+        "scale": "billions",
+        "metric_type": "capital_expenditures",
+        "speaker": "Anat Ashkenazi",
+        "confidence": 1,
+        "quote_end_char": 21770,
+        "gaap_classification": "gaap",
+        "claim_id": "claim_017",
+        "metric_context": "Total",
+        "quote_start_char": 21744,
+        "qualifiers": [],
+        "unit": "dollars",
+        "claim_type": "absolute",
+        "period": "Q3 2025",
+        "speaker_role": "cfo",
+        "claimed_value_raw": "$24 billion",
+        "is_approximate": false,
+        "quote_text": "our CapEx was $24 billion."
+      },
+      "verification": {
+        "claim_id": "claim_017",
+        "claimed_value": 24,
+        "actual_value": 23953000000,
+        "difference": 47000000,
+        "difference_pct": 0.19621759278587234,
+        "tolerance_used": 0.02,
+        "computation_detail": "Claimed 24,000,000,000.00 vs Actual 23,953,000,000.00. Diff: 0.20% (threshold: 2.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|24,000,000,000.00 - 23,953,000,000.00| / |23,953,000,000.00|",
+            "result": 0.0019621759278587235,
+            "threshold": 0.02
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "capital_expenditures",
+            "fy": 2025,
+            "fq": 3,
+            "value": 23953000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 24,000,000,000.00 vs actual 23,953,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Anat Ashkenazi",
+        "quote_start_char": 23600,
+        "speaker_role": "cfo",
+        "metric_context": "Total",
+        "gaap_classification": "gaap",
+        "unit": "dollars",
+        "metric_type": "capital_expenditures",
+        "period": "FY 2025",
+        "confidence": 1,
+        "qualifiers": [
+          "range of $91 billion to"
+        ],
+        "quote_end_char": 23669,
+        "quote_text": "expect CapEx to be in the range of $91 billion to $93 billion in 2025",
+        "scale": "billions",
+        "is_approximate": false,
+        "claim_type": "guidance",
+        "claimed_value": 93,
+        "claimed_value_raw": "93 billion",
+        "claim_id": "claim_018"
+      },
+      "verification": {
+        "claim_id": "claim_018",
+        "claimed_value": 93,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 16,
+    "verified": 7,
+    "close_match": 0,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 9
+  }
+}

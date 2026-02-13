@@ -1,0 +1,62 @@
+{
+  "AAPL": [
+    "https://www.fool.com/earnings/call-transcripts/2026/01/29/apple-aapl-q1-2026-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/10/31/apple-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/08/01/apple-aapl-q3-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/01/30/apple-aapl-q1-2025-earnings-call-transcript/"
+  ],
+  "MSFT": [
+    "https://www.fool.com/earnings/call-transcripts/2026/01/28/microsoft-msft-q2-2026-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/10/29/microsoft-msft-q1-2026-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/08/05/microsoft-msft-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/01/29/microsoft-msft-q2-2025-earnings-call-transcript/"
+  ],
+  "GOOGL": [
+    "https://www.fool.com/earnings/call-transcripts/2026/02/04/alphabet-googl-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/10/30/alphabet-goog-q3-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/07/23/alphabet-googl-q2-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/02/05/alphabet-goog-q4-2024-earnings-call-transcript/"
+  ],
+  "AMZN": [
+    "https://www.fool.com/earnings/call-transcripts/2026/02/05/amazon-amzn-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/10/31/amazon-amzn-q3-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/02/06/amazoncom-amzn-q4-2024-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2024/10/31/amazoncom-amzn-q3-2024-earnings-call-transcript/"
+  ],
+  "TSLA": [
+    "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/10/22/tesla-tsla-q3-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/07/23/tesla-tsla-q2-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/01/29/tesla-tsla-q4-2024-earnings-call-transcript/"
+  ],
+  "NVDA": [
+    "https://www.fool.com/earnings/call-transcripts/2025/11/19/nvidia-nvda-q3-2026-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2024/11/20/nvidia-nvda-q3-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2024/08/28/nvidia-nvda-q2-2025-earnings-call-transcript/"
+  ],
+  "META": [
+    "https://www.fool.com/earnings/call-transcripts/2026/01/28/meta-meta-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/10/29/meta-platforms-meta-q3-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/01/29/meta-platforms-meta-q4-2024-earnings-call-transcri/",
+    "https://www.fool.com/earnings/call-transcripts/2024/10/30/meta-platforms-meta-q3-2024-earnings-call-transcri/"
+  ],
+  "JPM": [
+    "https://www.fool.com/earnings/call-transcripts/2026/01/15/j-p-morgan-chase-jpm-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/08/04/jpmorgan-jpm-q2-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/01/15/jpmorgan-chase-jpm-q4-2024-earnings-call-transcrip/",
+    "https://www.fool.com/earnings/call-transcripts/2024/10/11/jpmorgan-chase-jpm-q3-2024-earnings-call-transcrip/"
+  ],
+  "JNJ": [
+    "https://www.fool.com/earnings/call-transcripts/2025/07/16/johnson-johnson-q2-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2025/01/22/johnson-johnson-jnj-q4-2024-earnings-call-transcri/",
+    "https://www.fool.com/earnings/call-transcripts/2024/10/15/johnson-johnson-jnj-q3-2024-earnings-call-transcri/",
+    "https://www.fool.com/earnings/call-transcripts/2024/07/17/johnson-johnson-jnj-q2-2024-earnings-call-transcri/"
+  ],
+  "WMT": [
+    "https://www.fool.com/earnings/call-transcripts/2025/02/20/walmart-wmt-q4-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2024/11/19/walmart-wmt-q3-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2024/08/15/walmart-wmt-q2-2025-earnings-call-transcript/",
+    "https://www.fool.com/earnings/call-transcripts/2024/05/16/walmart-wmt-q1-2025-earnings-call-transcript/"
+  ]
+}

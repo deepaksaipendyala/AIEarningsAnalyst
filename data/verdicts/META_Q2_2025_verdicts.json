@@ -1,0 +1,1011 @@
+{
+  "ticker": "META",
+  "key": "META_Q2_2025",
+  "year": 2025,
+  "quarter": 2,
+  "verified_at": "2026-02-13T12:10:17.498146",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "qualifiers": [],
+        "speaker": "Susan J. S. Li",
+        "quote_end_char": 8097,
+        "speaker_role": "cfo",
+        "claim_id": "claim_001",
+        "claimed_value_raw": "$47.5 billion",
+        "gaap_classification": "gaap",
+        "claimed_value": 47.5,
+        "unit": "dollars",
+        "metric_type": "revenue",
+        "period": "Q2 2025",
+        "scale": "billions",
+        "claim_type": "absolute",
+        "quote_text": "$47.5 billion",
+        "is_approximate": false,
+        "metric_context": "Total",
+        "quote_start_char": 8084,
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 47.5,
+        "actual_value": 47516000000,
+        "difference": -16000000.0,
+        "difference_pct": 0.03367286808653927,
+        "tolerance_used": 0.005,
+        "computation_detail": "Claimed 47,500,000,000.00 vs Actual 47,516,000,000.00. Diff: 0.03% (threshold: 0.5%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|47,500,000,000.00 - 47,516,000,000.00| / |47,516,000,000.00|",
+            "result": 0.0003367286808653927,
+            "threshold": 0.005
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 2,
+            "value": 47516000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 47,500,000,000.00 vs actual 47,516,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "cfo",
+        "comparison_period": "Q2 2024",
+        "claimed_value": 22,
+        "period": "Q2 2025",
+        "metric_context": "Total",
+        "confidence": 1,
+        "speaker": "Susan J. S. Li",
+        "quote_text": "22%",
+        "quote_end_char": 8105,
+        "claimed_value_raw": "22%",
+        "quote_start_char": 8102,
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "claim_id": "claim_002",
+        "metric_type": "revenue",
+        "claim_type": "yoy_growth",
+        "is_approximate": false,
+        "unit": "percent",
+        "scale": null
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 22,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [],
+        "metric_context": "Total",
+        "speaker_role": "cfo",
+        "metric_type": "operating_expenses",
+        "scale": "billions",
+        "unit": "dollars",
+        "gaap_classification": "gaap",
+        "quote_start_char": 8177,
+        "confidence": 1,
+        "period": "Q2 2025",
+        "speaker": "Susan J. S. Li",
+        "claim_id": "claim_003",
+        "claim_type": "absolute",
+        "quote_text": "$27.1 billion",
+        "is_approximate": false,
+        "claimed_value_raw": "$27.1 billion",
+        "quote_end_char": 8190,
+        "claimed_value": 27.1
+      },
+      "verification": {
+        "claim_id": "claim_003",
+        "claimed_value": 27.1,
+        "actual_value": 27075000000,
+        "difference": 25000000.0,
+        "difference_pct": 0.09233610341643582,
+        "tolerance_used": 0.01,
+        "computation_detail": "Total expenses (COGS + OpEx): claimed 27,100,000,000.00 vs actual 27,075,000,000.00 (8,491,000,000 + 18,584,000,000). Diff: 0.09% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Total expenses = COGS + OpEx",
+            "formula": "8,491,000,000 + 18,584,000,000 = 27,075,000,000",
+            "result": 27075000000
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "cost_of_revenue",
+            "fy": 2025,
+            "fq": 2,
+            "value": 8491000000
+          },
+          {
+            "field": "operating_expenses",
+            "fy": 2025,
+            "fq": 2,
+            "value": 18584000000
+          }
+        ],
+        "evidence_source": "fmp (cost_of_revenue + operating_expenses)",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Total expenses claim verified against sum of cost of revenue + operating expenses: claimed 27,100,000,000.00 vs actual 27,075,000,000.00.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q2 2025",
+        "comparison_period": "Q2 2024",
+        "claim_id": "claim_004",
+        "claim_type": "yoy_growth",
+        "speaker_role": "cfo",
+        "qualifiers": [],
+        "is_approximate": false,
+        "unit": "percent",
+        "speaker": "Susan J. S. Li",
+        "claimed_value": 12,
+        "scale": null,
+        "metric_context": "Total",
+        "gaap_classification": "gaap",
+        "claimed_value_raw": "12%",
+        "metric_type": "operating_expenses",
+        "quote_end_char": 8198,
+        "quote_text": "12%",
+        "confidence": 1,
+        "quote_start_char": 8195
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 12,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value": 16,
+        "claim_id": "claim_005",
+        "metric_type": "cost_of_revenue",
+        "speaker": "Susan J. S. Li",
+        "speaker_role": "cfo",
+        "qualifiers": [],
+        "scale": null,
+        "quote_text": "16%",
+        "quote_start_char": 8285,
+        "metric_context": "Total",
+        "comparison_period": "Q2 2024",
+        "claimed_value_raw": "16%",
+        "confidence": 1,
+        "is_approximate": false,
+        "quote_end_char": 8288,
+        "unit": "percent",
+        "period": "Q2 2025",
+        "claim_type": "yoy_growth",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 16,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "quote_start_char": 8468,
+        "unit": "percent",
+        "is_approximate": false,
+        "scale": null,
+        "comparison_period": "Q2 2024",
+        "claim_type": "yoy_growth",
+        "quote_text": "23%",
+        "metric_type": "research_and_development",
+        "claimed_value": 23,
+        "claimed_value_raw": "23%",
+        "quote_end_char": 8471,
+        "metric_context": "Total",
+        "speaker": "Susan J. S. Li",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "claim_id": "claim_006",
+        "period": "Q2 2025",
+        "speaker_role": "cfo"
+      },
+      "verification": {
+        "claim_id": "claim_006",
+        "claimed_value": 23,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 8572,
+        "claim_type": "yoy_growth",
+        "quote_text": "9%",
+        "confidence": 1,
+        "unit": "percent",
+        "gaap_classification": "gaap",
+        "period": "Q2 2025",
+        "claimed_value": 9,
+        "is_approximate": false,
+        "scale": null,
+        "quote_end_char": 8574,
+        "metric_context": "Total",
+        "speaker_role": "cfo",
+        "qualifiers": [],
+        "comparison_period": "Q2 2024",
+        "speaker": "Susan J. S. Li",
+        "claim_id": "claim_007",
+        "metric_type": "operating_expenses",
+        "claimed_value_raw": "9%"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [
+          "decreased"
+        ],
+        "speaker_role": "cfo",
+        "confidence": 1,
+        "quote_text": "27%",
+        "period": "Q2 2025",
+        "metric_type": "operating_expenses",
+        "claimed_value_raw": "27%",
+        "is_approximate": false,
+        "speaker": "Susan J. S. Li",
+        "claimed_value": -27,
+        "claim_id": "claim_008",
+        "quote_start_char": 8771,
+        "comparison_period": "Q2 2024",
+        "claim_type": "yoy_growth",
+        "scale": null,
+        "gaap_classification": "gaap",
+        "quote_end_char": 8774,
+        "metric_context": "Total",
+        "unit": "percent"
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": -27,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "metric_type": "operating_income",
+        "qualifiers": [],
+        "quote_text": "$20.4 billion",
+        "claim_id": "claim_009",
+        "claim_type": "absolute",
+        "speaker": "Susan J. S. Li",
+        "claimed_value_raw": "$20.4 billion",
+        "confidence": 1,
+        "quote_end_char": 9233,
+        "speaker_role": "cfo",
+        "scale": "billions",
+        "metric_context": "Total",
+        "unit": "dollars",
+        "claimed_value": 20.4,
+        "period": "Q2 2025",
+        "quote_start_char": 9220,
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 20.4,
+        "actual_value": 20441000000,
+        "difference": -41000000.0,
+        "difference_pct": 0.20057727117068638,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 20,400,000,000.00 vs Actual 20,441,000,000.00. Diff: 0.20% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|20,400,000,000.00 - 20,441,000,000.00| / |20,441,000,000.00|",
+            "result": 0.002005772711706864,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_income",
+            "fy": 2025,
+            "fq": 2,
+            "value": 20441000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 20,400,000,000.00 vs actual 20,441,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Susan J. S. Li",
+        "unit": "percent",
+        "is_approximate": false,
+        "claimed_value": 43,
+        "confidence": 1,
+        "quote_end_char": 9253,
+        "scale": null,
+        "claimed_value_raw": "43%",
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap",
+        "quote_start_char": 9250,
+        "period": "Q2 2025",
+        "metric_type": "operating_margin",
+        "quote_text": "43%",
+        "metric_context": "Total",
+        "claim_type": "margin",
+        "claim_id": "claim_010"
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 43,
+        "actual_value": 43.019193534809325,
+        "difference": -0.019193534809325286,
+        "difference_pct": 0.019193534809325286,
+        "tolerance_used": 0.3,
+        "computation_detail": "Claimed 43.0%. Actual: 20,441,000,000 / 47,516,000,000 = 43.02%. Diff: 0.02 pp (threshold: 0.3 pp)",
+        "computation_steps": [
+          {
+            "step": "Compute operating_margin",
+            "formula": "20,441,000,000 / 47,516,000,000 * 100",
+            "result": 43.019193534809325
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_income",
+            "fy": 2025,
+            "fq": 2,
+            "value": 20441000000
+          },
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 2,
+            "value": 47516000000
+          }
+        ],
+        "evidence_source": "fmp (operating_income), fmp (revenue)",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Margin claim: 43.0% claimed. Computed: 20,441,000,000 / 47,516,000,000 = 43.02%.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "$18.3 billion",
+        "claim_id": "claim_011",
+        "speaker": "Susan J. S. Li",
+        "quote_text": "$18.3 billion",
+        "period": "Q2 2025",
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "quote_start_char": 9452,
+        "qualifiers": [],
+        "unit": "dollars",
+        "speaker_role": "cfo",
+        "metric_context": "Total",
+        "scale": "billions",
+        "is_approximate": false,
+        "claimed_value": 18.3,
+        "quote_end_char": 9465,
+        "confidence": 1,
+        "metric_type": "net_income"
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 18.3,
+        "actual_value": 18337000000,
+        "difference": -37000000.0,
+        "difference_pct": 0.20177782625293122,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 18,300,000,000.00 vs Actual 18,337,000,000.00. Diff: 0.20% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|18,300,000,000.00 - 18,337,000,000.00| / |18,337,000,000.00|",
+            "result": 0.002017778262529312,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "net_income",
+            "fy": 2025,
+            "fq": 2,
+            "value": 18337000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 18,300,000,000.00 vs actual 18,337,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "scale": null,
+        "qualifiers": [],
+        "metric_type": "eps_diluted",
+        "unit": "per_share",
+        "confidence": 1,
+        "metric_context": "Total",
+        "claimed_value": 7.14,
+        "quote_text": "$7.14",
+        "speaker": "Susan J. S. Li",
+        "quote_end_char": 9474,
+        "quote_start_char": 9469,
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "claim_id": "claim_012",
+        "gaap_classification": "gaap",
+        "claimed_value_raw": "$7.14",
+        "period": "Q2 2025"
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 7.14,
+        "actual_value": 7.14,
+        "difference": 0.0,
+        "difference_pct": 0.0,
+        "tolerance_used": 0.015,
+        "computation_detail": "EPS: claimed $7.14 vs actual $7.14. Diff $0.000 within $0.015 tolerance.",
+        "computation_steps": [
+          {
+            "step": "EPS absolute comparison",
+            "formula": "|7.14 - 7.14| = 0.000",
+            "result": 0.0,
+            "threshold": 0.015
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "eps_diluted",
+            "fy": 2025,
+            "fq": 2,
+            "value": 7.14
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed $7.14 matches actual $7.14.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "metric_context": "Total",
+        "gaap_classification": "gaap",
+        "speaker_role": "cfo",
+        "quote_start_char": 9560,
+        "quote_text": "$17 billion",
+        "claim_type": "absolute",
+        "qualifiers": [],
+        "claim_id": "claim_013",
+        "claimed_value": 17,
+        "metric_type": "capital_expenditures",
+        "period": "Q2 2025",
+        "speaker": "Susan J. S. Li",
+        "claimed_value_raw": "$17 billion",
+        "quote_end_char": 9571,
+        "confidence": 1,
+        "unit": "dollars",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": 17,
+        "actual_value": 16538000000,
+        "difference": 462000000,
+        "difference_pct": 2.793566332083686,
+        "tolerance_used": 0.02,
+        "computation_detail": "Claimed 17,000,000,000.00 vs Actual 16,538,000,000.00. Diff: 2.79% (threshold: 2.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|17,000,000,000.00 - 16,538,000,000.00| / |16,538,000,000.00|",
+            "result": 0.02793566332083686,
+            "threshold": 0.02
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "capital_expenditures",
+            "fy": 2025,
+            "fq": 2,
+            "value": 16538000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Close Match: claimed 17,000,000,000.00 vs actual 16,538,000,000.00 from fmp.",
+        "verdict": "close_match"
+      }
+    },
+    {
+      "claim": {
+        "unit": "dollars",
+        "speaker_role": "cfo",
+        "quote_text": "$8.5 billion",
+        "claimed_value": 8.5,
+        "claim_type": "absolute",
+        "period": "Q2 2025",
+        "is_approximate": false,
+        "quote_start_char": 9667,
+        "qualifiers": [],
+        "quote_end_char": 9679,
+        "claim_id": "claim_014",
+        "gaap_classification": "unknown",
+        "metric_context": "Total",
+        "speaker": "Susan J. S. Li",
+        "claimed_value_raw": "$8.5 billion",
+        "confidence": 1,
+        "metric_type": "free_cash_flow",
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 8.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "fcf_definition_gap"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Claimed FCF ($8.5B) is 6% below reported FCF ($9.0B). Companies sometimes report FCF net of finance lease principal payments, resulting in a lower figure than the standard definition.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "metric_type": "revenue",
+        "speaker": "Susan J. S. Li",
+        "claimed_value": 47.1,
+        "qualifiers": [],
+        "quote_text": "$47.1 billion",
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap",
+        "unit": "dollars",
+        "is_approximate": false,
+        "confidence": 1,
+        "metric_context": "Family of Apps",
+        "quote_start_char": 9993,
+        "claim_id": "claim_015",
+        "claimed_value_raw": "$47.1 billion",
+        "claim_type": "absolute",
+        "quote_end_char": 10006,
+        "period": "Q2 2025"
+      },
+      "verification": {
+        "claim_id": "claim_015",
+        "claimed_value": 47.1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Family of Apps revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Susan J. S. Li",
+        "unit": "dollars",
+        "qualifiers": [],
+        "claim_id": "claim_017",
+        "quote_start_char": 11835,
+        "claimed_value": 25,
+        "claim_type": "absolute",
+        "metric_context": "Family of Apps",
+        "quote_text": "$25 billion",
+        "scale": "billions",
+        "is_approximate": false,
+        "speaker_role": "cfo",
+        "quote_end_char": 11846,
+        "period": "Q2 2025",
+        "claimed_value_raw": "$25 billion",
+        "metric_type": "operating_income",
+        "gaap_classification": "gaap",
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_017",
+        "claimed_value": 25,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Family of Apps operating income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "metric_context": "Family of Apps",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "period": "Q2 2025",
+        "speaker": "Susan J. S. Li",
+        "claimed_value_raw": "53%",
+        "claim_id": "claim_018",
+        "claim_type": "margin",
+        "claimed_value": 53,
+        "quote_text": "53%",
+        "unit": "percent",
+        "metric_type": "operating_margin",
+        "quote_end_char": 11866,
+        "quote_start_char": 11863,
+        "scale": null,
+        "speaker_role": "cfo",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_018",
+        "claimed_value": 53,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Family of Apps operating margin claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "revenue",
+        "quote_text": "$370 million",
+        "quote_start_char": 11933,
+        "scale": "millions",
+        "metric_context": "Reality Labs",
+        "qualifiers": [],
+        "is_approximate": false,
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "period": "Q2 2025",
+        "quote_end_char": 11945,
+        "speaker": "Susan J. S. Li",
+        "unit": "dollars",
+        "claimed_value_raw": "$370 million",
+        "claim_id": "claim_019",
+        "speaker_role": "cfo",
+        "claimed_value": 370,
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_019",
+        "claimed_value": 370,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Reality Labs revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 12222,
+        "qualifiers": [
+          "loss"
+        ],
+        "metric_context": "Reality Labs",
+        "period": "Q2 2025",
+        "claimed_value_raw": "$4.5 billion",
+        "quote_start_char": 12210,
+        "scale": "billions",
+        "claim_id": "claim_020",
+        "unit": "dollars",
+        "quote_text": "$4.5 billion",
+        "metric_type": "operating_income",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "speaker": "Susan J. S. Li",
+        "claimed_value": -4.5,
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_020",
+        "claimed_value": -4.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Reality Labs operating income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Total",
+        "period": "Q3 2025",
+        "claimed_value_raw": "$47.5 billion to $50.5 billion",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "quote_text": "$47.5 billion to $50.5 billion",
+        "claim_type": "guidance",
+        "speaker": "Susan J. S. Li",
+        "unit": "dollars",
+        "speaker_role": "cfo",
+        "metric_type": "revenue",
+        "quote_end_char": 23709,
+        "claimed_value": 49,
+        "claim_id": "claim_021",
+        "confidence": 1,
+        "scale": "billions",
+        "quote_start_char": 23679
+      },
+      "verification": {
+        "claim_id": "claim_021",
+        "claimed_value": 49,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 24229,
+        "speaker": "Susan J. S. Li",
+        "scale": "billions",
+        "qualifiers": [],
+        "claim_type": "guidance",
+        "claimed_value": 116,
+        "period": "FY 2025",
+        "unit": "dollars",
+        "metric_type": "operating_expenses",
+        "quote_start_char": 24201,
+        "confidence": 1,
+        "claim_id": "claim_022",
+        "quote_text": "$114 billion to $118 billion",
+        "is_approximate": false,
+        "speaker_role": "cfo",
+        "claimed_value_raw": "$114 billion to $118 billion",
+        "gaap_classification": "gaap",
+        "metric_context": "Total"
+      },
+      "verification": {
+        "claim_id": "claim_022",
+        "claimed_value": 116,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "$66 billion to $72 billion",
+        "scale": "billions",
+        "unit": "dollars",
+        "metric_context": "Total",
+        "speaker": "Susan J. S. Li",
+        "speaker_role": "cfo",
+        "quote_text": "$66 billion to $72 billion",
+        "metric_type": "capital_expenditures",
+        "is_approximate": false,
+        "quote_end_char": 25269,
+        "quote_start_char": 25243,
+        "period": "FY 2025",
+        "confidence": 1,
+        "claimed_value": 69,
+        "claim_type": "guidance",
+        "claim_id": "claim_023",
+        "gaap_classification": "gaap",
+        "qualifiers": []
+      },
+      "verification": {
+        "claim_id": "claim_023",
+        "claimed_value": 69,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 22,
+    "verified": 6,
+    "close_match": 1,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 15
+  }
+}

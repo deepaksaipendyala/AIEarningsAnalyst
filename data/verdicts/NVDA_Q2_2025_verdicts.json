@@ -1,0 +1,509 @@
+{
+  "ticker": "NVDA",
+  "key": "NVDA_Q2_2025",
+  "year": 2025,
+  "quarter": 2,
+  "verified_at": "2026-02-13T12:10:17.494853",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "quote_end_char": 2501,
+        "period": "Q2 2025",
+        "claim_id": "claim_001",
+        "confidence": 1,
+        "quote_start_char": 2430,
+        "claim_type": "absolute",
+        "quote_text": "Revenue of $30 billion was up 15% sequentially and up 122% year-on-year",
+        "metric_type": "revenue",
+        "speaker_role": "management",
+        "scale": "billions",
+        "qualifiers": [],
+        "unit": "dollars",
+        "claimed_value_raw": "$30 billion",
+        "is_approximate": false,
+        "claimed_value": 30,
+        "speaker": "Colette Kress",
+        "gaap_classification": "gaap",
+        "metric_context": "Total"
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 30,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "No revenue data found for NVDA Q2 2025.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "claimed_value": 26.3,
+        "speaker": "Colette Kress",
+        "qualifiers": [
+          "record"
+        ],
+        "unit": "dollars",
+        "claimed_value_raw": "$26.3 billion",
+        "metric_context": "Data Center",
+        "gaap_classification": "gaap",
+        "confidence": 1,
+        "quote_start_char": 2572,
+        "claim_type": "absolute",
+        "quote_end_char": 2667,
+        "period": "Q2 2025",
+        "claim_id": "claim_004",
+        "speaker_role": "management",
+        "scale": "billions",
+        "quote_text": "data center revenue of $26.3 billion was a record, up 16% sequentially and up 154% year-on-year",
+        "metric_type": "revenue"
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 26.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Data Center revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Gaming",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "claimed_value": 2.88,
+        "speaker": "Colette Kress",
+        "qualifiers": [],
+        "unit": "dollars",
+        "claimed_value_raw": "$2.88 billion",
+        "speaker_role": "management",
+        "scale": "billions",
+        "quote_text": "Gaming revenue of $2.88 billion increased 9% sequentially and 16% year-on-year.",
+        "metric_type": "revenue",
+        "confidence": 1,
+        "quote_start_char": 11060,
+        "claim_type": "absolute",
+        "quote_end_char": 11139,
+        "claim_id": "claim_007",
+        "period": "Q2 2025"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 2.88,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Gaming revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Pro visualization",
+        "gaap_classification": "gaap",
+        "claimed_value": 454,
+        "speaker": "Colette Kress",
+        "is_approximate": false,
+        "unit": "dollars",
+        "claimed_value_raw": "$454 million",
+        "qualifiers": [],
+        "scale": "millions",
+        "speaker_role": "management",
+        "metric_type": "revenue",
+        "quote_text": "Revenue of $454 million was up 6% sequentially and 20% year-on-year.",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "quote_start_char": 12154,
+        "claim_id": "claim_008",
+        "period": "Q2 2025",
+        "quote_end_char": 12222
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 454,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Pro visualization revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "revenue",
+        "quote_text": "revenue was $346 million, up 5% sequentially and up 37% year-on-year.",
+        "scale": "millions",
+        "speaker_role": "management",
+        "claim_id": "claim_009",
+        "period": "Q2 2025",
+        "quote_end_char": 13343,
+        "claim_type": "absolute",
+        "confidence": 1,
+        "quote_start_char": 13274,
+        "gaap_classification": "gaap",
+        "metric_context": "Automotive and robotics",
+        "claimed_value_raw": "$346 million",
+        "unit": "dollars",
+        "qualifiers": [],
+        "claimed_value": 346,
+        "speaker": "Colette Kress",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 346,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Automotive and robotics revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "management",
+        "scale": null,
+        "quote_text": "GAAP gross margins were 75.1%",
+        "metric_type": "gross_margin",
+        "confidence": 1,
+        "quote_start_char": 13921,
+        "claim_type": "margin",
+        "quote_end_char": 13950,
+        "claim_id": "claim_010",
+        "period": "Q2 2025",
+        "metric_context": "Total",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "claimed_value": 75.1,
+        "speaker": "Colette Kress",
+        "qualifiers": [],
+        "unit": "percent",
+        "claimed_value_raw": "75.1%"
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 75.1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing gross_profit or revenue data for Q2 2025.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "claimed_value": 75.7,
+        "speaker": "Colette Kress",
+        "qualifiers": [],
+        "claimed_value_raw": "75.7%",
+        "unit": "percent",
+        "metric_context": "Total",
+        "gaap_classification": "non_gaap",
+        "quote_start_char": 13955,
+        "confidence": 1,
+        "claim_type": "margin",
+        "quote_end_char": 13988,
+        "claim_id": "claim_011",
+        "period": "Q2 2025",
+        "speaker_role": "management",
+        "scale": null,
+        "quote_text": "non-GAAP gross margins were 75.7%",
+        "metric_type": "gross_margin"
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 75.7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q2 2025",
+        "claim_id": "claim_012",
+        "quote_end_char": 14290,
+        "claim_type": "absolute",
+        "confidence": 1,
+        "quote_start_char": 14246,
+        "metric_type": "operating_cash_flow",
+        "quote_text": "Cash flow from operations was $14.5 billion.",
+        "scale": "billions",
+        "speaker_role": "management",
+        "unit": "dollars",
+        "claimed_value_raw": "$14.5 billion",
+        "qualifiers": [],
+        "claimed_value": 14.5,
+        "speaker": "Colette Kress",
+        "is_approximate": false,
+        "gaap_classification": "gaap",
+        "metric_context": "Total"
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 14.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "No operating_cash_flow data found for NVDA Q2 2025.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "Total revenue is expected to be $32.5 billion, plus or minus 2%.",
+        "metric_type": "revenue",
+        "speaker_role": "management",
+        "scale": "billions",
+        "quote_end_char": 14729,
+        "claim_id": "claim_013",
+        "period": "Q3 2025",
+        "quote_start_char": 14665,
+        "confidence": 1,
+        "claim_type": "guidance",
+        "gaap_classification": "gaap",
+        "metric_context": "Total",
+        "qualifiers": [],
+        "claimed_value_raw": "$32.5 billion",
+        "unit": "dollars",
+        "is_approximate": false,
+        "claimed_value": 32.5,
+        "speaker": "Colette Kress"
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": 32.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "gross_margin",
+        "quote_text": "GAAP and non-GAAP gross margins are expected to be 74.4% and 75%, respectively, plus or minus 50 basis points.",
+        "scale": null,
+        "speaker_role": "management",
+        "claim_id": "claim_014",
+        "period": "Q3 2025",
+        "quote_end_char": 15014,
+        "claim_type": "guidance",
+        "quote_start_char": 14904,
+        "confidence": 1,
+        "gaap_classification": "non_gaap",
+        "metric_context": "Total",
+        "claimed_value_raw": "75%",
+        "unit": "percent",
+        "qualifiers": [],
+        "claimed_value": 75,
+        "speaker": "Colette Kress",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 75,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "guidance",
+        "confidence": 1,
+        "quote_start_char": 15219,
+        "claim_id": "claim_015",
+        "period": "Q3 2025",
+        "quote_end_char": 15333,
+        "scale": "billions",
+        "speaker_role": "management",
+        "metric_type": "operating_expenses",
+        "quote_text": "GAAP and non-GAAP operating expenses are expected to be approximately $4.3 billion and $3.0 billion, respectively.",
+        "claimed_value": 3,
+        "speaker": "Colette Kress",
+        "is_approximate": true,
+        "unit": "dollars",
+        "claimed_value_raw": "$3.0 billion",
+        "qualifiers": [
+          "approximately"
+        ],
+        "metric_context": "Total",
+        "gaap_classification": "non_gaap"
+      },
+      "verification": {
+        "claim_id": "claim_015",
+        "claimed_value": 3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [
+          "several billion dollars"
+        ],
+        "claimed_value_raw": "several billion dollars",
+        "unit": "dollars",
+        "is_approximate": true,
+        "speaker": "Colette Kress",
+        "claimed_value": 2,
+        "gaap_classification": "gaap",
+        "metric_context": "Blackwell",
+        "quote_end_char": 6106,
+        "period": "Q4 2025",
+        "claim_id": "claim_006",
+        "confidence": 0.8,
+        "quote_start_char": 6036,
+        "claim_type": "guidance",
+        "quote_text": "In Q4, we expect to ship several billion dollars in Blackwell revenue.",
+        "metric_type": "revenue",
+        "speaker_role": "management",
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_006",
+        "claimed_value": 2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "verified": 0,
+    "close_match": 0,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 12
+  }
+}

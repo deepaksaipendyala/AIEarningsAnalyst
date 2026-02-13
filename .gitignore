@@ -1,0 +1,39 @@
+# Data - raw API caches (large, regenerable)
+data/financials/
+data/*.db
+data/transcripts/manual_transcripts/
+
+# Keep pre-computed results for deployment
+# data/transcripts/ — included (needed for Transcript Viewer)
+# data/claims/ — included (intermediate but useful)
+# data/verdicts/ — included (final verification results)
+# data/companies.json — included (company metadata)
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+*.env
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Stray pip artifacts
+=*
+
+# Alembic
+alembic/versions/*.pyc

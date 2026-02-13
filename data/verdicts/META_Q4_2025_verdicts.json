@@ -1,0 +1,560 @@
+{
+  "ticker": "META",
+  "key": "META_Q4_2025",
+  "year": 2025,
+  "quarter": 4,
+  "verified_at": "2026-02-13T12:10:17.496263",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "gaap_classification": "unknown",
+        "speaker_role": "cfo",
+        "qualifiers": [
+          "more than"
+        ],
+        "metric_type": "other",
+        "is_approximate": false,
+        "speaker": "Susan Li",
+        "claim_type": "absolute",
+        "claim_id": "claim_001",
+        "scale": "billions",
+        "claimed_value": 3.5,
+        "unit": "count",
+        "claimed_value_raw": "3.5 billion",
+        "quote_end_char": 7355,
+        "quote_text": "We estimate more than 3.5 billion people used at least one of our family of apps on a daily basis in December.",
+        "quote_start_char": 7245,
+        "period": "December 2025",
+        "confidence": 1,
+        "metric_context": "family of apps"
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 3.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Susan Li",
+        "quote_start_char": 7356,
+        "claim_type": "absolute",
+        "period": "Q4 2025",
+        "quote_end_char": 7429,
+        "qualifiers": [],
+        "is_approximate": false,
+        "claimed_value_raw": "$58.9 billion",
+        "confidence": 1,
+        "metric_context": "family of apps",
+        "metric_type": "revenue",
+        "quote_text": "Q4 total family of apps revenue was $58.9 billion, up 25% year over year.",
+        "unit": "dollars",
+        "claimed_value": 58.9,
+        "scale": "billions",
+        "claim_id": "claim_002",
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 58.9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a family of apps revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Susan Li",
+        "gaap_classification": "non_gaap",
+        "is_approximate": false,
+        "unit": "dollars",
+        "scale": "billions",
+        "metric_type": "revenue",
+        "confidence": 1,
+        "metric_context": "family of apps",
+        "claim_id": "claim_004",
+        "claim_type": "absolute",
+        "qualifiers": [],
+        "period": "Q4 2025",
+        "speaker_role": "cfo",
+        "quote_start_char": 7430,
+        "claimed_value_raw": "$58.1 billion",
+        "quote_text": "Q4 family of apps ad revenue was $58.1 billion, up 24% or 23% on a constant currency basis.",
+        "quote_end_char": 7521,
+        "claimed_value": 58.1
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 58.1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "millions",
+        "claimed_value": 801,
+        "quote_start_char": 7891,
+        "speaker": "Susan Li",
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "quote_text": "Family of apps other revenue was $801 million, up 54%, driven by WhatsApp paid revenue growth as well as MetaVerified subscriptions.",
+        "claimed_value_raw": "$801 million",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "claim_id": "claim_007",
+        "metric_type": "revenue",
+        "unit": "dollars",
+        "quote_end_char": 8023,
+        "period": "Q4 2025",
+        "metric_context": "family of apps other",
+        "qualifiers": [],
+        "claim_type": "absolute"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 801,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a family of apps other revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "quote_end_char": 8110,
+        "metric_type": "revenue",
+        "claimed_value_raw": "$955 million",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "unit": "dollars",
+        "speaker": "Susan Li",
+        "scale": "millions",
+        "claimed_value": 955,
+        "period": "Q4 2025",
+        "quote_start_char": 8024,
+        "metric_context": "Reality Labs",
+        "is_approximate": false,
+        "quote_text": "Within our Reality Labs segment, Q4 revenue was $955 million, down 12% year over year.",
+        "claim_id": "claim_008"
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 955,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Reality Labs revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 8578,
+        "claim_id": "claim_009",
+        "speaker": "Susan Li",
+        "quote_end_char": 8639,
+        "is_approximate": false,
+        "quote_text": "We ended Q4 with over 78,800 employees, up 6% year over year.",
+        "confidence": 1,
+        "gaap_classification": "unknown",
+        "period": "Q4 2025 end",
+        "claimed_value": 78800,
+        "qualifiers": [],
+        "metric_type": "other",
+        "metric_context": "Total",
+        "claimed_value_raw": "78,800",
+        "claim_type": "absolute",
+        "speaker_role": "cfo",
+        "scale": "ones",
+        "unit": "count"
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 78800,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "unit": "dollars",
+        "claim_type": "absolute",
+        "scale": "billions",
+        "quote_start_char": 8694,
+        "claim_id": "claim_010",
+        "is_approximate": false,
+        "speaker": "Susan Li",
+        "metric_type": "capital_expenditures",
+        "period": "Q4 2025",
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "claimed_value": 22.1,
+        "claimed_value_raw": "$22.1 billion",
+        "metric_context": "Total",
+        "confidence": 1,
+        "quote_end_char": 8812,
+        "quote_text": "Meta Superintelligence were $22.1 billion, driven by investments in data centers, servers, and network infrastructure."
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 22.1,
+        "actual_value": 21383000000,
+        "difference": 717000000.0,
+        "difference_pct": 3.353130991909461,
+        "tolerance_used": 0.02,
+        "computation_detail": "Claimed 22,100,000,000.00 vs Actual 21,383,000,000.00. Diff: 3.35% (threshold: 2.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|22,100,000,000.00 - 21,383,000,000.00| / |21,383,000,000.00|",
+            "result": 0.03353130991909461,
+            "threshold": 0.02
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "capital_expenditures",
+            "fy": 2025,
+            "fq": 4,
+            "value": 21383000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Close Match: claimed 22,100,000,000.00 vs actual 21,383,000,000.00 from fmp.",
+        "verdict": "close_match"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "cfo",
+        "claimed_value_raw": "$14.1 billion",
+        "quote_start_char": 8813,
+        "gaap_classification": "unknown",
+        "scale": "billions",
+        "confidence": 1,
+        "quote_end_char": 8846,
+        "period": "Q4 2025",
+        "claim_id": "claim_011",
+        "metric_type": "free_cash_flow",
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "unit": "dollars",
+        "claimed_value": 14.1,
+        "quote_text": "Free cash flow was $14.1 billion.",
+        "speaker": "Susan Li",
+        "metric_context": "Total",
+        "qualifiers": []
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 14.1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "fcf_definition_gap"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Claimed FCF ($14.1B) is 5% below reported FCF ($14.8B). Companies sometimes report FCF net of finance lease principal payments, resulting in a lower figure than the standard definition.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "claimed_value_raw": "$81.6 billion",
+        "quote_text": "We ended the quarter with $81.6 billion in cash and marketable securities and $58.7 billion in debt.",
+        "metric_context": "Total cash and marketable securities",
+        "quote_start_char": 8847,
+        "scale": "billions",
+        "is_approximate": false,
+        "claim_id": "claim_012",
+        "gaap_classification": "unknown",
+        "period": "Q4 2025 end",
+        "speaker": "Susan Li",
+        "claimed_value": 81.6,
+        "quote_end_char": 8947,
+        "claim_type": "absolute",
+        "metric_type": "other",
+        "unit": "dollars",
+        "qualifiers": [],
+        "speaker_role": "cfo"
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 81.6,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Susan Li",
+        "unit": "dollars",
+        "quote_text": "Paid messaging within WhatsApp continues to scale as well, crossing a $2 billion annual run rate in Q4.",
+        "metric_type": "revenue",
+        "metric_context": "WhatsApp paid messaging",
+        "qualifiers": [
+          "run rate"
+        ],
+        "is_approximate": false,
+        "quote_start_char": 15251,
+        "period": "Q4 2025",
+        "claimed_value": 2,
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "scale": "billions",
+        "claimed_value_raw": "$2 billion",
+        "gaap_classification": "gaap",
+        "confidence": 1,
+        "claim_id": "claim_014",
+        "quote_end_char": 15354
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a WhatsApp paid messaging revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "claimed_value": 53.5,
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "metric_type": "revenue",
+        "period": "Q1 2026",
+        "claim_type": "guidance",
+        "metric_context": "Total",
+        "scale": "billions",
+        "quote_text": "We expect our first quarter 2026 total revenue to be in the range of $53.5 billion to $56.5 billion.",
+        "quote_end_char": 17830,
+        "gaap_classification": "gaap",
+        "quote_start_char": 17730,
+        "confidence": 1,
+        "unit": "dollars",
+        "claimed_value_raw": "$53.5 billion",
+        "speaker": "Susan Li",
+        "claim_id": "claim_015"
+      },
+      "verification": {
+        "claim_id": "claim_015",
+        "claimed_value": 53.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "confidence": 1,
+        "metric_context": "Total",
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap",
+        "claim_type": "guidance",
+        "qualifiers": [],
+        "claimed_value_raw": "162",
+        "metric_type": "operating_expenses",
+        "speaker": "Susan Li",
+        "quote_text": "Expect full-year 2026 total expenses to be in the range of $162 to $169 billion.",
+        "unit": "dollars",
+        "claimed_value": 162,
+        "scale": "billions",
+        "quote_start_char": 18016,
+        "period": "FY 2026",
+        "claim_id": "claim_017",
+        "quote_end_char": 18096
+      },
+      "verification": {
+        "claim_id": "claim_017",
+        "claimed_value": 162,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "capital_expenditures",
+        "scale": "billions",
+        "is_approximate": false,
+        "gaap_classification": "gaap",
+        "quote_start_char": 18665,
+        "confidence": 1,
+        "metric_context": "Total",
+        "claim_id": "claim_018",
+        "claim_type": "guidance",
+        "qualifiers": [],
+        "quote_end_char": 18793,
+        "quote_text": "Anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $115 to $135 billion",
+        "unit": "dollars",
+        "claimed_value_raw": "115",
+        "claimed_value": 115,
+        "period": "FY 2026",
+        "speaker": "Susan Li",
+        "speaker_role": "cfo"
+      },
+      "verification": {
+        "claim_id": "claim_018",
+        "claimed_value": 115,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 13,
+    "verified": 0,
+    "close_match": 1,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 12
+  }
+}

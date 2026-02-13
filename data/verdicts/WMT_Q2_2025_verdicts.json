@@ -1,0 +1,768 @@
+{
+  "ticker": "WMT",
+  "key": "WMT_Q2_2025",
+  "year": 2025,
+  "quarter": 2,
+  "verified_at": "2026-02-13T12:10:17.511379",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "metric_context": "Walmart U.S. Marketplace",
+        "confidence": 1,
+        "claimed_value_raw": "32%",
+        "quote_start_char": 4612,
+        "claim_id": "claim_001",
+        "speaker": "C. Douglas McMillon",
+        "qualifiers": [],
+        "scale": null,
+        "claimed_value": 32,
+        "gaap_classification": "gaap",
+        "quote_text": "Walmart U.S. Marketplace sales grew 32% for the quarter.",
+        "period": "Q2 2025",
+        "metric_type": "revenue",
+        "claim_type": "yoy_growth",
+        "speaker_role": "ceo",
+        "comparison_period": "Q2 2024",
+        "quote_end_char": 4668,
+        "unit": "percent",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 32,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Walmart U.S. Marketplace revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 4852,
+        "gaap_classification": "gaap",
+        "metric_type": "revenue",
+        "speaker_role": "ceo",
+        "is_approximate": false,
+        "quote_end_char": 4917,
+        "claim_id": "claim_002",
+        "qualifiers": [],
+        "scale": null,
+        "unit": "percent",
+        "metric_context": "Total",
+        "claimed_value": 21,
+        "quote_text": "e-commerce sales grew about 20% for each segment and 21% overall.",
+        "speaker": "C. Douglas McMillon",
+        "claim_type": "yoy_growth",
+        "confidence": 1,
+        "comparison_period": "Q2 2024",
+        "period": "Q2 2025",
+        "claimed_value_raw": "21%"
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 21,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Total revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "C. Douglas McMillon",
+        "quote_text": "Globally, membership income grew 23%.",
+        "claim_type": "yoy_growth",
+        "quote_end_char": 5467,
+        "metric_type": "revenue",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "is_approximate": false,
+        "metric_context": "Total Membership Income",
+        "speaker_role": "ceo",
+        "period": "Q2 2025",
+        "confidence": 1,
+        "quote_start_char": 5430,
+        "claimed_value_raw": "23%",
+        "claimed_value": 23,
+        "unit": "percent",
+        "claim_id": "claim_003",
+        "scale": null,
+        "comparison_period": "Q2 2024"
+      },
+      "verification": {
+        "claim_id": "claim_003",
+        "claimed_value": 23,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Total Membership Income revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 5570,
+        "confidence": 1,
+        "metric_context": "Total Advertising",
+        "period": "Q2 2025",
+        "gaap_classification": "gaap",
+        "metric_type": "revenue",
+        "claim_id": "claim_004",
+        "is_approximate": false,
+        "claim_type": "yoy_growth",
+        "speaker": "C. Douglas McMillon",
+        "speaker_role": "ceo",
+        "scale": null,
+        "claimed_value": 26,
+        "unit": "percent",
+        "claimed_value_raw": "26%",
+        "quote_text": "Globally, advertising grew 26%",
+        "qualifiers": [],
+        "quote_end_char": 5600,
+        "comparison_period": "Q2 2024"
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 26,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Total Advertising revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "30%",
+        "unit": "percent",
+        "claim_type": "yoy_growth",
+        "gaap_classification": "gaap",
+        "metric_context": "Walmart Connect US Advertising",
+        "period": "Q2 2025",
+        "is_approximate": false,
+        "quote_end_char": 5654,
+        "claim_id": "claim_005",
+        "scale": null,
+        "quote_start_char": 5602,
+        "speaker_role": "ceo",
+        "speaker": "C. Douglas McMillon",
+        "confidence": 1,
+        "metric_type": "revenue",
+        "qualifiers": [],
+        "quote_text": "including 30% growth for Walmart Connect in the U.S.",
+        "claimed_value": 30,
+        "comparison_period": "Q2 2024"
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 30,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Walmart Connect US Advertising revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 9493,
+        "claim_type": "absolute",
+        "scale": null,
+        "quote_start_char": 9400,
+        "gaap_classification": "gaap",
+        "metric_type": "revenue",
+        "speaker": "John David Rainey",
+        "claim_id": "claim_006",
+        "confidence": 1,
+        "speaker_role": "cfo",
+        "metric_context": "Total quarterly average increase",
+        "claimed_value": 5,
+        "quote_text": "we've increased our quarterly sales by more than 5% and our quarterly operating income by 9%.",
+        "qualifiers": [
+          "more than"
+        ],
+        "claimed_value_raw": "5%",
+        "is_approximate": false,
+        "period": "Since April 2023",
+        "unit": "percent"
+      },
+      "verification": {
+        "claim_id": "claim_006",
+        "claimed_value": 5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Total quarterly average increase revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "period": "Since April 2023",
+        "qualifiers": [],
+        "speaker_role": "cfo",
+        "quote_end_char": 9493,
+        "quote_start_char": 9400,
+        "speaker": "John David Rainey",
+        "is_approximate": false,
+        "claim_id": "claim_007",
+        "unit": "percent",
+        "gaap_classification": "gaap",
+        "claimed_value": 9,
+        "claim_type": "absolute",
+        "scale": null,
+        "metric_context": "Total quarterly average increase",
+        "claimed_value_raw": "9%",
+        "confidence": 1,
+        "quote_text": "we've increased our quarterly sales by more than 5% and our quarterly operating income by 9%.",
+        "metric_type": "operating_income"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Total quarterly average increase operating income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "claimed_value": 4.9,
+        "gaap_classification": "non_gaap",
+        "metric_context": "Total Net Sales CC",
+        "claim_type": "yoy_growth",
+        "metric_type": "revenue",
+        "unit": "percent",
+        "scale": null,
+        "period": "Q2 2025",
+        "qualifiers": [],
+        "is_approximate": false,
+        "quote_start_char": 9818,
+        "speaker": "John David Rainey",
+        "claim_id": "claim_008",
+        "quote_text": "Second-quarter total net sales growth was 4.9% on a constant-currency basis",
+        "comparison_period": "Q2 2024",
+        "speaker_role": "cfo",
+        "claimed_value_raw": "4.9%",
+        "quote_end_char": 9893
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 4.9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "In Walmart U.S., comp sales growth of 4.2% was driven primarily by strong traffic",
+        "metric_type": "revenue",
+        "scale": null,
+        "quote_end_char": 10092,
+        "claim_type": "yoy_growth",
+        "speaker_role": "cfo",
+        "qualifiers": [],
+        "unit": "percent",
+        "speaker": "John David Rainey",
+        "confidence": 1,
+        "claim_id": "claim_009",
+        "gaap_classification": "gaap",
+        "claimed_value": 4.2,
+        "quote_start_char": 10011,
+        "claimed_value_raw": "4.2%",
+        "is_approximate": false,
+        "metric_context": "Walmart U.S. Comps",
+        "comparison_period": "Q2 2024",
+        "period": "Q2 2025"
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 4.2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Walmart U.S. Comps revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "is_approximate": false,
+        "unit": "percent",
+        "speaker": "John David Rainey",
+        "qualifiers": [],
+        "quote_text": "E-commerce sales in Walmart U.S. were up 22%",
+        "claim_type": "yoy_growth",
+        "quote_end_char": null,
+        "scale": null,
+        "quote_start_char": null,
+        "comparison_period": "Q2 2024",
+        "metric_context": "Walmart U.S. e-commerce",
+        "metric_type": "revenue",
+        "speaker_role": "cfo",
+        "claimed_value_raw": "22%",
+        "claimed_value": 22,
+        "gaap_classification": "gaap",
+        "period": "Q2 2025",
+        "claim_id": "claim_010"
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 22,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Walmart U.S. e-commerce revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "8.3%",
+        "is_approximate": false,
+        "scale": null,
+        "claimed_value": 8.3,
+        "speaker_role": "cfo",
+        "qualifiers": [],
+        "claim_type": "yoy_growth",
+        "confidence": 1,
+        "quote_text": "Our international business delivered constant-currency sales growth of 8.3%",
+        "claim_id": "claim_011",
+        "metric_type": "revenue",
+        "quote_start_char": 11457,
+        "gaap_classification": "non_gaap",
+        "comparison_period": "Q2 2024",
+        "period": "Q2 2025",
+        "metric_context": "International Sales CC",
+        "quote_end_char": 11532,
+        "speaker": "John David Rainey",
+        "unit": "percent"
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 8.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_id": "claim_012",
+        "speaker": "John David Rainey",
+        "period": "Q2 2025",
+        "claim_type": "yoy_growth",
+        "is_approximate": false,
+        "metric_type": "revenue",
+        "comparison_period": "Q2 2024",
+        "gaap_classification": "gaap",
+        "confidence": 1,
+        "claimed_value_raw": "5.2%",
+        "speaker_role": "cfo",
+        "claimed_value": 5.2,
+        "quote_text": "Sam's Club U.S. comp sales ex fuel increased 5.2%",
+        "qualifiers": [],
+        "quote_end_char": 12527,
+        "quote_start_char": 12478,
+        "unit": "percent",
+        "metric_context": "Sam's Club U.S. Ex Fuel Comps",
+        "scale": null
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 5.2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Sam's Club U.S. Ex Fuel Comps revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": null,
+        "gaap_classification": "gaap",
+        "quote_end_char": 13306,
+        "metric_type": "gross_margin",
+        "qualifiers": [],
+        "unit": "basis_points",
+        "quote_text": "consolidated gross margins expanded 43 basis points",
+        "confidence": 1,
+        "quote_start_char": 13255,
+        "speaker_role": "cfo",
+        "claimed_value_raw": "43 basis points",
+        "claim_type": "margin",
+        "period": "Q2 2025",
+        "metric_context": "Consolidated Gross Margin Expansion",
+        "claimed_value": 43,
+        "is_approximate": false,
+        "claim_id": "claim_013",
+        "speaker": "John David Rainey"
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": 43,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "margin_change_bps"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim describes a margin change in basis points, not an absolute margin level. Verifying margin changes requires prior-period margin data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "7.4%",
+        "is_approximate": false,
+        "confidence": 1,
+        "unit": "percent",
+        "comparison_period": "Q2 2024",
+        "claim_type": "yoy_growth",
+        "period": "Q2 2025",
+        "quote_start_char": 18224,
+        "claimed_value": 7.4,
+        "scale": null,
+        "claim_id": "claim_014",
+        "qualifiers": [],
+        "quote_end_char": 18293,
+        "speaker_role": "cfo",
+        "metric_context": "Total Adjusted Operating Income CC",
+        "metric_type": "operating_income",
+        "speaker": "John David Rainey",
+        "quote_text": "Consolidated adjusted operating income grew 7.4% in constant currency",
+        "gaap_classification": "non_gaap"
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 7.4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "gaap_classification": "non_gaap",
+        "quote_text": "Adjusted EPS of $0.67 per share",
+        "confidence": 1,
+        "is_approximate": false,
+        "speaker": "John David Rainey",
+        "unit": "per_share",
+        "period": "Q2 2025",
+        "qualifiers": [],
+        "quote_end_char": 18646,
+        "speaker_role": "cfo",
+        "metric_context": "Total Adjusted EPS",
+        "claim_type": "absolute",
+        "claimed_value": 0.67,
+        "quote_start_char": 18615,
+        "claimed_value_raw": "$0.67 per share",
+        "claim_id": "claim_015_eps",
+        "scale": null,
+        "metric_type": "eps_diluted"
+      },
+      "verification": {
+        "claim_id": "claim_015_eps",
+        "claimed_value": 0.67,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [],
+        "confidence": 1,
+        "claim_id": "claim_016_guidance_sales",
+        "unit": "percent",
+        "quote_text": "expect full year FY '25 sales growth of 3.75% to 4.75%",
+        "speaker": "John David Rainey",
+        "is_approximate": false,
+        "period": "FY 2025",
+        "gaap_classification": "gaap",
+        "quote_start_char": 19246,
+        "metric_context": "Total Full Year Sales Growth",
+        "quote_end_char": 19300,
+        "speaker_role": "cfo",
+        "claimed_value_raw": "3.75% to 4.75%",
+        "claimed_value": 3.75,
+        "metric_type": "revenue",
+        "scale": null,
+        "claim_type": "guidance"
+      },
+      "verification": {
+        "claim_id": "claim_016_guidance_sales",
+        "claimed_value": 3.75,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Total Full Year Operating Income Growth",
+        "claimed_value_raw": "6.5% to 8%",
+        "confidence": 1,
+        "metric_type": "operating_income",
+        "scale": null,
+        "quote_start_char": 19301,
+        "claimed_value": 6.5,
+        "speaker_role": "cfo",
+        "speaker": "John David Rainey",
+        "is_approximate": false,
+        "period": "FY 2025",
+        "quote_end_char": 19342,
+        "claim_type": "guidance",
+        "unit": "percent",
+        "claim_id": "claim_017_guidance_oi",
+        "gaap_classification": "gaap",
+        "quote_text": "and operating income growth of 6.5% to 8%",
+        "qualifiers": []
+      },
+      "verification": {
+        "claim_id": "claim_017_guidance_oi",
+        "claimed_value": 6.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value": 2.35,
+        "unit": "per_share",
+        "quote_text": "Adjusted EPS is expected to be $2.35 to $2.43",
+        "gaap_classification": "non_gaap",
+        "scale": null,
+        "claim_id": "claim_018_guidance_eps",
+        "metric_type": "eps_diluted",
+        "period": "FY 2025",
+        "claim_type": "guidance",
+        "qualifiers": [],
+        "quote_start_char": 19420,
+        "is_approximate": false,
+        "quote_end_char": 19465,
+        "speaker": "John David Rainey",
+        "confidence": 1,
+        "metric_context": "Total Full Year Adjusted EPS",
+        "claimed_value_raw": "$2.35 to $2.43",
+        "speaker_role": "cfo"
+      },
+      "verification": {
+        "claim_id": "claim_018_guidance_eps",
+        "claimed_value": 2.35,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "verified": 0,
+    "close_match": 0,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 18
+  }
+}

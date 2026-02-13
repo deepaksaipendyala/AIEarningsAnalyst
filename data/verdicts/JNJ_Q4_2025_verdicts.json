@@ -1,0 +1,1220 @@
+{
+  "ticker": "JNJ",
+  "key": "JNJ_Q4_2025",
+  "year": 2025,
+  "quarter": 4,
+  "verified_at": "2026-02-13T12:10:17.504726",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "qualifiers": [
+          "over"
+        ],
+        "quote_end_char": 3746,
+        "quote_start_char": 3615,
+        "metric_type": "other",
+        "period": "FY 2025",
+        "claimed_value": 32,
+        "quote_text": "In 2025, we invested over $32 billion in R&D and M&A, including the acquisitions of Intracellular Therapies and Halda Therapeutics.",
+        "speaker_role": "ceo",
+        "confidence": 1,
+        "gaap_classification": "unknown",
+        "speaker": "Joaquin Duato",
+        "unit": "dollars",
+        "claimed_value_raw": "$32 billion",
+        "metric_context": "Total",
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "claim_id": "claim_001",
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 32,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "ones",
+        "period": "FY 2025",
+        "quote_end_char": null,
+        "gaap_classification": "gaap",
+        "claim_id": "claim_002",
+        "qualifiers": [],
+        "claimed_value_raw": "5.3%",
+        "metric_context": "Total",
+        "speaker_role": "ceo",
+        "unit": "percent",
+        "quote_text": "Over the full year, we delivered 5.3% operational sales growth.",
+        "metric_type": "revenue",
+        "speaker": "Joaquin Duato",
+        "claimed_value": 5.3,
+        "quote_start_char": null,
+        "comparison_period": "FY 2024",
+        "is_approximate": false,
+        "confidence": 1,
+        "claim_type": "yoy_growth"
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 5.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Joaquin Duato",
+        "quote_text": "In innovative medicine, we reported operational sales growth for the year of 5.3%.",
+        "unit": "percent",
+        "speaker_role": "ceo",
+        "quote_start_char": 4957,
+        "quote_end_char": 5039,
+        "scale": "ones",
+        "claimed_value": 5.3,
+        "is_approximate": false,
+        "confidence": 1,
+        "comparison_period": "FY 2024",
+        "metric_context": "Innovative Medicine",
+        "claim_type": "yoy_growth",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "period": "FY 2025",
+        "metric_type": "revenue",
+        "claim_id": "claim_003",
+        "claimed_value_raw": "5.3%"
+      },
+      "verification": {
+        "claim_id": "claim_003",
+        "claimed_value": 5.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "gaap_classification": "gaap",
+        "quote_end_char": 5166,
+        "speaker": "Joaquin Duato",
+        "qualifiers": [
+          "exceeded",
+          "for the first time"
+        ],
+        "claim_type": "absolute",
+        "confidence": 1,
+        "quote_start_char": 5040,
+        "is_approximate": false,
+        "scale": "billions",
+        "claimed_value": 60,
+        "metric_context": "Pharmaceutical",
+        "claimed_value_raw": "$60 billion",
+        "metric_type": "revenue",
+        "claim_id": "claim_004",
+        "unit": "dollars",
+        "speaker_role": "ceo",
+        "quote_text": "Full-year sales for our Pharmaceutical business exceeded $60 billion for the first time, with 13 brands growing double digits.",
+        "period": "FY 2025"
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 60,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "21%",
+        "comparison_period": "FY 2024",
+        "scale": "ones",
+        "claimed_value": 21,
+        "metric_type": "revenue",
+        "claim_id": "claim_005",
+        "period": "FY 2025",
+        "speaker": "Joaquin Duato",
+        "qualifiers": [],
+        "quote_start_char": 5719,
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "quote_text": "In 2025, we delivered 21% operational sales growth, and we expect to exceed $50 billion in annual sales by 2030.",
+        "metric_context": "Oncology",
+        "claim_type": "yoy_growth",
+        "unit": "percent",
+        "speaker_role": "ceo",
+        "quote_end_char": 5831,
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 21,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "With annual sales over $14 billion, DARZALEX grew an impressive 22% across the full year.",
+        "claim_id": "claim_007",
+        "scale": "billions",
+        "is_approximate": false,
+        "metric_type": "revenue",
+        "gaap_classification": "gaap",
+        "quote_start_char": 6152,
+        "unit": "dollars",
+        "speaker": "Joaquin Duato",
+        "qualifiers": [
+          "over"
+        ],
+        "claimed_value": 14,
+        "speaker_role": "ceo",
+        "confidence": 1,
+        "period": "FY 2025",
+        "claimed_value_raw": "$14 billion",
+        "quote_end_char": 6241,
+        "metric_context": "DARZALEX",
+        "claim_type": "absolute"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 14,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "absolute",
+        "unit": "dollars",
+        "period": "FY 2025",
+        "gaap_classification": "gaap",
+        "metric_type": "revenue",
+        "metric_context": "Tremfya",
+        "quote_start_char": 8137,
+        "qualifiers": [
+          "more than",
+          "for the first time"
+        ],
+        "confidence": 1,
+        "claim_id": "claim_009",
+        "quote_text": "And with global full-year sales of Tremfya accelerating to more than $5 billion for the first time, we're increasingly confident that Tremfya will exceed $10 billion in peak year sales.",
+        "speaker": "Joaquin Duato",
+        "scale": "billions",
+        "claimed_value": 5,
+        "is_approximate": false,
+        "speaker_role": "ceo",
+        "quote_end_char": 8322,
+        "claimed_value_raw": "$5 billion"
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 8823,
+        "comparison_period": "FY 2024",
+        "qualifiers": [],
+        "metric_type": "revenue",
+        "confidence": 1,
+        "unit": "percent",
+        "claim_id": "claim_010",
+        "claimed_value": 10,
+        "speaker_role": "ceo",
+        "claimed_value_raw": "10%",
+        "quote_text": "Turning to neuroscience, where 2025 operational sales grew 10%.",
+        "claim_type": "yoy_growth",
+        "is_approximate": false,
+        "quote_start_char": 8760,
+        "scale": "ones",
+        "period": "FY 2025",
+        "metric_context": "Neuroscience",
+        "speaker": "Joaquin Duato",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 10,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "gaap_classification": "gaap",
+        "quote_text": "Spravato continues its strong trajectory with 57% growth in the year, with more than two hundred thousand patients now treated worldwide.",
+        "quote_end_char": 8962,
+        "claim_id": "claim_011,claim_type:",
+        "comparison_period": "FY 2024",
+        "unit": "percent",
+        "claimed_value": 57,
+        "speaker": "Joaquin Duato",
+        "qualifiers": [],
+        "speaker_role": "ceo",
+        "claimed_value_raw": "57%",
+        "period": "FY 2025",
+        "scale": "ones",
+        "quote_start_char": 8825,
+        "metric_context": "Spravato",
+        "confidence": 1,
+        "claim_type": "yoy_growth",
+        "is_approximate": false,
+        "metric_type": "revenue"
+      },
+      "verification": {
+        "claim_id": "claim_011,claim_type:",
+        "claimed_value": 57,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "MedTech",
+        "period": "FY 2025",
+        "speaker_role": "ceo",
+        "quote_text": "Now turning to MedTech, where operational sales for the year grew 5.4%.",
+        "scale": "ones",
+        "unit": "percent",
+        "quote_start_char": 9159,
+        "quote_end_char": 9230,
+        "comparison_period": "FY 2024",
+        "claim_type": "yoy_growth",
+        "metric_type": "revenue",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "confidence": 1,
+        "speaker": "Joaquin Duato",
+        "claim_id": "claim_012",
+        "claimed_value_raw": "5.4%",
+        "qualifiers": [],
+        "claimed_value": 5.4
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 5.4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "In 2025, we delivered nearly $4 billion in sales, with strong performance in cardiovascular and accelerating momentum across surgery and vision.",
+        "gaap_classification": "gaap",
+        "speaker_role": "ceo",
+        "qualifiers": [
+          "nearly"
+        ],
+        "is_approximate": true,
+        "confidence": 1,
+        "claim_type": "absolute",
+        "quote_end_char": 9375,
+        "unit": "dollars",
+        "metric_context": "MedTech",
+        "speaker": "Joaquin Duato",
+        "claim_id": "claim_013",
+        "period": "FY 2025",
+        "scale": "billions",
+        "claimed_value": 4,
+        "claimed_value_raw": "$4 billion",
+        "quote_start_char": 9231,
+        "metric_type": "revenue"
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": 4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "scale": "ones",
+        "metric_context": "Cardiovascular",
+        "claim_id": "claim_014",
+        "speaker_role": "ceo",
+        "gaap_classification": "gaap",
+        "quote_end_char": 9732,
+        "is_approximate": false,
+        "comparison_period": "FY 2024",
+        "quote_text": "Johnson & Johnson today is a leader in three cardiovascular segments, with the portfolio delivering 15% operational sales growth in the year.",
+        "unit": "percent",
+        "claimed_value": 15,
+        "claimed_value_raw": "15%",
+        "speaker": "Joaquin Duato",
+        "metric_type": "revenue",
+        "qualifiers": [],
+        "claim_type": "yoy_growth",
+        "period": "FY 2025",
+        "quote_start_char": 9591
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 15,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [],
+        "speaker": "Joaquin Duato",
+        "is_approximate": false,
+        "claim_id": "claim_015",
+        "claim_type": "yoy_growth",
+        "claimed_value_raw": "5.3%",
+        "claimed_value": 5.3,
+        "unit": "percent",
+        "quote_text": "And finally, vision, which delivered robust annual operational sales growth of 5.3% with particularly strong momentum in surgical vision.",
+        "confidence": 1,
+        "scale": "ones",
+        "quote_end_char": 11392,
+        "comparison_period": "FY 2024",
+        "quote_start_char": 11255,
+        "metric_context": "Vision",
+        "metric_type": "revenue",
+        "gaap_classification": "gaap",
+        "speaker_role": "ceo",
+        "period": "FY 2025"
+      },
+      "verification": {
+        "claim_id": "claim_015",
+        "claimed_value": 5.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "quote_text": "Starting with Q4 2025 sales results. Worldwide sales were $24.6 billion for the quarter.",
+        "quote_end_char": 12320,
+        "qualifiers": [],
+        "unit": "dollars",
+        "claim_id": "claim_016",
+        "speaker_role": "management",
+        "metric_type": "revenue",
+        "claimed_value_raw": "$24.6 billion",
+        "scale": "billions",
+        "metric_context": "Total",
+        "is_approximate": false,
+        "claim_type": "absolute",
+        "quote_start_char": 12232,
+        "period": "Q4 2025",
+        "gaap_classification": "gaap",
+        "claimed_value": 24.6,
+        "speaker": "Darren Snellgrove"
+      },
+      "verification": {
+        "claim_id": "claim_016",
+        "claimed_value": 24.6,
+        "actual_value": 24564000000,
+        "difference": 36000000.0,
+        "difference_pct": 0.14655593551538837,
+        "tolerance_used": 0.005,
+        "computation_detail": "Claimed 24,600,000,000.00 vs Actual 24,564,000,000.00. Diff: 0.15% (threshold: 0.5%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|24,600,000,000.00 - 24,564,000,000.00| / |24,564,000,000.00|",
+            "result": 0.0014655593551538837,
+            "threshold": 0.005
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 4,
+            "value": 24564000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 24,600,000,000.00 vs actual 24,564,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "yoy_growth",
+        "gaap_classification": "gaap",
+        "claimed_value": 7.1,
+        "is_approximate": false,
+        "quote_end_char": 12404,
+        "speaker": "Darren Snellgrove",
+        "comparison_period": "Q4 2024",
+        "confidence": 1,
+        "quote_start_char": 12322,
+        "claim_id": "claim_017",
+        "scale": "ones",
+        "qualifiers": [],
+        "metric_context": "Total",
+        "claimed_value_raw": "7.1%",
+        "period": "Q4 2025",
+        "unit": "percent",
+        "metric_type": "revenue",
+        "speaker_role": "management",
+        "quote_text": "Sales increased 7.1% despite an approximate 650 basis point headwind from STELARA."
+      },
+      "verification": {
+        "claim_id": "claim_017",
+        "claimed_value": 7.1,
+        "actual_value": 24564000000,
+        "difference": -1.9763765541740685,
+        "difference_pct": 1.9763765541740685,
+        "tolerance_used": 1.0,
+        "computation_detail": "Claimed 7.1% YoY growth. Actual: (24,564,000,000 - 22,520,000,000) / 22,520,000,000 = 9.08%. Diff: 1.98 pp (threshold: 1.0 pp)",
+        "computation_steps": [
+          {
+            "step": "YoY growth",
+            "formula": "(24,564,000,000 - 22,520,000,000) / |22,520,000,000| * 100",
+            "result": 9.076376554174068,
+            "claimed": 7.1,
+            "difference_pp": -1.9763765541740685
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 4,
+            "value": 24564000000
+          },
+          {
+            "field": "revenue",
+            "fy": 2024,
+            "fq": 4,
+            "value": 22520000000
+          }
+        ],
+        "evidence_source": "fmp (current), fmp (prior)",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Growth claim: 7.1% claimed. Computed from Q4 2025 (24,564,000,000) vs Q4 2024 (22,520,000,000) = 9.08% actual.",
+        "verdict": "close_match"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q4 2025",
+        "quote_end_char": 12746,
+        "qualifiers": [],
+        "claim_id": "claim_018",
+        "quote_text": "For the quarter, net earnings were $5.1 billion, and diluted earnings per share was $2.1 versus $1.41 a year ago.",
+        "metric_context": "Total",
+        "speaker": "Darren Snellgrove",
+        "speaker_role": "management",
+        "scale": "billions",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "unit": "dollars",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "metric_type": "net_income",
+        "claimed_value_raw": "$5.1 billion",
+        "quote_start_char": 12633,
+        "claimed_value": 5.1
+      },
+      "verification": {
+        "claim_id": "claim_018",
+        "claimed_value": 5.1,
+        "actual_value": 5116000000,
+        "difference": -16000000.0,
+        "difference_pct": 0.3127443315089914,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 5,100,000,000.00 vs Actual 5,116,000,000.00. Diff: 0.31% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|5,100,000,000.00 - 5,116,000,000.00| / |5,116,000,000.00|",
+            "result": 0.003127443315089914,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "net_income",
+            "fy": 2025,
+            "fq": 4,
+            "value": 5116000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 5,100,000,000.00 vs actual 5,116,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [],
+        "metric_type": "eps_diluted",
+        "scale": null,
+        "claim_id": "claim_019",
+        "speaker": "Darren Snellgrove",
+        "confidence": 1,
+        "claimed_value_raw": "$2.1",
+        "is_approximate": false,
+        "unit": "per_share",
+        "quote_text": "For the quarter, net earnings were $5.1 billion, and diluted earnings per share was $2.1 versus $1.41 a year ago.",
+        "claimed_value": 2.1,
+        "quote_start_char": 12633,
+        "quote_end_char": 12746,
+        "speaker_role": "management",
+        "gaap_classification": "gaap",
+        "metric_context": "Total",
+        "period": "Q4 2025",
+        "claim_type": "absolute"
+      },
+      "verification": {
+        "claim_id": "claim_019",
+        "claimed_value": 2.1,
+        "actual_value": 2.1,
+        "difference": 0.0,
+        "difference_pct": 0.0,
+        "tolerance_used": 0.015,
+        "computation_detail": "EPS: claimed $2.10 vs actual $2.10. Diff $0.000 within $0.015 tolerance.",
+        "computation_steps": [
+          {
+            "step": "EPS absolute comparison",
+            "formula": "|2.10 - 2.10| = 0.000",
+            "result": 0.0,
+            "threshold": 0.015
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "eps_diluted",
+            "fy": 2025,
+            "fq": 4,
+            "value": 2.1
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed $2.10 matches actual $2.10.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [
+          "Adjusted"
+        ],
+        "claimed_value_raw": "$6 billion",
+        "period": "Q4 2025",
+        "quote_end_char": 12904,
+        "quote_start_char": 12748,
+        "claim_type": "absolute",
+        "speaker": "Darren Snellgrove",
+        "metric_context": "Total",
+        "scale": "billions",
+        "speaker_role": "management",
+        "quote_text": "Adjusted net earnings for the quarter were $6 billion, and adjusted diluted earnings per share of $2.46, representing an increase of 21.5% compared to 2024.",
+        "confidence": 1,
+        "unit": "dollars",
+        "claim_id": "claim_020",
+        "is_approximate": false,
+        "claimed_value": 6,
+        "metric_type": "net_income",
+        "gaap_classification": "non_gaap"
+      },
+      "verification": {
+        "claim_id": "claim_020",
+        "claimed_value": 6,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Darren Snellgrove",
+        "metric_type": "eps_diluted",
+        "metric_context": "Total",
+        "gaap_classification": "non_gaap",
+        "claimed_value_raw": "$2.46",
+        "period": "Q4 2025",
+        "quote_text": "Adjusted net earnings for the quarter were $6 billion, and adjusted diluted earnings per share of $2.46, representing an increase of 21.5% compared to 2024.",
+        "confidence": 1,
+        "qualifiers": [
+          "adjusted"
+        ],
+        "claim_id": "claim_021",
+        "scale": null,
+        "speaker_role": "management",
+        "quote_end_char": 12904,
+        "claim_type": "absolute",
+        "quote_start_char": 12748,
+        "unit": "per_share",
+        "is_approximate": false,
+        "claimed_value": 2.46
+      },
+      "verification": {
+        "claim_id": "claim_021",
+        "claimed_value": 2.46,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claim_id": "claim_022",
+        "claimed_value": 94.2,
+        "period": "FY 2025",
+        "metric_type": "revenue",
+        "unit": "dollars",
+        "quote_start_char": 13071,
+        "is_approximate": false,
+        "confidence": 1,
+        "claim_type": "absolute",
+        "qualifiers": [],
+        "quote_end_char": 13130,
+        "scale": "billions",
+        "metric_context": "Total",
+        "quote_text": "For the full year 2025, worldwide sales were $94.2 billion.",
+        "claimed_value_raw": "$94.2 billion",
+        "speaker_role": "management",
+        "speaker": "Darren Snellgrove",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_022",
+        "claimed_value": 94.2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Darren Snellgrove",
+        "claimed_value_raw": "$10.79",
+        "metric_context": "Total",
+        "claim_id": "claim_023",
+        "qualifiers": [
+          "adjusted"
+        ],
+        "period": "FY 2025",
+        "unit": "per_share",
+        "speaker_role": "management",
+        "quote_start_char": 13857,
+        "gaap_classification": "non_gaap",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "metric_type": "eps_diluted",
+        "quote_end_char": 14031,
+        "quote_text": "Full-year 2025 adjusted net earnings were $26.2 billion, and adjusted diluted earnings per share was $10.79, both representing an increase of 8.1% compared to full year 2024.",
+        "is_approximate": false,
+        "scale": null,
+        "claimed_value": 10.79
+      },
+      "verification": {
+        "claim_id": "claim_023",
+        "claimed_value": 10.79,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "scale": "billions",
+        "claimed_value": 15.8,
+        "is_approximate": false,
+        "quote_end_char": 14434,
+        "gaap_classification": "gaap",
+        "period": "Q4 2025",
+        "claim_id": "claim_025",
+        "metric_context": "Innovative Medicine",
+        "quote_start_char": 14216,
+        "metric_type": "revenue",
+        "claim_type": "absolute",
+        "claimed_value_raw": "$15.8 billion",
+        "speaker": "Darren Snellgrove",
+        "speaker_role": "management",
+        "qualifiers": [],
+        "unit": "dollars",
+        "quote_text": "Beginning with innovative medicine, worldwide sales of $15.8 billion increased 7.9% despite an approximate 1110 basis point headwind from STELARA, illustrating the continued strength of our key brands and new launches."
+      },
+      "verification": {
+        "claim_id": "claim_025",
+        "claimed_value": 15.8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Innovative Medicine revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "quote_text": "Carvictee achieved sales of $555 million with growth of 63.2%, driven by share gains and site expansion.",
+        "claimed_value_raw": "$555 million",
+        "unit": "dollars",
+        "claim_id": "claim_026",
+        "claimed_value": 555,
+        "quote_start_char": 14883,
+        "metric_type": "revenue",
+        "qualifiers": [],
+        "metric_context": "Carvictee",
+        "speaker_role": "management",
+        "speaker": "Darren Snellgrove",
+        "is_approximate": false,
+        "claim_type": "absolute",
+        "period": "Q4 2025",
+        "gaap_classification": "gaap",
+        "quote_end_char": 14987,
+        "scale": "millions"
+      },
+      "verification": {
+        "claim_id": "claim_026",
+        "claimed_value": 555,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Carvictee revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Ribrovant plus Lascluse",
+        "metric_type": "revenue",
+        "scale": "millions",
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "period": "Q4 2025",
+        "qualifiers": [],
+        "claimed_value_raw": "$216 million",
+        "quote_text": "In lung cancer, Ribrovant plus Lascluse delivered sales of $216 million and growth of 76.5%, driven by continued launch uptake in all regions.",
+        "quote_start_char": 15261,
+        "claim_type": "absolute",
+        "speaker_role": "management",
+        "claim_id": "claim_027",
+        "quote_end_char": 15403,
+        "unit": "dollars",
+        "speaker": "Darren Snellgrove",
+        "confidence": 1,
+        "claimed_value": 216
+      },
+      "verification": {
+        "claim_id": "claim_027",
+        "claimed_value": 216,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Ribrovant plus Lascluse revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "$8.8 billion",
+        "claim_id": "claim_028",
+        "claim_type": "absolute",
+        "speaker": "Darren Snellgrove",
+        "speaker_role": "management",
+        "confidence": 1,
+        "metric_context": "MedTech",
+        "unit": "dollars",
+        "quote_start_char": 16131,
+        "scale": "billions",
+        "metric_type": "revenue",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "period": "Q4 2025",
+        "is_approximate": false,
+        "quote_end_char": 16351,
+        "claimed_value": 8.8,
+        "quote_text": "Now moving to medtech. Worldwide sales of $8.8 billion increased 5.8%, with growth of 6.6% in the US and 4.9% outside of the US, driven by strong performance in our three focus areas: cardiovascular, surgery, and vision."
+      },
+      "verification": {
+        "claim_id": "claim_028",
+        "claimed_value": 8.8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a MedTech revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "claimed_value": 19.7,
+        "metric_type": "free_cash_flow",
+        "gaap_classification": "unknown",
+        "quote_start_char": 22059,
+        "quote_end_char": 22216,
+        "scale": "billions",
+        "qualifiers": [],
+        "period": "FY 2025",
+        "quote_text": "The company generated $19.7 billion of free cash flow during 2025, on par with 2024 despite increased capital investment in the US and the impact of tariffs.",
+        "speaker_role": "cfo",
+        "metric_context": "Total",
+        "speaker": "Joe Wolk",
+        "claim_id": "claim_029",
+        "claimed_value_raw": "$19.7 billion",
+        "claim_type": "absolute",
+        "unit": "dollars",
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_029",
+        "claimed_value": 19.7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Cannot verify: full_year",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "revenue",
+        "confidence": 1,
+        "claim_type": "guidance",
+        "speaker_role": "cfo",
+        "period": "FY 2026",
+        "claimed_value_raw": "5.7%",
+        "scale": "ones",
+        "quote_end_char": 22785,
+        "claimed_value": 5.7,
+        "speaker": "Joe Wolk",
+        "is_approximate": false,
+        "metric_context": "Total",
+        "unit": "percent",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "quote_text": "Turning now to guidance for the full year 2026. We anticipate operational sales growth in the range of 5.7% to 6.7% with a midpoint of $100 billion or 6.2%.",
+        "quote_start_char": 22629,
+        "claim_id": "claim_030"
+      },
+      "verification": {
+        "claim_id": "claim_030",
+        "claimed_value": 5.7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Total",
+        "claim_type": "guidance",
+        "quote_end_char": 25428,
+        "period": "FY 2026",
+        "claim_id": "claim_032",
+        "scale": null,
+        "metric_type": "eps_diluted",
+        "claimed_value_raw": "$11.53",
+        "is_approximate": false,
+        "quote_text": "As such, we expect reported adjusted earnings per share of $11.53 at the midpoint.",
+        "gaap_classification": "non_gaap",
+        "quote_start_char": 25346,
+        "qualifiers": [
+          "reported adjusted",
+          "midpoint"
+        ],
+        "unit": "per_share",
+        "speaker_role": "cfo",
+        "speaker": "Joe Wolk",
+        "claimed_value": 11.53,
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_032",
+        "claimed_value": 11.53,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 28,
+    "verified": 3,
+    "close_match": 1,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 24
+  }
+}

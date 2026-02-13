@@ -1,0 +1,1132 @@
+{
+  "ticker": "AMZN",
+  "key": "AMZN_Q3_2025",
+  "year": 2025,
+  "quarter": 3,
+  "verified_at": "2026-02-13T12:10:17.487701",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "quote_end_char": 2408,
+        "quote_text": "we're reporting $180.2 billion in revenue, up 12% year-over-year",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "is_approximate": false,
+        "scale": "billions",
+        "quote_start_char": 2344,
+        "confidence": 1,
+        "metric_context": "Total",
+        "speaker_role": "ceo",
+        "claim_type": "absolute",
+        "claim_id": "claim_001",
+        "metric_type": "revenue",
+        "claimed_value_raw": "$180.2 billion",
+        "period": "Q3 2025",
+        "claimed_value": 180.2,
+        "unit": "dollars",
+        "speaker": "Andrew Jassy"
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 180.2,
+        "actual_value": 180169000000,
+        "difference": 31000000.0,
+        "difference_pct": 0.017206067636496847,
+        "tolerance_used": 0.005,
+        "computation_detail": "Claimed 180,200,000,000.00 vs Actual 180,169,000,000.00. Diff: 0.02% (threshold: 0.5%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|180,200,000,000.00 - 180,169,000,000.00| / |180,169,000,000.00|",
+            "result": 0.00017206067636496846,
+            "threshold": 0.005
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 3,
+            "value": 180169000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 180,200,000,000.00 vs actual 180,169,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Total",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "speaker_role": "ceo",
+        "claimed_value_raw": "$17.4 billion",
+        "claim_id": "claim_003",
+        "metric_type": "operating_income",
+        "speaker": "Andrew Jassy",
+        "period": "Q3 2025",
+        "unit": "dollars",
+        "claimed_value": 17.4,
+        "quote_end_char": 2532,
+        "quote_text": "Operating income was $17.4 billion, but would have been over $21 billion",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "quote_start_char": 2460,
+        "scale": "billions",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_003",
+        "claimed_value": 17.4,
+        "actual_value": 17422000000,
+        "difference": -22000000.0,
+        "difference_pct": 0.1262771208816439,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 17,400,000,000.00 vs Actual 17,422,000,000.00. Diff: 0.13% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|17,400,000,000.00 - 17,422,000,000.00| / |17,422,000,000.00|",
+            "result": 0.001262771208816439,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_income",
+            "fy": 2025,
+            "fq": 3,
+            "value": 17422000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 17,400,000,000.00 vs actual 17,422,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 2702,
+        "quote_text": "Trailing 12-month free cash flow was $14.8 billion.",
+        "gaap_classification": "unknown",
+        "qualifiers": [
+          "Trailing 12-month"
+        ],
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 2651,
+        "confidence": 1,
+        "metric_context": "Total",
+        "speaker_role": "ceo",
+        "claim_type": "absolute",
+        "metric_type": "free_cash_flow",
+        "claim_id": "claim_004",
+        "claimed_value_raw": "$14.8 billion",
+        "speaker": "Andrew Jassy",
+        "period": "Q3 2025",
+        "claimed_value": 14.8,
+        "unit": "dollars"
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 14.8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "ttm_or_multiperiod"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a trailing twelve-month (TTM), year-to-date, or multi-period figure. Our data contains single-quarter figures only.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q3 2025",
+        "claimed_value": 20.2,
+        "unit": "percent",
+        "speaker": "Andrew Jassy",
+        "claimed_value_raw": "20.2%",
+        "metric_type": "revenue",
+        "claim_id": "claim_005",
+        "claim_type": "yoy_growth",
+        "speaker_role": "ceo",
+        "metric_context": "AWS",
+        "confidence": 1,
+        "quote_start_char": 2777,
+        "is_approximate": false,
+        "scale": "ones",
+        "qualifiers": [],
+        "comparison_period": "Q3 2024",
+        "gaap_classification": "gaap",
+        "quote_text": "reaccelerating to 20.2% year-over-year",
+        "quote_end_char": 2815
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 20.2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a AWS revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "20% year-over-year growth on a $132 billion annualized run rate",
+        "quote_end_char": 3029,
+        "quote_start_char": 2966,
+        "scale": "billions",
+        "is_approximate": false,
+        "qualifiers": [
+          "annualized run rate"
+        ],
+        "gaap_classification": "gaap",
+        "claim_type": "absolute",
+        "speaker_role": "ceo",
+        "metric_context": "AWS",
+        "confidence": 1,
+        "speaker": "Andrew Jassy",
+        "period": "Q3 2025",
+        "claimed_value": 132,
+        "unit": "dollars",
+        "claimed_value_raw": "$132 billion",
+        "claim_id": "claim_006",
+        "metric_type": "revenue"
+      },
+      "verification": {
+        "claim_id": "claim_006",
+        "claimed_value": 132,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a AWS revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 7271,
+        "quote_text": "Connect has recently crested $1 billion annualized revenue run rate",
+        "qualifiers": [
+          "annualized revenue run rate"
+        ],
+        "gaap_classification": "gaap",
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 7204,
+        "confidence": 1,
+        "metric_context": "Amazon Connect",
+        "speaker_role": "ceo",
+        "claim_type": "absolute",
+        "metric_type": "revenue",
+        "claim_id": "claim_007",
+        "claimed_value_raw": "$1 billion",
+        "speaker": "Andrew Jassy",
+        "unit": "dollars",
+        "claimed_value": 1,
+        "period": "Q3 2025"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 1,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Amazon Connect revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value_raw": "$4 billion",
+        "claim_id": "claim_008",
+        "metric_type": "capital_expenditures",
+        "period": "Q3 2025",
+        "claimed_value": 4,
+        "unit": "dollars",
+        "speaker": "Andrew Jassy",
+        "metric_context": "Total",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "speaker_role": "ceo",
+        "qualifiers": [
+          "committing to expand rural delivery network"
+        ],
+        "gaap_classification": "gaap",
+        "quote_start_char": 11587,
+        "is_approximate": false,
+        "scale": "billions",
+        "quote_end_char": 11680,
+        "quote_text": "That includes committing over $4 billion to expand our rural delivery network across the U.S."
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim_by_value"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Claimed 4,000,000,000 is much less than total capital expenditures 35,095,000,000 \u2014 likely a segment, subset, or incremental amount.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_start_char": 13098,
+        "scale": "billions",
+        "is_approximate": false,
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "quote_text": "generating $17.6 billion of revenue in the quarter and growing 22% year-over-year.",
+        "quote_end_char": 13180,
+        "speaker": "Andrew Jassy",
+        "period": "Q3 2025",
+        "claimed_value": 17.6,
+        "unit": "dollars",
+        "claimed_value_raw": "$17.6 billion",
+        "metric_type": "revenue",
+        "claim_id": "claim_009",
+        "claim_type": "absolute",
+        "speaker_role": "ceo",
+        "metric_context": "Amazon ads",
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 17.6,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Amazon ads revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q3 2025",
+        "claimed_value": 180.2,
+        "unit": "dollars",
+        "speaker": "Brian Olsavsky",
+        "metric_type": "revenue",
+        "claim_id": "claim_011",
+        "claimed_value_raw": "$180.2 billion",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "metric_context": "Total",
+        "is_approximate": false,
+        "scale": "billions",
+        "quote_start_char": 16642,
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "quote_text": "Worldwide revenue was $180.2 billion, a 12% increase year-over-year",
+        "quote_end_char": 16709
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 180.2,
+        "actual_value": 180169000000,
+        "difference": 31000000.0,
+        "difference_pct": 0.017206067636496847,
+        "tolerance_used": 0.005,
+        "computation_detail": "Claimed 180,200,000,000.00 vs Actual 180,169,000,000.00. Diff: 0.02% (threshold: 0.5%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|180,200,000,000.00 - 180,169,000,000.00| / |180,169,000,000.00|",
+            "result": 0.00017206067636496846,
+            "threshold": 0.005
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 3,
+            "value": 180169000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 180,200,000,000.00 vs actual 180,169,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "Total",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "speaker_role": "cfo",
+        "claimed_value_raw": "$17.4 billion",
+        "claim_id": "claim_013",
+        "metric_type": "operating_income",
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 17.4,
+        "unit": "dollars",
+        "quote_end_char": 16839,
+        "quote_text": "In Q3, we reported worldwide operating income of $17.4 billion.",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "quote_start_char": 16776,
+        "scale": "billions",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": 17.4,
+        "actual_value": 17422000000,
+        "difference": -22000000.0,
+        "difference_pct": 0.1262771208816439,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 17,400,000,000.00 vs Actual 17,422,000,000.00. Diff: 0.13% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|17,400,000,000.00 - 17,422,000,000.00| / |17,422,000,000.00|",
+            "result": 0.001262771208816439,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_income",
+            "fy": 2025,
+            "fq": 3,
+            "value": 17422000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 17,400,000,000.00 vs actual 17,422,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "claim_type": "absolute",
+        "speaker_role": "cfo",
+        "metric_context": "Total",
+        "confidence": 1,
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 4.3,
+        "unit": "dollars",
+        "claimed_value_raw": "$4.3 billion",
+        "metric_type": "operating_expenses",
+        "claim_id": "claim_014",
+        "quote_text": "This operating income includes 2 special charges, which reduced operating income by $4.3 billion.",
+        "quote_end_char": 16937,
+        "quote_start_char": 16840,
+        "scale": "billions",
+        "is_approximate": false,
+        "qualifiers": [
+          "special charges"
+        ],
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 4.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim_by_value"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Claimed 4,300,000,000 is much less than total operating expenses 74,077,000,000 \u2014 likely a segment, subset, or incremental amount.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker": "Brian Olsavsky",
+        "unit": "dollars",
+        "claimed_value": 21.7,
+        "period": "Q3 2025",
+        "metric_type": "operating_income",
+        "claim_id": "claim_015",
+        "claimed_value_raw": "$21.7 billion",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "metric_context": "Total",
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 17403,
+        "qualifiers": [
+          "Excluding these 2 charges"
+        ],
+        "gaap_classification": "non_gaap",
+        "quote_text": "Excluding these 2 charges, worldwide operating income would have been $21.7 billion",
+        "quote_end_char": 17486
+      },
+      "verification": {
+        "claim_id": "claim_015",
+        "claimed_value": 21.7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_context": "North America",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "speaker_role": "cfo",
+        "claimed_value_raw": "$106.3 billion",
+        "metric_type": "revenue",
+        "claim_id": "claim_016",
+        "unit": "dollars",
+        "claimed_value": 106.3,
+        "period": "Q3 2025",
+        "speaker": "Brian Olsavsky",
+        "quote_end_char": 17747,
+        "quote_text": "In the North America segment, third quarter revenue was $106.3 billion",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "quote_start_char": 17677,
+        "is_approximate": false,
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_016",
+        "claimed_value": 106.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a North America revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "an increase of 11% year-over-year.",
+        "quote_end_char": 17783,
+        "scale": "ones",
+        "is_approximate": false,
+        "quote_start_char": 17749,
+        "qualifiers": [],
+        "comparison_period": "Q3 2024",
+        "gaap_classification": "gaap",
+        "speaker_role": "cfo",
+        "claim_type": "yoy_growth",
+        "confidence": 1,
+        "metric_context": "North America",
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 11,
+        "unit": "percent",
+        "metric_type": "revenue",
+        "claim_id": "claim_017",
+        "claimed_value_raw": "11%"
+      },
+      "verification": {
+        "claim_id": "claim_017",
+        "claimed_value": 11,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a North America revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "metric_context": "International",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "metric_type": "revenue",
+        "claim_id": "claim_018",
+        "claimed_value_raw": "$40.9 billion",
+        "speaker": "Brian Olsavsky",
+        "unit": "dollars",
+        "claimed_value": 40.9,
+        "period": "Q3 2025",
+        "quote_end_char": 17866,
+        "quote_text": "International segment revenue was $40.9 billion, an increase of 10% year-over-year",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 17784
+      },
+      "verification": {
+        "claim_id": "claim_018",
+        "claimed_value": 40.9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a International revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 18931,
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "quote_text": "North America segment operating income was $4.8 billion, with an operating margin of 4.5%.",
+        "quote_end_char": 19021,
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 4.8,
+        "unit": "dollars",
+        "claim_id": "claim_019",
+        "metric_type": "operating_income",
+        "claimed_value_raw": "$4.8 billion",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "metric_context": "North America"
+      },
+      "verification": {
+        "claim_id": "claim_019",
+        "claimed_value": 4.8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a North America operating income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "ones",
+        "is_approximate": false,
+        "quote_start_char": 18988,
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "quote_text": "with an operating margin of 4.5%.",
+        "quote_end_char": 19021,
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 4.5,
+        "unit": "percent",
+        "metric_type": "operating_margin",
+        "claim_id": "claim_020",
+        "claimed_value_raw": "4.5%",
+        "speaker_role": "cfo",
+        "claim_type": "margin",
+        "confidence": 1,
+        "metric_context": "North America"
+      },
+      "verification": {
+        "claim_id": "claim_020",
+        "claimed_value": 4.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a North America operating margin claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 19102,
+        "qualifiers": [
+          "Excluding the $2.5 billion charge related to the legal settlement"
+        ],
+        "gaap_classification": "non_gaap",
+        "quote_text": "North America segment operating income would have been $7.3 billion with an operating margin of 6.9%.",
+        "quote_end_char": 19203,
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 7.3,
+        "unit": "dollars",
+        "claim_id": "claim_021",
+        "metric_type": "operating_income",
+        "claimed_value_raw": "$7.3 billion",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "metric_context": "North America"
+      },
+      "verification": {
+        "claim_id": "claim_021",
+        "claimed_value": 7.3,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "non_gaap_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "quote_start_char": 19292,
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_end_char": 19382,
+        "quote_text": "International segment operating income was $1.2 billion, with an operating margin of 2.9%.",
+        "claimed_value_raw": "$1.2 billion",
+        "metric_type": "operating_income",
+        "claim_id": "claim_022",
+        "speaker": "Brian Olsavsky",
+        "unit": "dollars",
+        "claimed_value": 1.2,
+        "period": "Q3 2025",
+        "metric_context": "International",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "speaker_role": "cfo"
+      },
+      "verification": {
+        "claim_id": "claim_022",
+        "claimed_value": 1.2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a International operating income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 21282,
+        "quote_text": "Advertising revenue was $17.7 billion and growth accelerated for the third consecutive quarter.",
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 21187,
+        "confidence": 1,
+        "metric_context": "Advertising",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "claim_id": "claim_023",
+        "metric_type": "revenue",
+        "claimed_value_raw": "$17.7 billion",
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 17.7,
+        "unit": "dollars"
+      },
+      "verification": {
+        "claim_id": "claim_023",
+        "claimed_value": 17.7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Advertising revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 21438,
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "quote_text": "Moving next to our AWS segment. Revenue was $33 billion, up 20.2% year-over-year.",
+        "quote_end_char": 21519,
+        "speaker": "Brian Olsavsky",
+        "unit": "dollars",
+        "claimed_value": 33,
+        "period": "Q3 2025",
+        "metric_type": "revenue",
+        "claim_id": "claim_024",
+        "claimed_value_raw": "$33 billion",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "metric_context": "AWS"
+      },
+      "verification": {
+        "claim_id": "claim_024",
+        "claimed_value": 33,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a AWS revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 21837,
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "quote_text": "AWS operating income was $11.4 billion, and reflects our continued growth",
+        "quote_end_char": 21910,
+        "speaker": "Brian Olsavsky",
+        "unit": "dollars",
+        "claimed_value": 11.4,
+        "period": "Q3 2025",
+        "metric_type": "operating_income",
+        "claim_id": "claim_025",
+        "claimed_value_raw": "$11.4 billion",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "metric_context": "AWS"
+      },
+      "verification": {
+        "claim_id": "claim_025",
+        "claimed_value": 11.4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a AWS operating income claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "unit": "dollars",
+        "claimed_value": 34.2,
+        "period": "Q3 2025",
+        "speaker": "Brian Olsavsky",
+        "metric_type": "capital_expenditures",
+        "claim_id": "claim_026",
+        "claimed_value_raw": "$34.2 billion",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "metric_context": "Total",
+        "is_approximate": false,
+        "scale": "billions",
+        "quote_start_char": 22315,
+        "qualifiers": [],
+        "gaap_classification": "gaap",
+        "quote_text": "Now turning to our cash CapEx, which was $34.2 billion in Q3.",
+        "quote_end_char": 22376
+      },
+      "verification": {
+        "claim_id": "claim_026",
+        "claimed_value": 34.2,
+        "actual_value": 35095000000,
+        "difference": -894999999.9999962,
+        "difference_pct": 2.5502208291779347,
+        "tolerance_used": 0.02,
+        "computation_detail": "Claimed 34,200,000,000.00 vs Actual 35,095,000,000.00. Diff: 2.55% (threshold: 2.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|34,200,000,000.00 - 35,095,000,000.00| / |35,095,000,000.00|",
+            "result": 0.025502208291779346,
+            "threshold": 0.02
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "capital_expenditures",
+            "fy": 2025,
+            "fq": 3,
+            "value": 35095000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Close Match: claimed 34,200,000,000.00 vs actual 35,095,000,000.00 from fmp.",
+        "verdict": "close_match"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 23206,
+        "quote_text": "Looking ahead, we expect our full year cash CapEx to be approximately $125 billion in 2025, and we expect that amount will increase in 2026.",
+        "qualifiers": [
+          "approximately"
+        ],
+        "gaap_classification": "gaap",
+        "is_approximate": true,
+        "scale": "billions",
+        "quote_start_char": 23066,
+        "confidence": 1,
+        "metric_context": "Total",
+        "speaker_role": "cfo",
+        "claim_type": "guidance",
+        "metric_type": "capital_expenditures",
+        "claim_id": "claim_027",
+        "claimed_value_raw": "$125 billion",
+        "unit": "dollars",
+        "claimed_value": 125,
+        "period": "FY 2025",
+        "speaker": "Brian Olsavsky"
+      },
+      "verification": {
+        "claim_id": "claim_027",
+        "claimed_value": 125,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "net_income",
+        "claim_id": "claim_028",
+        "claimed_value_raw": "$21.2 billion",
+        "speaker": "Brian Olsavsky",
+        "period": "Q3 2025",
+        "claimed_value": 21.2,
+        "unit": "dollars",
+        "confidence": 1,
+        "metric_context": "Total",
+        "speaker_role": "cfo",
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "qualifiers": [],
+        "scale": "billions",
+        "is_approximate": false,
+        "quote_start_char": 23309,
+        "quote_end_char": 23433,
+        "quote_text": "our third quarter net income of $21.2 billion includes a pretax gain of $9.5 billion related to our investment in Anthropic."
+      },
+      "verification": {
+        "claim_id": "claim_028",
+        "claimed_value": 21.2,
+        "actual_value": 21187000000,
+        "difference": 13000000.0,
+        "difference_pct": 0.06135838013876433,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 21,200,000,000.00 vs Actual 21,187,000,000.00. Diff: 0.06% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|21,200,000,000.00 - 21,187,000,000.00| / |21,187,000,000.00|",
+            "result": 0.0006135838013876433,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "net_income",
+            "fy": 2025,
+            "fq": 3,
+            "value": 21187000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 21,200,000,000.00 vs actual 21,187,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    }
+  ],
+  "summary": {
+    "total": 25,
+    "verified": 5,
+    "close_match": 1,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 19
+  }
+}

@@ -1,0 +1,1146 @@
+{
+  "ticker": "AAPL",
+  "key": "AAPL_Q2_2025",
+  "year": 2025,
+  "quarter": 2,
+  "verified_at": "2026-02-13T12:10:17.477053",
+  "claims_with_verdicts": [
+    {
+      "claim": {
+        "unit": "dollars",
+        "gaap_classification": "gaap",
+        "metric_type": "revenue",
+        "period": "Q2 2025",
+        "claimed_value": 95.4,
+        "speaker": "Tim Cook",
+        "quote_text": "Today we are reporting $95.4 billion in revenue",
+        "scale": "billions",
+        "claim_type": "absolute",
+        "is_approximate": false,
+        "metric_context": "Total",
+        "quote_start_char": 1603,
+        "claim_id": "claim_001",
+        "quote_end_char": 1650,
+        "claimed_value_raw": "$95.4 billion",
+        "speaker_role": "ceo",
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_001",
+        "claimed_value": 95.4,
+        "actual_value": 95359000000,
+        "difference": 41000000.0,
+        "difference_pct": 0.04299541731771516,
+        "tolerance_used": 0.005,
+        "computation_detail": "Claimed 95,400,000,000.00 vs Actual 95,359,000,000.00. Diff: 0.04% (threshold: 0.5%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|95,400,000,000.00 - 95,359,000,000.00| / |95,359,000,000.00|",
+            "result": 0.0004299541731771516,
+            "threshold": 0.005
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 2,
+            "value": 95359000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 95,400,000,000.00 vs actual 95,359,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "quote_text": "up 5% from a year ago",
+        "quote_start_char": 1652,
+        "quote_end_char": 1673,
+        "speaker_role": "ceo",
+        "metric_context": "Total",
+        "claim_id": "claim_002",
+        "scale": "ones",
+        "claim_type": "yoy_growth",
+        "metric_type": "revenue",
+        "gaap_classification": "gaap",
+        "unit": "percent",
+        "period": "Q2 2025",
+        "claimed_value": 5,
+        "speaker": "Tim Cook",
+        "comparison_period": "Q2 2024",
+        "is_approximate": false,
+        "claimed_value_raw": "5%"
+      },
+      "verification": {
+        "claim_id": "claim_002",
+        "claimed_value": 5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value": 1.65,
+        "speaker_role": "ceo",
+        "metric_context": "Total",
+        "claim_type": "absolute",
+        "quote_start_char": 1733,
+        "claim_id": "claim_003",
+        "claimed_value_raw": "$1.65",
+        "scale": null,
+        "is_approximate": false,
+        "confidence": 1,
+        "unit": "per_share",
+        "speaker": "Tim Cook",
+        "metric_type": "eps_diluted",
+        "quote_text": "Diluted EPS was $1.65",
+        "quote_end_char": 1754,
+        "period": "Q2 2025",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_003",
+        "claimed_value": 1.65,
+        "actual_value": 1.65,
+        "difference": 0.0,
+        "difference_pct": 0.0,
+        "tolerance_used": 0.015,
+        "computation_detail": "EPS: claimed $1.65 vs actual $1.65. Diff $0.000 within $0.015 tolerance.",
+        "computation_steps": [
+          {
+            "step": "EPS absolute comparison",
+            "formula": "|1.65 - 1.65| = 0.000",
+            "result": 0.0,
+            "threshold": 0.015
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "eps_diluted",
+            "fy": 2025,
+            "fq": 2,
+            "value": 1.65
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed $1.65 matches actual $1.65.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "eps_diluted",
+        "scale": "ones",
+        "quote_start_char": 1756,
+        "gaap_classification": "gaap",
+        "speaker_role": "ceo",
+        "is_approximate": false,
+        "speaker": "Tim Cook",
+        "claim_id": "claim_004",
+        "period": "Q2 2025",
+        "quote_text": "up 8% year-over-year",
+        "quote_end_char": 1776,
+        "claim_type": "yoy_growth",
+        "claimed_value": 8,
+        "metric_context": "Total",
+        "comparison_period": "Q2 2024",
+        "unit": "percent",
+        "claimed_value_raw": "8%",
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_004",
+        "claimed_value": 8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Missing data for period(s): Q2 2024",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "ceo",
+        "quote_text": "Services achieved an all-time revenue record, growing 12% compared to the prior year.",
+        "quote_end_char": 1890,
+        "confidence": 1,
+        "quote_start_char": 1805,
+        "claimed_value": 12,
+        "metric_context": "Services",
+        "comparison_period": "Q2 2024",
+        "unit": "percent",
+        "metric_type": "revenue",
+        "scale": "ones",
+        "claim_type": "yoy_growth",
+        "gaap_classification": "gaap",
+        "period": "Q2 2025",
+        "speaker": "Tim Cook",
+        "claimed_value_raw": "12%",
+        "claim_id": "claim_005",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_005",
+        "claimed_value": 12,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Services revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "revenue",
+        "claim_type": "absolute",
+        "metric_context": "iPhone",
+        "is_approximate": false,
+        "gaap_classification": "gaap",
+        "speaker": "Tim Cook",
+        "unit": "dollars",
+        "claimed_value_raw": "$46.8 billion",
+        "quote_text": "iPhone revenue was $46.8 billion",
+        "quote_end_char": 3241,
+        "claim_id": "claim_006",
+        "scale": "billions",
+        "period": "Q2 2025",
+        "claimed_value": 46.8,
+        "speaker_role": "ceo",
+        "quote_start_char": 3209,
+        "confidence": 1
+      },
+      "verification": {
+        "claim_id": "claim_006",
+        "claimed_value": 46.8,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a iPhone revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "comparison_period": "Q2 2024",
+        "quote_start_char": 3243,
+        "speaker_role": "ceo",
+        "claimed_value": 2,
+        "unit": "percent",
+        "claim_id": "claim_007",
+        "claimed_value_raw": "2%",
+        "period": "Q2 2025",
+        "quote_end_char": 3264,
+        "scale": "ones",
+        "metric_context": "iPhone",
+        "speaker": "Tim Cook",
+        "is_approximate": false,
+        "gaap_classification": "gaap",
+        "claim_type": "yoy_growth",
+        "metric_type": "revenue",
+        "confidence": 1,
+        "quote_text": "up 2% from a year ago"
+      },
+      "verification": {
+        "claim_id": "claim_007",
+        "claimed_value": 2,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a iPhone revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "period": "Q2 2025",
+        "speaker": "Tim Cook",
+        "speaker_role": "ceo",
+        "quote_end_char": 4021,
+        "scale": "billions",
+        "claim_type": "absolute",
+        "claimed_value_raw": "$7.9 billion",
+        "quote_text": "Mac revenue was $7.9 billion",
+        "claim_id": "claim_008",
+        "metric_type": "revenue",
+        "metric_context": "Mac",
+        "confidence": 1,
+        "is_approximate": false,
+        "claimed_value": 7.9,
+        "quote_start_char": 3993,
+        "unit": "dollars",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_008",
+        "claimed_value": 7.9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Mac revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "is_approximate": false,
+        "claimed_value_raw": "7%",
+        "comparison_period": "Q2 2024",
+        "speaker_role": "ceo",
+        "quote_text": "7% higher year over year",
+        "quote_start_char": 4023,
+        "metric_context": "Mac",
+        "quote_end_char": 4047,
+        "unit": "percent",
+        "claim_type": "yoy_growth",
+        "confidence": 1,
+        "claimed_value": 7,
+        "period": "Q2 2025",
+        "metric_type": "revenue",
+        "claim_id": "claim_009",
+        "speaker": "Tim Cook",
+        "gaap_classification": "gaap",
+        "scale": "ones"
+      },
+      "verification": {
+        "claim_id": "claim_009",
+        "claimed_value": 7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Mac revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "revenue",
+        "quote_text": "revenue for the quarter was $6.4 billion",
+        "speaker": "Tim Cook",
+        "period": "Q2 2025",
+        "scale": "billions",
+        "is_approximate": false,
+        "metric_context": "iPad",
+        "speaker_role": "ceo",
+        "claimed_value_raw": "$6.4 billion",
+        "quote_end_char": 4830,
+        "claim_id": "claim_010",
+        "unit": "dollars",
+        "confidence": 1,
+        "claimed_value": 6.4,
+        "quote_start_char": 4790,
+        "claim_type": "absolute",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_010",
+        "claimed_value": 6.4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a iPad revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "claimed_value": 15,
+        "period": "Q2 2025",
+        "claimed_value_raw": "15%",
+        "quote_text": "up 15% from a year ago",
+        "speaker_role": "ceo",
+        "gaap_classification": "gaap",
+        "quote_start_char": 4832,
+        "comparison_period": "Q2 2024",
+        "quote_end_char": 4854,
+        "unit": "percent",
+        "is_approximate": false,
+        "speaker": "Tim Cook",
+        "confidence": 1,
+        "metric_type": "revenue",
+        "scale": "ones",
+        "metric_context": "iPad",
+        "claim_type": "yoy_growth",
+        "claim_id": "claim_011"
+      },
+      "verification": {
+        "claim_id": "claim_011",
+        "claimed_value": 15,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a iPad revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 5442,
+        "speaker_role": "ceo",
+        "claimed_value_raw": "$7.5 billion",
+        "claim_type": "absolute",
+        "confidence": 1,
+        "quote_text": "Across wearables, home, and accessories, revenue was $7.5 billion",
+        "claimed_value": 7.5,
+        "unit": "dollars",
+        "period": "Q2 2025",
+        "gaap_classification": "gaap",
+        "speaker": "Tim Cook",
+        "metric_context": "Wearables, Home, and Accessories",
+        "quote_start_char": 5377,
+        "metric_type": "revenue",
+        "claim_id": "claim_012",
+        "is_approximate": false,
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_012",
+        "claimed_value": 7.5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Wearables, Home, and Accessories revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "revenue",
+        "scale": "ones",
+        "is_approximate": false,
+        "comparison_period": "Q2 2024",
+        "quote_end_char": 5467,
+        "claimed_value_raw": "down 5%",
+        "claimed_value": -5,
+        "unit": "percent",
+        "period": "Q2 2025",
+        "speaker_role": "ceo",
+        "speaker": "Tim Cook",
+        "metric_context": "Wearables, Home, and Accessories",
+        "gaap_classification": "gaap",
+        "claim_type": "yoy_growth",
+        "quote_start_char": 5444,
+        "quote_text": "down 5% from a year ago",
+        "confidence": 1,
+        "claim_id": "claim_013"
+      },
+      "verification": {
+        "claim_id": "claim_013",
+        "claimed_value": -5,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Wearables, Home, and Accessories revenue growth claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "metric_type": "revenue",
+        "speaker": "Tim Cook",
+        "claim_id": "claim_014",
+        "period": "Q2 2025",
+        "quote_text": "Let's now turn to services, where we achieved an all-time revenue record of $26.6 billion",
+        "quote_start_char": 6812,
+        "scale": "billions",
+        "speaker_role": "ceo",
+        "claim_type": "absolute",
+        "gaap_classification": "gaap",
+        "unit": "dollars",
+        "quote_end_char": 6901,
+        "claimed_value": 26.6,
+        "claimed_value_raw": "$26.6 billion",
+        "is_approximate": false,
+        "metric_context": "Services"
+      },
+      "verification": {
+        "claim_id": "claim_014",
+        "claimed_value": 26.6,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Services revenue claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 11699,
+        "metric_context": "Total",
+        "claimed_value": 900,
+        "speaker_role": "ceo",
+        "quote_start_char": 11643,
+        "qualifiers": [
+          "estimate"
+        ],
+        "unit": "dollars",
+        "speaker": "Tim Cook",
+        "confidence": 1,
+        "is_approximate": true,
+        "claim_id": "claim_015",
+        "metric_type": "cost_of_revenue",
+        "claimed_value_raw": "$900 million",
+        "claim_type": "guidance",
+        "quote_text": "we estimate the impact to add $900 million to our costs.",
+        "scale": "millions",
+        "period": "Q3 2025",
+        "gaap_classification": "gaap"
+      },
+      "verification": {
+        "claim_id": "claim_015",
+        "claimed_value": 900,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "guidance_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Forward-looking guidance claims cannot be verified against historical data.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "Company gross margin is 47.1%",
+        "claim_id": "claim_016",
+        "claimed_value": 47.1,
+        "gaap_classification": "gaap",
+        "metric_type": "gross_margin",
+        "quote_end_char": 13418,
+        "metric_context": "Total",
+        "speaker_role": "cfo",
+        "is_approximate": false,
+        "unit": "percent",
+        "claim_type": "margin",
+        "confidence": 1,
+        "quote_start_char": 13389,
+        "speaker": "Kevin Parekh",
+        "scale": "ones",
+        "period": "Q2 2025",
+        "claimed_value_raw": "47.1%"
+      },
+      "verification": {
+        "claim_id": "claim_016",
+        "claimed_value": 47.1,
+        "actual_value": 47.050619238876244,
+        "difference": 0.04938076112375711,
+        "difference_pct": 0.04938076112375711,
+        "tolerance_used": 0.3,
+        "computation_detail": "Claimed 47.1%. Actual: 44,867,000,000 / 95,359,000,000 = 47.05%. Diff: 0.05 pp (threshold: 0.3 pp)",
+        "computation_steps": [
+          {
+            "step": "Compute gross_margin",
+            "formula": "44,867,000,000 / 95,359,000,000 * 100",
+            "result": 47.050619238876244
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "gross_profit",
+            "fy": 2025,
+            "fq": 2,
+            "value": 44867000000
+          },
+          {
+            "field": "revenue",
+            "fy": 2025,
+            "fq": 2,
+            "value": 95359000000
+          }
+        ],
+        "evidence_source": "fmp (gross_profit), fmp (revenue)",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Margin claim: 47.1% claimed. Computed: 44,867,000,000 / 95,359,000,000 = 47.05%.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "cfo",
+        "speaker": "Kevin Parekh",
+        "unit": "percent",
+        "gaap_classification": "gaap",
+        "claim_id": "claim_017",
+        "quote_end_char": 13558,
+        "claimed_value": 35.9,
+        "scale": "ones",
+        "claim_type": "margin",
+        "is_approximate": false,
+        "quote_start_char": 13527,
+        "quote_text": "Products gross margin was 35.9%",
+        "metric_context": "Products",
+        "confidence": 1,
+        "claimed_value_raw": "35.9%",
+        "period": "Q2 2025",
+        "metric_type": "gross_margin"
+      },
+      "verification": {
+        "claim_id": "claim_017",
+        "claimed_value": 35.9,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Products gross margin claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "metric_type": "gross_margin",
+        "speaker_role": "cfo",
+        "quote_text": "Services gross margin was 75.7%",
+        "gaap_classification": "gaap",
+        "quote_start_char": 13662,
+        "scale": "ones",
+        "confidence": 1,
+        "unit": "percent",
+        "metric_context": "Services",
+        "claim_id": "claim_018",
+        "is_approximate": false,
+        "period": "Q2 2025",
+        "claim_type": "margin",
+        "claimed_value_raw": "75.7%",
+        "quote_end_char": 13693,
+        "speaker": "Kevin Parekh",
+        "claimed_value": 75.7
+      },
+      "verification": {
+        "claim_id": "claim_018",
+        "claimed_value": 75.7,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [
+          "segment_claim"
+        ],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "This is a Services gross margin claim. Our data only includes total company-level figures.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "cfo",
+        "gaap_classification": "gaap",
+        "metric_type": "operating_expenses",
+        "scale": "billions",
+        "unit": "dollars",
+        "claim_type": "absolute",
+        "speaker": "Kevin Parekh",
+        "claimed_value_raw": "$15.3 billion",
+        "confidence": 1,
+        "quote_start_char": 13800,
+        "quote_text": "Operating expenses landed at $15.3 billion",
+        "metric_context": "Total",
+        "quote_end_char": 13842,
+        "claim_id": "claim_019",
+        "is_approximate": false,
+        "period": "Q2 2025",
+        "claimed_value": 15.3
+      },
+      "verification": {
+        "claim_id": "claim_019",
+        "claimed_value": 15.3,
+        "actual_value": 15278000000,
+        "difference": 22000000.0,
+        "difference_pct": 0.14399790548501112,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 15,300,000,000.00 vs Actual 15,278,000,000.00. Diff: 0.14% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|15,300,000,000.00 - 15,278,000,000.00| / |15,278,000,000.00|",
+            "result": 0.0014399790548501113,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_expenses",
+            "fy": 2025,
+            "fq": 2,
+            "value": 15278000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 15,300,000,000.00 vs actual 15,278,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "quote_end_char": 13894,
+        "period": "Q2 2025",
+        "confidence": 1,
+        "metric_context": "Total",
+        "gaap_classification": "gaap",
+        "quote_start_char": 13866,
+        "metric_type": "net_income",
+        "scale": "billions",
+        "claimed_value": 24.8,
+        "claim_type": "absolute",
+        "speaker": "Kevin Parekh",
+        "unit": "dollars",
+        "claimed_value_raw": "$24.8 billion",
+        "speaker_role": "cfo",
+        "quote_text": "Net income was $24.8 billion",
+        "claim_id": "claim_020",
+        "is_approximate": false
+      },
+      "verification": {
+        "claim_id": "claim_020",
+        "claimed_value": 24.8,
+        "actual_value": 24780000000,
+        "difference": 20000000.0,
+        "difference_pct": 0.08071025020177562,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 24,800,000,000.00 vs Actual 24,780,000,000.00. Diff: 0.08% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|24,800,000,000.00 - 24,780,000,000.00| / |24,780,000,000.00|",
+            "result": 0.0008071025020177562,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "net_income",
+            "fy": 2025,
+            "fq": 2,
+            "value": 24780000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 24,800,000,000.00 vs actual 24,780,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "quote_end_char": 14039,
+        "gaap_classification": "unknown",
+        "unit": "dollars",
+        "quote_text": "Operating cash flow was also strong at $24 billion.",
+        "claimed_value_raw": "$24 billion",
+        "claimed_value": 24,
+        "period": "Q2 2025",
+        "speaker": "Kevin Parekh",
+        "is_approximate": false,
+        "metric_type": "operating_cash_flow",
+        "metric_context": "Total",
+        "confidence": 1,
+        "quote_start_char": 13988,
+        "speaker_role": "cfo",
+        "claim_id": "claim_021",
+        "claim_type": "absolute"
+      },
+      "verification": {
+        "claim_id": "claim_021",
+        "claimed_value": 24,
+        "actual_value": 23952000000,
+        "difference": 48000000,
+        "difference_pct": 0.2004008016032064,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 24,000,000,000.00 vs Actual 23,952,000,000.00. Diff: 0.20% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|24,000,000,000.00 - 23,952,000,000.00| / |23,952,000,000.00|",
+            "result": 0.002004008016032064,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "operating_cash_flow",
+            "fy": 2025,
+            "fq": 2,
+            "value": 23952000000
+          }
+        ],
+        "evidence_source": "fmp",
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Verified: claimed 24,000,000,000.00 vs actual 23,952,000,000.00 from fmp.",
+        "verdict": "verified"
+      }
+    },
+    {
+      "claim": {
+        "unit": "dollars",
+        "claimed_value_raw": "$133 billion",
+        "confidence": 1,
+        "claimed_value": 133,
+        "claim_id": "claim_022",
+        "metric_type": "other",
+        "is_approximate": false,
+        "claim_type": "absolute",
+        "quote_start_char": 17790,
+        "period": "Q2 2025",
+        "metric_context": "Total",
+        "speaker_role": "cfo",
+        "qualifiers": [
+          "cash and marketable securities"
+        ],
+        "speaker": "Kevin Parekh",
+        "quote_text": "We ended the quarter with $133 billion in cash and marketable securities.",
+        "quote_end_char": 17863,
+        "gaap_classification": "unknown",
+        "scale": "billions"
+      },
+      "verification": {
+        "claim_id": "claim_022",
+        "claimed_value": 133,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "scale": "billions",
+        "quote_text": "$98 billion in total debt.",
+        "speaker_role": "cfo",
+        "is_approximate": false,
+        "quote_end_char": 17986,
+        "period": "Q2 2025",
+        "unit": "dollars",
+        "quote_start_char": 17960,
+        "claimed_value_raw": "$98 billion",
+        "metric_type": "other",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "claim_id": "claim_023",
+        "gaap_classification": "unknown",
+        "qualifiers": [
+          "total debt"
+        ],
+        "speaker": "Kevin Parekh",
+        "claimed_value": 98,
+        "metric_context": "Total"
+      },
+      "verification": {
+        "claim_id": "claim_023",
+        "claimed_value": 98,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "speaker_role": "cfo",
+        "scale": "billions",
+        "claim_type": "absolute",
+        "claimed_value_raw": "$35 billion",
+        "quote_end_char": 18050,
+        "unit": "dollars",
+        "quote_start_char": 17998,
+        "confidence": 1,
+        "quote_text": "at the end of the quarter, net cash was $35 billion.",
+        "metric_context": "Total",
+        "claim_id": "claim_024",
+        "period": "Q2 2025",
+        "gaap_classification": "unknown",
+        "is_approximate": false,
+        "qualifiers": [
+          "net cash"
+        ],
+        "claimed_value": 35,
+        "metric_type": "other",
+        "speaker": "Kevin Parekh"
+      },
+      "verification": {
+        "claim_id": "claim_024",
+        "claimed_value": 35,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "quote_text": "today our board authorized an additional $100 billion for share repurchases",
+        "quote_start_char": 18325,
+        "claimed_value": 100,
+        "is_approximate": false,
+        "speaker": "Kevin Parekh",
+        "quote_end_char": 18400,
+        "qualifiers": [
+          "share repurchases"
+        ],
+        "period": "Q2 2025",
+        "claimed_value_raw": "$100 billion",
+        "confidence": 1,
+        "claim_type": "absolute",
+        "unit": "dollars",
+        "claim_id": "claim_025",
+        "scale": "billions",
+        "gaap_classification": "unknown",
+        "speaker_role": "cfo",
+        "metric_context": "Total",
+        "metric_type": "other"
+      },
+      "verification": {
+        "claim_id": "claim_025",
+        "claimed_value": 100,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    },
+    {
+      "claim": {
+        "confidence": 1,
+        "metric_type": "other",
+        "claimed_value_raw": "4%",
+        "speaker": "Kevin Parekh",
+        "unit": "percent",
+        "period": "Q2 2025",
+        "comparison_period": "prior dividend level",
+        "gaap_classification": "unknown",
+        "qualifiers": [
+          "raising dividend"
+        ],
+        "speaker_role": "cfo",
+        "scale": "ones",
+        "quote_text": "We're also raising our dividend by 4%",
+        "quote_end_char": 18494,
+        "claim_id": "claim_026_growth_div",
+        "is_approximate": false,
+        "claim_type": "yoy_growth",
+        "metric_context": "Total",
+        "claimed_value": 4,
+        "quote_start_char": 18457
+      },
+      "verification": {
+        "claim_id": "claim_026_growth_div",
+        "claimed_value": 4,
+        "actual_value": null,
+        "difference": null,
+        "difference_pct": null,
+        "tolerance_used": null,
+        "computation_detail": null,
+        "computation_steps": [],
+        "financial_facts_used": [],
+        "evidence_source": null,
+        "flags": [],
+        "misleading_flags": [],
+        "misleading_reasons": [],
+        "explanation": "Metric 'other' not in verification catalog.",
+        "verdict": "unverifiable"
+      }
+    }
+  ],
+  "summary": {
+    "total": 26,
+    "verified": 6,
+    "close_match": 0,
+    "mismatch": 0,
+    "misleading": 0,
+    "unverifiable": 20
+  }
+}
