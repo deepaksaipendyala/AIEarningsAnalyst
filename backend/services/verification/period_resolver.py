@@ -21,10 +21,6 @@ def resolve_periods(claim: dict, transcript_year: int, transcript_quarter: int) 
         target_year = transcript_year
         target_quarter = transcript_quarter
 
-    # Full year claims (quarter=0) are not verifiable in MVP
-    if target_quarter == 0:
-        return {"target": (target_year, 0), "error": "full_year"}
-
     result = {"target": (target_year, target_quarter)}
 
     claim_type = claim.get("claim_type", "")
@@ -37,10 +33,13 @@ def resolve_periods(claim: dict, transcript_year: int, transcript_quarter: int) 
             if comp_parsed:
                 result["baseline"] = comp_parsed
                 return result
-        # Default YoY: same quarter, previous year
+        # Default YoY: same quarter, previous year (or full-year to full-year)
         result["baseline"] = (target_year - 1, target_quarter)
 
     elif claim_type == "qoq_growth":
+        # Quarter-over-quarter is undefined for full-year periods.
+        if target_quarter == 0:
+            return result
         # Previous quarter
         if target_quarter == 1:
             result["baseline"] = (target_year - 1, 4)

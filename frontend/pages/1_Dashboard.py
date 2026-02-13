@@ -132,6 +132,6 @@ with st.sidebar:
     st.divider()
     st.markdown("### Tolerance Reference")
     st.caption("Revenue: ±0.5%")
-    st.caption("EPS: ±$0.01")
-    st.caption("Margins: ±0.3 pp")
+    st.caption("EPS: ±$0.005")
+    st.caption("Margins: ±0.5 pp")
     st.caption("Growth rates: ±1.0 pp")

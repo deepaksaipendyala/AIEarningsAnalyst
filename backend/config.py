@@ -26,6 +26,13 @@ class Settings(BaseSettings):
     # Pipeline
     quarters_to_fetch: int = 4
 
+    # RAG / Analyst
+    rag_generation_model: str = "openai/gpt-4.1-mini"
+    rag_embedding_model: str = "openai/text-embedding-3-large"
+    rag_embedding_mode: str = "hash"
+    rag_chunk_words: int = 220
+    rag_chunk_overlap: int = 40
+
     model_config = {"env_file": ".env", "extra": "ignore"}
 
     @property
@@ -44,8 +51,27 @@ class Settings(BaseSettings):
     def verdicts_dir(self) -> Path:
         return self.data_dir / "verdicts"
 
+    @property
+    def sec_dir(self) -> Path:
+        return self.data_dir / "sec"
+
+    @property
+    def rag_dir(self) -> Path:
+        return self.data_dir / "rag"
+
+    @property
+    def rag_db_path(self) -> Path:
+        return self.rag_dir / "knowledge.db"
+
     def ensure_dirs(self):
-        for d in [self.transcripts_dir, self.financials_dir, self.claims_dir, self.verdicts_dir]:
+        for d in [
+            self.transcripts_dir,
+            self.financials_dir,
+            self.claims_dir,
+            self.verdicts_dir,
+            self.sec_dir,
+            self.rag_dir,
+        ]:
             d.mkdir(parents=True, exist_ok=True)
 
 

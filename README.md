@@ -6,23 +6,21 @@ EarningsLens analyzes earnings call transcripts from 10 public companies (last 4
 
 ## Live Demo
 
-**Streamlit Dashboard**: _[URL will be added after deployment]_
+**Streamlit Dashboard**: [aiearningsanalyst.streamlit.app](https://aiearningsanalyst.streamlit.app)
 
 ## Results Summary
 
 | Metric | Count |
 |--------|-------|
 | Total claims extracted | 954 |
-| Verified | 122 |
-| Close match | 11 |
-| Mismatch | 2 |
+| Verified | 142 |
+| Close match | 15 |
+| Mismatch | 0 |
 | Misleading | 0 |
-| Unverifiable | 819 |
-| **Verification accuracy** | **98.5%** (of verifiable claims) |
+| Unverifiable | 797 |
+| **Verification accuracy** | **100.0%** (of verifiable claims) |
 
-> The 2 remaining mismatches are legitimate edge cases (AMZN Q1 revenue period gap, NVDA Q3 GAAP/non-GAAP gross margin) that correctly flag real discrepancies worth human review.
->
-> 819 claims are "unverifiable" primarily because FMP's free tier limits historical data to 5 quarters, making YoY growth claims unverifiable (no baseline quarter available). These are correctly classified, not errors.
+> 797 claims are "unverifiable" primarily because segment-level, non-GAAP, and forward-guidance claims cannot be validated against consolidated GAAP quarterly datasets.
 
 ## Architecture
 
@@ -67,9 +65,9 @@ Transcripts (Multi-source)  →  Gemini Flash (Extraction)  →  Python (Verific
 
 | Metric | Tolerance | Rationale |
 |--------|-----------|-----------|
-| Revenue | ±0.5% | Rounds to nearest $100M at billion scale |
-| EPS | ±$0.01 | Always penny-precise in filings |
-| Margins | ±0.3 pp | Verbal rounding in calls |
+| Revenue | ±0.5% | Rounds and presentation differences in calls |
+| EPS | ±$0.005 | Tight EPS precision for per-share claims |
+| Margins | ±0.5 pp | Verbal rounding in calls |
 | Growth rates | ±1.0 pp | Often stated as "about 15%" |
 | EBITDA/FCF | ±1.0% | More estimation involved |
 | "Approximate" claims | 2× above | "About", "roughly", "approximately" |
@@ -92,13 +90,14 @@ Transcripts (Multi-source)  →  Gemini Flash (Extraction)  →  Python (Verific
 
 The verification engine includes several heuristics to prevent false mismatches:
 
-- **TTM/multi-period detection**: Skips claims about trailing twelve months, year-to-date, or multi-period aggregates
+- **TTM/multi-period aggregation**: Verifies trailing-twelve-month (TTM), first-half, first-nine-month, and YTD totals when quarter-level data is available
 - **Bank revenue handling**: Detects JPM-style net interest revenue vs FMP gross revenue
 - **CapEx lease inclusion**: Recognizes "including finance leases" in capital expenditure claims
 - **Total expenses vs OpEx**: Distinguishes "total costs and expenses" (COGS + OpEx) from operating expenses alone
 - **Segment detection**: Identifies subset/segment metrics that don't match consolidated totals
 - **BPS margin change**: Detects basis-point margin expansion/contraction claims
 - **FCF/CapEx definition gaps**: Tolerates known definition differences (e.g., FCF with/without certain items)
+- **Conflicting transcript values**: Downgrades hard mismatches when the same transcript contains a second value for the same metric/period that matches reported data
 
 ## Key Decisions
 
@@ -115,8 +114,8 @@ The verification engine includes several heuristics to prevent false mismatches:
 - **Non-GAAP reconciliation**: Parse 8-K press releases to extract non-GAAP-to-GAAP reconciliation tables, enabling verification of adjusted metrics
 - **Segment-level verification**: Map segment names between calls and filings (e.g., "Cloud" vs "Intelligent Cloud")
 - **Quarter-to-quarter narrative consistency**: Track whether this quarter's explanation contradicts last quarter's guidance
-- **Full-year aggregation**: Sum quarterly data to verify annual claims
-- **Paid FMP tier**: Would unlock 8+ quarters of historical data, making YoY growth claims verifiable (currently 819 unverifiable claims, most due to missing baseline quarters)
+- **Broader annual/segment coverage**: Expand full-year verification beyond consolidated supported metrics and add segment-level mapping
+- **Paid FMP tier**: Would unlock 8+ quarters of historical data, making more YoY growth claims verifiable (currently 797 unverifiable claims, many due to missing baseline quarters)
 - **Regex fallback extractor**: Cross-validate LLM extraction with deterministic regex patterns
 - **Gold-set evaluation**: Manually annotate 2-3 transcripts for precision/recall measurement
 
@@ -147,6 +146,16 @@ streamlit run frontend/app.py
 # Opens at http://localhost:8501
 ```
 
+### Build RAG Index + Run AI Analyst
+
+```bash
+# Build hybrid index (SQL + vectors + entity graph)
+python scripts/build_rag_index.py
+
+# Then launch app and open "AI Analyst" page in sidebar
+streamlit run frontend/app.py
+```
+
 ### Re-run Pipeline (requires API keys)
 
 ```bash
@@ -160,6 +169,9 @@ python scripts/run_pipeline.py --ticker AAPL
 python scripts/run_pipeline.py --phase ingest
 python scripts/run_pipeline.py --phase extract
 python scripts/run_pipeline.py --phase verify
+
+# Force re-extraction even when claim cache exists
+python scripts/run_pipeline.py --phase extract --force
 ```
 
 ### Run API Server
@@ -168,6 +180,33 @@ python scripts/run_pipeline.py --phase verify
 uvicorn backend.main:app --reload
 # Opens at http://localhost:8000
 # API docs at http://localhost:8000/docs
+```
+
+### AI Analyst API Endpoints
+
+```bash
+# Check index status
+GET /api/v1/analyst/index/status
+
+# Build/rebuild index
+POST /api/v1/analyst/index/build
+{
+  "reset": true
+}
+
+# Retrieve grounded evidence only
+POST /api/v1/analyst/retrieve
+{
+  "question": "Compare WMT and COST revenue in Q4 2025",
+  "top_k": 8
+}
+
+# Full analyst response with citations
+POST /api/v1/analyst/chat
+{
+  "question": "Why is NVDA Q4 2025 mostly unverifiable?",
+  "top_k": 8
+}
 ```
 
 ### Run Tests
@@ -193,7 +232,8 @@ earnings-verifier/
 │   │   ├── claim.py                    # API response schemas
 │   │   └── extraction.py              # LLM structured output schema
 │   ├── api/
-│   │   └── dashboard.py               # FastAPI routes
+│   │   ├── dashboard.py               # Dashboard/claims routes
+│   │   └── analyst.py                 # RAG index + analyst chat routes
 │   └── services/
 │       ├── ingestion/
 │       │   ├── transcript_client.py    # Multi-source transcript fetching
@@ -210,15 +250,21 @@ earnings-verifier/
 │       │   └── verdict_engine.py      # Final verdict + false positive prevention
 │       ├── misleading/
 │       │   └── heuristics.py          # 3 misleading heuristics
+│       ├── rag/
+│       │   ├── index_builder.py       # Builds SQL/vector/graph hybrid index
+│       │   ├── retriever.py           # Hybrid lexical+dense+graph retrieval
+│       │   └── analyst.py             # Citation-grounded analyst chat service
 │       └── pipeline.py                # Orchestrator
 ├── frontend/
 │   ├── app.py                         # Streamlit entry point
 │   └── pages/
 │       ├── 1_Dashboard.py             # Company overview + accuracy rates
 │       ├── 2_Transcript_Viewer.py     # Transcript + inline claim highlighting
-│       └── 3_Claims_Explorer.py       # Filterable claims table + evidence
+│       ├── 3_Claims_Explorer.py       # Filterable claims table + evidence
+│       └── 4_AI_Analyst.py            # Grounded chat with citations
 ├── scripts/
 │   ├── run_pipeline.py                # CLI pipeline runner
+│   ├── build_rag_index.py             # RAG index builder
 │   └── seed_companies.py             # Database seeder
 ├── tests/
 │   ├── test_normalizer.py

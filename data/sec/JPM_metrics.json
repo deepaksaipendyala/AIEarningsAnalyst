@@ -1,0 +1,471 @@
+{
+  "ticker": "JPM",
+  "cik": "0000019617",
+  "source": "sec_companyfacts",
+  "schema_version": 4,
+  "fetched_at": "2026-02-13T16:33:22.610442",
+  "periods": {
+    "2009_Q2": {
+      "revenue": 25623000000.0,
+      "net_income": 2721000000.0,
+      "eps_basic": 0.28,
+      "eps_diluted": 0.28,
+      "operating_cash_flow": 103259000000.0
+    },
+    "2009_Q3": {
+      "revenue": 26622000000.0,
+      "net_income": 3588000000.0,
+      "eps_basic": 0.82,
+      "eps_diluted": 0.82,
+      "operating_cash_flow": 110884000000.0
+    },
+    "2010_Q1": {
+      "revenue": 27671000000.0,
+      "net_income": 3326000000.0,
+      "eps_basic": 0.75,
+      "eps_diluted": 0.74,
+      "operating_cash_flow": 19132000000.0,
+      "total_debt": 262857000000.0
+    },
+    "2010_Q2": {
+      "revenue": 25101000000.0,
+      "net_income": 4795000000.0,
+      "eps_basic": 1.1,
+      "eps_diluted": 1.09,
+      "operating_cash_flow": 47555000000.0,
+      "total_debt": 248618000000.0
+    },
+    "2010_Q3": {
+      "revenue": 23824000000.0,
+      "net_income": 4418000000.0,
+      "eps_basic": 1.02,
+      "eps_diluted": 1.01,
+      "operating_cash_flow": -5646000000.0,
+      "total_debt": 255589000000.0
+    },
+    "2011_Q1": {
+      "revenue": 25221000000.0,
+      "net_income": 5555000000.0,
+      "eps_basic": 1.29,
+      "eps_diluted": 1.28,
+      "operating_cash_flow": -5979000000.0,
+      "total_debt": 269616000000.0
+    },
+    "2011_Q2": {
+      "revenue": 26779000000.0,
+      "net_income": 5431000000.0,
+      "eps_basic": 1.28,
+      "eps_diluted": 1.27,
+      "operating_cash_flow": 58725000000.0,
+      "total_debt": 279228000000.0
+    },
+    "2011_Q3": {
+      "revenue": 23763000000.0,
+      "net_income": 4262000000.0,
+      "eps_basic": 1.02,
+      "eps_diluted": 1.02,
+      "operating_cash_flow": 66518000000.0,
+      "total_debt": 273688000000.0
+    },
+    "2012_Q1": {
+      "revenue": 26052000000.0,
+      "net_income": 4924000000.0,
+      "eps_basic": 1.2,
+      "eps_diluted": 1.19,
+      "operating_cash_flow": 4266000000.0,
+      "total_debt": 255831000000.0
+    },
+    "2012_Q2": {
+      "revenue": 22180000000.0,
+      "net_income": 4960000000.0,
+      "eps_basic": 1.22,
+      "eps_diluted": 1.21,
+      "operating_cash_flow": 46249000000.0,
+      "total_debt": 239539000000.0
+    },
+    "2012_Q3": {
+      "revenue": 25146000000.0,
+      "net_income": 5708000000.0,
+      "eps_basic": 1.41,
+      "eps_diluted": 1.4,
+      "operating_cash_flow": 29590000000.0,
+      "total_debt": 241140000000.0
+    },
+    "2013_Q1": {
+      "revenue": 25122000000.0,
+      "net_income": 6529000000.0,
+      "eps_basic": 1.61,
+      "eps_diluted": 1.59,
+      "operating_cash_flow": 19964000000.0,
+      "total_debt": 268361000000.0
+    },
+    "2013_Q2": {
+      "revenue": 25211000000.0,
+      "net_income": 6496000000.0,
+      "eps_basic": 1.61,
+      "eps_diluted": 1.6,
+      "operating_cash_flow": 88484000000.0,
+      "total_debt": 266212000000.0
+    },
+    "2013_Q3": {
+      "revenue": 23117000000.0,
+      "net_income": -380000000.0,
+      "eps_basic": -0.17,
+      "eps_diluted": -0.17,
+      "operating_cash_flow": 115061000000.0,
+      "total_debt": 263372000000.0
+    },
+    "2014_Q1": {
+      "revenue": 22993000000.0,
+      "net_income": 5274000000.0,
+      "eps_basic": 1.29,
+      "eps_diluted": 1.28,
+      "operating_cash_flow": 14667000000.0,
+      "total_debt": 274512000000.0
+    },
+    "2014_Q2": {
+      "revenue": 24454000000.0,
+      "net_income": 5985000000.0,
+      "eps_basic": 1.47,
+      "eps_diluted": 1.46,
+      "operating_cash_flow": 10296000000.0,
+      "total_debt": 269929000000.0
+    },
+    "2014_Q3": {
+      "revenue": 24246000000.0,
+      "net_income": 5572000000.0,
+      "eps_basic": 1.37,
+      "eps_diluted": 1.36,
+      "operating_cash_flow": 7847000000.0
+    },
+    "2010_Q4": {
+      "revenue": 26098000000.0,
+      "net_income": 4831000000.0,
+      "eps_basic": 1.1099999999999999,
+      "eps_diluted": 1.12,
+      "operating_cash_flow": -64793000000.0
+    },
+    "2011_Q4": {
+      "revenue": 21471000000.0,
+      "net_income": 3728000000.0,
+      "eps_basic": 0.9099999999999997,
+      "eps_diluted": 0.9100000000000006,
+      "operating_cash_flow": -23332000000.0
+    },
+    "2012_Q4": {
+      "revenue": 23653000000.0,
+      "net_income": 5692000000.0,
+      "eps_basic": 1.3899999999999997,
+      "eps_diluted": 1.4000000000000004,
+      "operating_cash_flow": -55026000000.0
+    },
+    "2013_Q4": {
+      "revenue": 23156000000.0,
+      "net_income": 5278000000.0,
+      "eps_basic": 1.3399999999999994,
+      "eps_diluted": 1.3299999999999992,
+      "operating_cash_flow": -115556000000.0
+    },
+    "2014_Q4": {
+      "revenue": 22512000000.0,
+      "net_income": 4931000000.0,
+      "eps_basic": 1.21,
+      "eps_diluted": 1.1899999999999995,
+      "operating_cash_flow": 3783000000.0
+    },
+    "2015_Q1": {
+      "net_income": 5914000000.0,
+      "eps_basic": 1.46,
+      "eps_diluted": 1.45,
+      "operating_cash_flow": 14879000000.0
+    },
+    "2015_Q2": {
+      "net_income": 6290000000.0,
+      "eps_basic": 1.56,
+      "eps_diluted": 1.54,
+      "operating_cash_flow": 32175000000.0
+    },
+    "2015_Q3": {
+      "net_income": 6804000000.0,
+      "eps_basic": 1.7,
+      "eps_diluted": 1.68,
+      "operating_cash_flow": 57299000000.0
+    },
+    "2016_Q1": {
+      "net_income": 5520000000.0,
+      "eps_basic": 1.36,
+      "eps_diluted": 1.35,
+      "operating_cash_flow": -21383000000.0
+    },
+    "2016_Q2": {
+      "net_income": 6200000000.0,
+      "eps_basic": 1.56,
+      "eps_diluted": 1.55,
+      "operating_cash_flow": -22907000000.0
+    },
+    "2016_Q3": {
+      "net_income": 6286000000.0,
+      "eps_basic": 1.6,
+      "eps_diluted": 1.58,
+      "operating_cash_flow": -18715000000.0
+    },
+    "2017_Q1": {
+      "net_income": 6448000000.0,
+      "eps_basic": 1.66,
+      "eps_diluted": 1.65,
+      "operating_cash_flow": -20036000000.0
+    },
+    "2017_Q2": {
+      "net_income": 7029000000.0,
+      "eps_basic": 1.83,
+      "eps_diluted": 1.82,
+      "operating_cash_flow": -13024000000.0
+    },
+    "2017_Q3": {
+      "net_income": 6732000000.0,
+      "eps_basic": 1.77,
+      "eps_diluted": 1.76,
+      "operating_cash_flow": -16038000000.0
+    },
+    "2018_Q1": {
+      "net_income": 8712000000.0,
+      "eps_basic": 2.38,
+      "eps_diluted": 2.37,
+      "operating_cash_flow": -35109000000.0,
+      "cash_and_marketable_securities": 414812000000.0,
+      "total_debt": 62667000000.0,
+      "net_cash": 352145000000.0
+    },
+    "2018_Q2": {
+      "net_income": 8316000000.0,
+      "eps_basic": 2.31,
+      "eps_diluted": 2.29,
+      "operating_cash_flow": 576000000.0,
+      "cash_and_marketable_securities": 405180000000.0,
+      "total_debt": 63918000000.0,
+      "net_cash": 341262000000.0
+    },
+    "2018_Q3": {
+      "net_income": 8380000000.0,
+      "eps_basic": 2.35,
+      "eps_diluted": 2.34,
+      "operating_cash_flow": 13765000000.0,
+      "cash_and_marketable_securities": 419097000000.0,
+      "total_debt": 64635000000.0,
+      "net_cash": 354462000000.0
+    },
+    "2019_Q1": {
+      "net_income": 9179000000.0,
+      "eps_basic": 2.65,
+      "eps_diluted": 2.65,
+      "operating_cash_flow": -80880000000.0,
+      "total_debt": 71305000000.0
+    },
+    "2019_Q2": {
+      "net_income": 9652000000.0,
+      "eps_basic": 2.83,
+      "eps_diluted": 2.82,
+      "operating_cash_flow": -94734000000.0,
+      "total_debt": 59890000000.0
+    },
+    "2019_Q3": {
+      "net_income": 9080000000.0,
+      "eps_basic": 2.69,
+      "eps_diluted": 2.68,
+      "operating_cash_flow": -77039000000.0,
+      "total_debt": 48893000000.0
+    },
+    "2020_Q1": {
+      "net_income": 2865000000.0,
+      "eps_basic": 0.79,
+      "eps_diluted": 0.78,
+      "operating_cash_flow": -120772000000.0,
+      "total_debt": 51909000000.0
+    },
+    "2020_Q2": {
+      "net_income": 4687000000.0,
+      "eps_basic": 1.39,
+      "eps_diluted": 1.38,
+      "operating_cash_flow": -37032000000.0,
+      "total_debt": 48014000000.0
+    },
+    "2020_Q3": {
+      "net_income": 9443000000.0,
+      "eps_basic": 2.93,
+      "eps_diluted": 2.92,
+      "operating_cash_flow": -51858000000.0,
+      "total_debt": 41992000000.0
+    },
+    "2021_Q1": {
+      "net_income": 14300000000.0,
+      "eps_basic": 4.51,
+      "eps_diluted": 4.5,
+      "operating_cash_flow": -43872000000.0,
+      "total_debt": 54978000000.0
+    },
+    "2021_Q2": {
+      "net_income": 11948000000.0,
+      "eps_basic": 3.79,
+      "eps_diluted": 3.78,
+      "operating_cash_flow": -30342000000.0,
+      "total_debt": 51938000000.0
+    },
+    "2021_Q3": {
+      "net_income": 11687000000.0,
+      "eps_basic": 3.74,
+      "eps_diluted": 3.74,
+      "operating_cash_flow": -7011000000.0,
+      "total_debt": 50393000000.0
+    },
+    "2022_Q1": {
+      "net_income": 8282000000.0,
+      "eps_basic": 2.64,
+      "eps_diluted": 2.63,
+      "operating_cash_flow": -41917000000.0,
+      "total_debt": 57586000000.0
+    },
+    "2022_Q2": {
+      "net_income": 8649000000.0,
+      "eps_basic": 2.77,
+      "eps_diluted": 2.76,
+      "operating_cash_flow": 24101000000.0,
+      "total_debt": 58422000000.0
+    },
+    "2022_Q3": {
+      "net_income": 9737000000.0,
+      "eps_basic": 3.13,
+      "eps_diluted": 3.12,
+      "operating_cash_flow": 5897000000.0,
+      "total_debt": 47866000000.0
+    },
+    "2023_Q1": {
+      "net_income": 12622000000.0,
+      "eps_basic": 4.11,
+      "eps_diluted": 4.1,
+      "operating_cash_flow": -111241000000.0,
+      "total_debt": 42241000000.0
+    },
+    "2023_Q2": {
+      "net_income": 14472000000.0,
+      "eps_basic": 4.76,
+      "eps_diluted": 4.75,
+      "operating_cash_flow": -92376000000.0,
+      "total_debt": 41022000000.0
+    },
+    "2023_Q3": {
+      "net_income": 13151000000.0,
+      "eps_basic": 4.33,
+      "eps_diluted": 4.33,
+      "operating_cash_flow": -47257000000.0,
+      "total_debt": 45470000000.0
+    },
+    "2024_Q1": {
+      "net_income": 13419000000.0,
+      "eps_basic": 4.45,
+      "eps_diluted": 4.44,
+      "operating_cash_flow": -154158000000.0,
+      "total_debt": 46268000000.0
+    },
+    "2024_Q2": {
+      "net_income": 18149000000.0,
+      "eps_basic": 6.13,
+      "eps_diluted": 6.12,
+      "operating_cash_flow": -115689000000.0,
+      "total_debt": 47308000000.0
+    },
+    "2024_Q3": {
+      "net_income": 12898000000.0,
+      "eps_basic": 4.38,
+      "eps_diluted": 4.37,
+      "operating_cash_flow": -189770000000.0,
+      "total_debt": 50638000000.0
+    },
+    "2025_Q1": {
+      "net_income": 14643000000.0,
+      "eps_basic": 5.08,
+      "eps_diluted": 5.07,
+      "operating_cash_flow": -251839000000.0,
+      "total_debt": 64980000000.0
+    },
+    "2025_Q2": {
+      "net_income": 14987000000.0,
+      "eps_basic": 5.25,
+      "eps_diluted": 5.24,
+      "operating_cash_flow": -222292000000.0,
+      "total_debt": 65293000000.0
+    },
+    "2025_Q3": {
+      "net_income": 14393000000.0,
+      "eps_basic": 5.08,
+      "eps_diluted": 5.07,
+      "operating_cash_flow": -267506000000.0,
+      "total_debt": 69355000000.0
+    },
+    "2016_Q4": {
+      "net_income": 6727000000.0,
+      "eps_basic": 1.7200000000000006,
+      "eps_diluted": 1.71,
+      "operating_cash_flow": 83201000000.0
+    },
+    "2017_Q4": {
+      "net_income": 4232000000.0,
+      "eps_basic": 1.0899999999999999,
+      "eps_diluted": 1.08,
+      "operating_cash_flow": 46597000000.0
+    },
+    "2018_Q4": {
+      "net_income": 7066000000.0,
+      "eps_basic": 2.0,
+      "eps_diluted": 2.0,
+      "operating_cash_flow": 34955000000.0
+    },
+    "2019_Q4": {
+      "net_income": 8520000000.0,
+      "eps_basic": 2.58,
+      "eps_diluted": 2.5700000000000003,
+      "operating_cash_flow": 258699000000.0
+    },
+    "2020_Q4": {
+      "net_income": 12136000000.0,
+      "eps_basic": 3.780000000000001,
+      "eps_diluted": 3.8000000000000007,
+      "operating_cash_flow": 129752000000.0
+    },
+    "2021_Q4": {
+      "net_income": 10399000000.0,
+      "eps_basic": 3.3499999999999996,
+      "eps_diluted": 3.34,
+      "operating_cash_flow": 159309000000.0
+    },
+    "2022_Q4": {
+      "net_income": 11008000000.0,
+      "eps_basic": 3.5600000000000005,
+      "eps_diluted": 3.58,
+      "operating_cash_flow": 119038000000.0
+    },
+    "2023_Q4": {
+      "net_income": 9307000000.0,
+      "eps_basic": 3.049999999999999,
+      "eps_diluted": 3.0500000000000007,
+      "operating_cash_flow": 263848000000.0
+    },
+    "2024_Q4": {
+      "net_income": 14005000000.0,
+      "eps_basic": 4.829999999999998,
+      "eps_diluted": 4.82,
+      "operating_cash_flow": 417605000000.0
+    },
+    "2025_Q4": {
+      "net_income": 13025000000.0,
+      "eps_basic": 4.640000000000001,
+      "eps_diluted": 4.639999999999999,
+      "operating_cash_flow": 593855000000.0
+    },
+    "2015_Q4": {
+      "net_income": 5434000000.0,
+      "eps_basic": 1.33,
+      "eps_diluted": 1.33,
+      "operating_cash_flow": -30887000000.0
+    }
+  }
+}

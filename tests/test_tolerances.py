@@ -16,15 +16,15 @@ class TestGetTolerance:
 
     def test_revenue_approx(self):
         tol = get_tolerance("revenue", is_approx=True)
-        assert tol["tight"] == 0.05  # 5%
+        assert tol["tight"] == 0.05  # approx threshold
 
     def test_eps_tight(self):
         tol = get_tolerance("eps_diluted", is_approx=False)
-        assert tol["tight"] == 0.01
+        assert tol["tight"] == 0.005
 
     def test_margin_tight(self):
         tol = get_tolerance("gross_margin", is_approx=False)
-        assert tol["tight"] == 0.003  # 0.3 pp
+        assert tol["tight"] == 0.005  # 0.5 pp
 
     def test_unknown_metric(self):
         tol = get_tolerance("unknown_metric", is_approx=False)
@@ -60,4 +60,4 @@ class TestIsApproximate:
 
 class TestEPSTolerance:
     def test_value(self):
-        assert EPS_ABSOLUTE_TOLERANCE == 0.015
+        assert EPS_ABSOLUTE_TOLERANCE == 0.005

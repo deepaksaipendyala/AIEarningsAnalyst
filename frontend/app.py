@@ -34,3 +34,6 @@ st.markdown("Use the sidebar to navigate between pages:")
 st.markdown("- **Dashboard**: Overview of all companies and aggregate stats")
 st.markdown("- **Transcript Viewer**: Read transcripts with highlighted claims")
 st.markdown("- **Claims Explorer**: Filter and explore individual claims with full evidence")
+st.markdown("- **AI Analyst**: Ask grounded questions with source-cited retrieval")
+
+st.page_link("pages/4_AI_Analyst.py", label="Open AI Analyst Chat", icon="🤖")

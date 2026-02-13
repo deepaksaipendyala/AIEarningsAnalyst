@@ -4,12 +4,15 @@ Coordinates the full pipeline for all companies and quarters.
 """
 
 import json
+import re
 import time
 from datetime import datetime
 from pathlib import Path
 
 from backend.config import settings
+from backend.services.extraction.normalizer import parse_period
 from backend.services.ingestion.fmp_client import FMPClient, load_fmp_data
+from backend.services.ingestion.sec_client import fetch_and_cache_sec_metrics
 from backend.services.ingestion.transcript_client import fetch_transcript
 from backend.services.extraction.llm_extractor import ClaimExtractor
 from backend.services.verification.verdict_engine import verify_single_claim
@@ -66,12 +69,21 @@ def run_ingestion(ticker: str = None):
         print("\n[Financials - FMP]")
         fmp.fetch_and_cache_financials(t)
 
+        # Supplemental SEC facts (historical fallback)
+        print("\n[Financials - SEC]")
+        sec_payload = fetch_and_cache_sec_metrics(t)
+        if sec_payload:
+            num_periods = len(sec_payload.get("periods", {}))
+            print(f"  [OK] {t} SEC companyfacts ({num_periods} periods)")
+        else:
+            print(f"  [WARN] {t} SEC companyfacts unavailable")
+
         time.sleep(1)
 
     print("\nIngestion complete.")
 
 
-def run_extraction(ticker: str = None):
+def run_extraction(ticker: str = None, force: bool = False):
     """Extract claims from all cached transcripts."""
     settings.ensure_dirs()
     extractor = ClaimExtractor()
@@ -85,7 +97,114 @@ def run_extraction(ticker: str = None):
         t = company["ticker"]
         print(f"\n[Extraction] {t}")
         for year, quarter in quarters:
-            extractor.extract_and_cache(t, year, quarter)
+            extractor.extract_and_cache(t, year, quarter, force=force)
+
+
+_FOOL_URL_PERIOD_RE = re.compile(
+    r"/[a-z0-9-]+-q([1-4])-(20\d{2})-earnings-call-transcript/?$",
+    re.IGNORECASE,
+)
+_TOTAL_CONTEXTS = {"", "total", "company", "overall", "consolidated"}
+
+
+def _derive_transcript_period_override(ticker: str, year: int, quarter: int) -> tuple[int, int]:
+    """Use transcript metadata to recover fiscal period when file key is mislabeled."""
+    path = settings.transcripts_dir / f"{ticker}_Q{quarter}_{year}.json"
+    if not path.exists():
+        return (year, quarter)
+
+    try:
+        with open(path) as f:
+            transcript = json.load(f)
+    except Exception:
+        return (year, quarter)
+
+    source_url = str(transcript.get("source_url") or "")
+    match = _FOOL_URL_PERIOD_RE.search(source_url)
+    if not match:
+        return (year, quarter)
+
+    url_quarter = int(match.group(1))
+    url_year = int(match.group(2))
+    return (url_year, url_quarter)
+
+
+def _shift_period_string(period_str: str, year_delta: int) -> str:
+    if not isinstance(period_str, str):
+        return period_str
+    parsed = parse_period(period_str)
+    if not parsed:
+        return period_str
+    year, quarter = parsed
+    shifted_year = year + year_delta
+    if quarter == 0:
+        return f"FY {shifted_year}"
+    return f"Q{quarter} {shifted_year}"
+
+
+def _claim_with_period_shift(claim: dict, year_delta: int) -> dict:
+    if year_delta == 0:
+        return claim
+    shifted = dict(claim)
+    for key in ("period", "comparison_period"):
+        if key in shifted:
+            shifted[key] = _shift_period_string(shifted.get(key), year_delta)
+    return shifted
+
+
+def _downgrade_conflicting_mismatches(verdicts: list[dict]) -> None:
+    """Downgrade obvious in-transcript contradictions to unverifiable."""
+    grouped: dict[tuple, list[int]] = {}
+    for idx, item in enumerate(verdicts):
+        claim = item.get("claim", {})
+        verification = item.get("verification", {})
+        if claim.get("claim_type") != "absolute":
+            continue
+        if verification.get("verdict") not in {"verified", "close_match", "mismatch"}:
+            continue
+
+        ctx = (claim.get("metric_context") or "").strip().lower()
+        if ctx not in _TOTAL_CONTEXTS:
+            continue
+
+        parsed_period = parse_period(claim.get("period", ""))
+        if not parsed_period:
+            continue
+
+        key = (claim.get("metric_type"), parsed_period, "total")
+        grouped.setdefault(key, []).append(idx)
+
+    for indices in grouped.values():
+        reference_idx = next(
+            (
+                i for i in indices
+                if verdicts[i]["verification"].get("verdict") in {"verified", "close_match"}
+            ),
+            None,
+        )
+        if reference_idx is None:
+            continue
+
+        reference_claim_id = verdicts[reference_idx]["claim"].get("claim_id")
+        for i in indices:
+            verification = verdicts[i]["verification"]
+            if verification.get("verdict") != "mismatch":
+                continue
+
+            diff_pct = verification.get("difference_pct")
+            if diff_pct is None or abs(diff_pct) < 3.0:
+                continue
+
+            flags = verification.get("flags", [])
+            if "conflicting_transcript_claim" not in flags:
+                flags.append("conflicting_transcript_claim")
+            verification["flags"] = flags
+            verification["verdict"] = "unverifiable"
+            verification["explanation"] = (
+                "Transcript contains conflicting values for this same metric and period. "
+                f"Another claim ({reference_claim_id}) aligns with financial data, so this value "
+                "is likely a transcript/source artifact."
+            )
 
 
 def run_verification(ticker: str = None):
@@ -123,15 +242,39 @@ def run_verification(ticker: str = None):
                 continue
 
             print(f"  [VERIFY] {key}: {len(claims)} claims...", end=" ")
+            effective_year, effective_quarter = _derive_transcript_period_override(t, year, quarter)
+            period_shift = effective_year - year
+            if (effective_year, effective_quarter) != (year, quarter):
+                print(
+                    f" using transcript fiscal period Q{effective_quarter} {effective_year}...",
+                    end=" ",
+                )
 
             verdicts = []
             for claim in claims:
-                v = verify_single_claim(claim, t, year, quarter, fmp_data)
+                claim_for_verification = _claim_with_period_shift(claim, period_shift)
+                v = verify_single_claim(
+                    claim_for_verification,
+                    t,
+                    effective_year,
+                    effective_quarter,
+                    fmp_data,
+                )
                 verdicts.append({"claim": claim, "verification": v})
-                verdict_label = v.get("verdict", "unverifiable")
-                summary["total"] += 1
-                if verdict_label in summary:
-                    summary[verdict_label] += 1
+
+            _downgrade_conflicting_mismatches(verdicts)
+
+            file_summary = {
+                "total": len(verdicts),
+                "verified": sum(1 for v in verdicts if v["verification"]["verdict"] == "verified"),
+                "close_match": sum(1 for v in verdicts if v["verification"]["verdict"] == "close_match"),
+                "mismatch": sum(1 for v in verdicts if v["verification"]["verdict"] == "mismatch"),
+                "misleading": sum(1 for v in verdicts if v["verification"]["verdict"] == "misleading"),
+                "unverifiable": sum(1 for v in verdicts if v["verification"]["verdict"] == "unverifiable"),
+            }
+            summary["total"] += file_summary["total"]
+            for label in ("verified", "close_match", "mismatch", "misleading", "unverifiable"):
+                summary[label] += file_summary[label]
 
             result = {
                 "ticker": t,
@@ -140,14 +283,7 @@ def run_verification(ticker: str = None):
                 "quarter": quarter,
                 "verified_at": datetime.now().isoformat(),
                 "claims_with_verdicts": verdicts,
-                "summary": {
-                    "total": len(verdicts),
-                    "verified": sum(1 for v in verdicts if v["verification"]["verdict"] == "verified"),
-                    "close_match": sum(1 for v in verdicts if v["verification"]["verdict"] == "close_match"),
-                    "mismatch": sum(1 for v in verdicts if v["verification"]["verdict"] == "mismatch"),
-                    "misleading": sum(1 for v in verdicts if v["verification"]["verdict"] == "misleading"),
-                    "unverifiable": sum(1 for v in verdicts if v["verification"]["verdict"] == "unverifiable"),
-                },
+                "summary": file_summary,
             }
 
             with open(verdict_path, "w") as f:
@@ -162,7 +298,7 @@ def run_verification(ticker: str = None):
         print(f"  {k}: {v}")
 
 
-def run_full_pipeline(ticker: str = None):
+def run_full_pipeline(ticker: str = None, force_extract: bool = False):
     """Run the complete pipeline: ingest -> extract -> verify."""
     print("=" * 60)
     print("EARNINGS CALL VERIFICATION PIPELINE")
@@ -172,7 +308,7 @@ def run_full_pipeline(ticker: str = None):
     run_ingestion(ticker)
 
     print("\n[Phase 2] Claim Extraction")
-    run_extraction(ticker)
+    run_extraction(ticker, force=force_extract)
 
     print("\n[Phase 3] Verification")
     run_verification(ticker)

@@ -1,6 +1,7 @@
 """LLM-based claim extraction from earnings call transcripts via OpenRouter."""
 
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 
@@ -8,7 +9,165 @@ from openai import OpenAI
 
 from backend.config import settings
 from backend.schemas.extraction import EXTRACTION_SCHEMA, SYSTEM_PROMPT
+from backend.services.ingestion.fmp_client import load_fmp_data
+from backend.services.ingestion.sec_client import load_sec_data
 from backend.services.extraction.validator import validate_claims
+
+_URL_PERIOD_RE = re.compile(
+    r"/[a-z0-9-]+-q([1-4])-(20\d{2})-earnings-call-transcript/?$",
+    re.IGNORECASE,
+)
+
+_CONTEXT_METRIC_ORDER = [
+    "revenue",
+    "gross_profit",
+    "operating_income",
+    "net_income",
+    "eps_diluted",
+    "eps_basic",
+    "operating_cash_flow",
+    "free_cash_flow",
+    "capital_expenditures",
+    "cost_of_revenue",
+    "operating_expenses",
+    "research_and_development",
+]
+
+
+def _period_label(year: int, quarter: int) -> str:
+    if quarter == 0:
+        return f"FY {year}"
+    return f"Q{quarter} {year}"
+
+
+def _available_metrics(row: dict) -> list[str]:
+    if not isinstance(row, dict):
+        return []
+    metrics = []
+    for metric in _CONTEXT_METRIC_ORDER:
+        value = row.get(metric)
+        if isinstance(value, (int, float)):
+            metrics.append(metric)
+    if metrics:
+        return metrics
+    # Fallback for rows containing non-standard numeric fields.
+    for key, value in row.items():
+        if key.startswith("_"):
+            continue
+        if isinstance(value, (int, float)):
+            metrics.append(key)
+    return metrics
+
+
+def _extract_source_url_fiscal_hint(transcript_meta: dict | None) -> tuple[int, int] | None:
+    source_url = str((transcript_meta or {}).get("source_url") or "")
+    match = _URL_PERIOD_RE.search(source_url)
+    if not match:
+        return None
+    return (int(match.group(2)), int(match.group(1)))
+
+
+def _render_financial_context(
+    ticker: str,
+    transcript_year: int,
+    transcript_quarter: int,
+    fmp_data: dict,
+    sec_data: dict,
+    transcript_meta: dict | None = None,
+    max_periods: int = 6,
+) -> str:
+    """Render compact financial context to improve period/comparison extraction."""
+    lines: list[str] = []
+    lines.append(
+        "Financial period map (for period/comparison_period field selection):"
+    )
+    lines.append(
+        f"- Transcript file label: {_period_label(transcript_year, transcript_quarter)}"
+    )
+
+    url_hint = _extract_source_url_fiscal_hint(transcript_meta)
+    if url_hint:
+        lines.append(f"- Source URL fiscal hint: {_period_label(url_hint[0], url_hint[1])}")
+
+    fmp_periods = sorted(
+        [k for k in fmp_data.keys() if isinstance(k, tuple)],
+        reverse=True,
+    )[:max_periods]
+    if fmp_periods:
+        lines.append("- FMP periods (metric coverage):")
+        for year, quarter in fmp_periods:
+            row = fmp_data.get((year, quarter), {})
+            metrics = _available_metrics(row)
+            metric_str = ", ".join(metrics[:8]) if metrics else "no tracked metrics"
+            if len(metrics) > 8:
+                metric_str += ", ..."
+            lines.append(f"  - {_period_label(year, quarter)}: {metric_str}")
+
+    aliases = fmp_data.get("_calendar_aliases", {}) if isinstance(fmp_data, dict) else {}
+    alias_items = sorted(aliases.items(), reverse=True)[:max_periods]
+    if alias_items:
+        lines.append("- Calendar alias mapping from filing dates:")
+        for cal_yq, fiscal_yq in alias_items:
+            lines.append(
+                f"  - {_period_label(cal_yq[0], cal_yq[1])} -> {_period_label(fiscal_yq[0], fiscal_yq[1])}"
+            )
+
+    sec_periods = sorted(
+        [k for k in sec_data.keys() if isinstance(k, tuple)],
+        reverse=True,
+    )[:max_periods]
+    if sec_periods:
+        lines.append("- SEC supplemental periods (if FMP period is missing):")
+        for year, quarter in sec_periods:
+            row = sec_data.get((year, quarter), {})
+            metrics = _available_metrics(row)
+            metric_str = ", ".join(metrics[:6]) if metrics else "no tracked metrics"
+            if len(metrics) > 6:
+                metric_str += ", ..."
+            lines.append(f"  - {_period_label(year, quarter)}: {metric_str}")
+
+    lines.extend(
+        [
+            "Period rules:",
+            "- Keep period/comparison_period aligned to the quote wording; do not invent periods.",
+            "- For YoY claims, set comparison_period to same quarter prior year unless explicitly different.",
+            "- For QoQ claims, set comparison_period to immediate previous quarter.",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
+def _build_user_prompt(
+    transcript_text: str,
+    ticker: str,
+    year: int,
+    quarter: int,
+    chunk_label: str = "",
+    financial_context: str = "",
+) -> str:
+    label = f" ({chunk_label})" if chunk_label else ""
+    context_block = ""
+    if financial_context:
+        context_block = (
+            "\nUse this additional structured context to resolve period/comparison_period fields:\n"
+            "<financial_context>\n"
+            f"{financial_context}\n"
+            "</financial_context>\n"
+        )
+
+    return f"""Here is the earnings call transcript for {ticker}, Q{quarter} {year}{label}.
+
+The transcript text is provided below. Character offsets start at 0 for the first character.
+When providing quote_start_char and quote_end_char, ensure that transcript_text[start:end] exactly matches quote_text.
+{context_block}
+<transcript>
+{transcript_text}
+</transcript>
+
+Extract all quantitative financial claims from this transcript. Be thorough and precise.
+Remember: quote_text must exactly match the substring at the given character offsets.
+Use short, focused quotes — just the sentence containing the numeric claim."""
 
 
 class ClaimExtractor:
@@ -21,22 +180,49 @@ class ClaimExtractor:
         )
         self.model = settings.extraction_model
 
-    def _call_extraction(self, transcript_text: str, ticker: str, year: int,
-                         quarter: int, chunk_label: str = "") -> list[dict]:
+    def _build_financial_context(
+        self,
+        ticker: str,
+        year: int,
+        quarter: int,
+        transcript_meta: dict | None = None,
+    ) -> str:
+        """Build compact SEC/FMP context to reduce period/comparison extraction errors."""
+        try:
+            fmp_data = load_fmp_data(ticker)
+        except Exception:
+            fmp_data = {}
+        try:
+            sec_data = load_sec_data(ticker, allow_fetch=False)
+        except Exception:
+            sec_data = {}
+        return _render_financial_context(
+            ticker=ticker,
+            transcript_year=year,
+            transcript_quarter=quarter,
+            fmp_data=fmp_data,
+            sec_data=sec_data,
+            transcript_meta=transcript_meta,
+        )
+
+    def _call_extraction(
+        self,
+        transcript_text: str,
+        ticker: str,
+        year: int,
+        quarter: int,
+        chunk_label: str = "",
+        financial_context: str = "",
+    ) -> list[dict]:
         """Make a single extraction API call and return raw claims list."""
-        label = f" ({chunk_label})" if chunk_label else ""
-        user_prompt = f"""Here is the earnings call transcript for {ticker}, Q{quarter} {year}{label}.
-
-The FULL transcript text is provided below. Character offsets start at 0 for the first character of this text.
-When providing quote_start_char and quote_end_char, ensure that text[start:end] exactly matches quote_text.
-
-<transcript>
-{transcript_text}
-</transcript>
-
-Extract all quantitative financial claims from this transcript. Be thorough and precise.
-Remember: quote_text must exactly match the substring at the given character offsets.
-Use short, focused quotes — just the sentence containing the numeric claim."""
+        user_prompt = _build_user_prompt(
+            transcript_text=transcript_text,
+            ticker=ticker,
+            year=year,
+            quarter=quarter,
+            chunk_label=chunk_label,
+            financial_context=financial_context,
+        )
 
         response = self.client.chat.completions.create(
             model=self.model,
@@ -67,20 +253,28 @@ Use short, focused quotes — just the sentence containing the numeric claim."""
 
         return []
 
-    def extract_from_text(self, transcript_text: str, ticker: str, year: int, quarter: int) -> dict:
+    def extract_from_text(
+        self,
+        transcript_text: str,
+        ticker: str,
+        year: int,
+        quarter: int,
+        transcript_meta: dict | None = None,
+    ) -> dict:
         """Extract claims from full transcript, splitting into chunks if needed."""
-        user_prompt = f"""Here is the earnings call transcript for {ticker}, Q{quarter} {year}.
-
-The transcript text is provided below. Character offsets start at 0 for the first character.
-When providing quote_start_char and quote_end_char, ensure that transcript_text[start:end] exactly matches quote_text.
-
-<transcript>
-{transcript_text}
-</transcript>
-
-Extract all quantitative financial claims from this transcript. Be thorough and precise.
-Remember: quote_text must exactly match the substring at the given character offsets.
-Use short, focused quotes — just the sentence containing the numeric claim."""
+        financial_context = self._build_financial_context(
+            ticker=ticker,
+            year=year,
+            quarter=quarter,
+            transcript_meta=transcript_meta,
+        )
+        user_prompt = _build_user_prompt(
+            transcript_text=transcript_text,
+            ticker=ticker,
+            year=year,
+            quarter=quarter,
+            financial_context=financial_context,
+        )
 
         response = self.client.chat.completions.create(
             model=self.model,
@@ -118,7 +312,8 @@ Use short, focused quotes — just the sentence containing the numeric claim."""
         for i, (chunk_text, offset) in enumerate(chunks):
             chunk_claims = self._call_extraction(
                 chunk_text, ticker, year, quarter,
-                chunk_label=f"part {i+1}/{len(chunks)}"
+                chunk_label=f"part {i+1}/{len(chunks)}",
+                financial_context=financial_context,
             )
             # Adjust character offsets to be relative to the full transcript
             for claim in chunk_claims:
@@ -137,13 +332,13 @@ Use short, focused quotes — just the sentence containing the numeric claim."""
             "total_claims_found": len(validated),
         }
 
-    def extract_and_cache(self, ticker: str, year: int, quarter: int) -> dict:
+    def extract_and_cache(self, ticker: str, year: int, quarter: int, force: bool = False) -> dict:
         """Extract claims from cached transcript, with caching."""
         settings.ensure_dirs()
         key = f"{ticker}_Q{quarter}_{year}"
         claims_path = settings.claims_dir / f"{key}_claims.json"
 
-        if claims_path.exists():
+        if claims_path.exists() and not force:
             with open(claims_path) as f:
                 cached = json.load(f)
             # Skip cache if it contains an error from a previous failed run
@@ -152,6 +347,8 @@ Use short, focused quotes — just the sentence containing the numeric claim."""
                 return cached
             else:
                 print(f"  [RETRY] {key} - previous run had error, re-extracting")
+        elif claims_path.exists() and force:
+            print(f"  [FORCE] {key} - ignoring cached claims and re-extracting")
 
         transcript_path = settings.transcripts_dir / f"{key}.json"
         if not transcript_path.exists():
@@ -165,7 +362,13 @@ Use short, focused quotes — just the sentence containing the numeric claim."""
         print(f"  [EXTRACT] {key} ({len(text)} chars)...", end=" ", flush=True)
 
         try:
-            result = self.extract_from_text(text, ticker, year, quarter)
+            result = self.extract_from_text(
+                text,
+                ticker,
+                year,
+                quarter,
+                transcript_meta=transcript_data,
+            )
             result["ticker"] = ticker
             result["year"] = year
             result["quarter"] = quarter

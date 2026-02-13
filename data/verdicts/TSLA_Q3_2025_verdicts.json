@@ -3,156 +3,33 @@
   "key": "TSLA_Q3_2025",
   "year": 2025,
   "quarter": 3,
-  "verified_at": "2026-02-13T12:10:17.491475",
+  "verified_at": "2026-02-13T17:39:35.594577",
   "claims_with_verdicts": [
     {
       "claim": {
-        "quote_end_char": 5607,
-        "speaker_role": "cfo",
-        "speaker": "Vaibhav Taneja",
-        "quote_start_char": 5560,
-        "metric_type": "revenue",
-        "gaap_classification": "gaap",
         "claim_id": "claim_001",
-        "scale": null,
-        "period": "Q3 2025",
-        "claim_type": "absolute",
-        "quote_text": "Greater China and APAC were up sequentially 33%",
-        "is_approximate": false,
-        "unit": "percent",
         "confidence": 1,
-        "claimed_value": 33,
-        "claimed_value_raw": "33%",
-        "metric_context": "Greater China and APAC",
-        "qualifiers": []
-      },
-      "verification": {
-        "claim_id": "claim_001",
-        "claimed_value": 33,
-        "actual_value": null,
-        "difference": null,
-        "difference_pct": null,
-        "tolerance_used": null,
-        "computation_detail": null,
-        "computation_steps": [],
-        "financial_facts_used": [],
-        "evidence_source": null,
-        "flags": [
-          "segment_claim"
-        ],
-        "misleading_flags": [],
-        "misleading_reasons": [],
-        "explanation": "This is a Greater China and APAC revenue claim. Our data only includes total company-level figures.",
-        "verdict": "unverifiable"
-      }
-    },
-    {
-      "claim": {
-        "scale": null,
-        "metric_type": "revenue",
-        "claimed_value_raw": "28%",
-        "speaker_role": "cfo",
-        "confidence": 1,
-        "claim_id": "claim_002",
-        "claim_type": "absolute",
-        "period": "Q3 2025",
-        "claimed_value": 28,
-        "unit": "percent",
-        "qualifiers": [],
-        "speaker": "Vaibhav Taneja",
-        "quote_start_char": 5609,
-        "quote_text": "North America was up 28%",
-        "metric_context": "North America",
-        "is_approximate": false,
-        "gaap_classification": "gaap",
-        "quote_end_char": 5633
-      },
-      "verification": {
-        "claim_id": "claim_002",
-        "claimed_value": 28,
-        "actual_value": null,
-        "difference": null,
-        "difference_pct": null,
-        "tolerance_used": null,
-        "computation_detail": null,
-        "computation_steps": [],
-        "financial_facts_used": [],
-        "evidence_source": null,
-        "flags": [
-          "segment_claim"
-        ],
-        "misleading_flags": [],
-        "misleading_reasons": [],
-        "explanation": "This is a North America revenue claim. Our data only includes total company-level figures.",
-        "verdict": "unverifiable"
-      }
-    },
-    {
-      "claim": {
-        "gaap_classification": "gaap",
-        "claimed_value": 25,
-        "metric_type": "revenue",
-        "metric_context": "EMEA",
-        "speaker_role": "cfo",
-        "is_approximate": false,
-        "claimed_value_raw": "25%",
-        "speaker": "Vaibhav Taneja",
-        "quote_end_char": 5656,
-        "confidence": 1,
-        "scale": null,
-        "claim_type": "absolute",
-        "quote_text": "EMEA was up 25%",
-        "qualifiers": [],
-        "period": "Q3 2025",
-        "unit": "percent",
-        "quote_start_char": 5641,
-        "claim_id": "claim_003"
-      },
-      "verification": {
-        "claim_id": "claim_003",
-        "claimed_value": 25,
-        "actual_value": null,
-        "difference": null,
-        "difference_pct": null,
-        "tolerance_used": null,
-        "computation_detail": null,
-        "computation_steps": [],
-        "financial_facts_used": [],
-        "evidence_source": null,
-        "flags": [
-          "segment_claim"
-        ],
-        "misleading_flags": [],
-        "misleading_reasons": [],
-        "explanation": "This is a EMEA revenue claim. Our data only includes total company-level figures.",
-        "verdict": "unverifiable"
-      }
-    },
-    {
-      "claim": {
-        "quote_text": "the total paid FSD customer base is still small, around 12% of our current fleet",
-        "speaker": "Vaibhav Taneja",
-        "unit": "percent",
-        "claim_type": "absolute",
-        "is_approximate": true,
-        "period": "Q3 2025",
-        "metric_context": "FSD customer base",
-        "quote_end_char": 6784,
-        "scale": null,
         "claimed_value_raw": "12%",
-        "speaker_role": "cfo",
-        "quote_start_char": 6704,
-        "metric_type": "other",
-        "claimed_value": 12,
-        "gaap_classification": "gaap",
+        "scale": null,
         "qualifiers": [
           "around"
         ],
-        "claim_id": "claim_004",
-        "confidence": 1
+        "claim_type": "absolute",
+        "claimed_value": 12,
+        "quote_text": "total paid FSD customer base is still small, around 12% of our current fleet.",
+        "metric_type": "other",
+        "metric_context": "FSD adoption",
+        "speaker_role": "management",
+        "unit": "percent",
+        "quote_start_char": 6708,
+        "quote_end_char": 6785,
+        "is_approximate": true,
+        "gaap_classification": "unknown",
+        "period": "Q3 2024",
+        "speaker": "Vaibhav Taneja"
       },
       "verification": {
-        "claim_id": "claim_004",
+        "claim_id": "claim_001",
         "claimed_value": 12,
         "actual_value": null,
         "difference": null,
@@ -171,27 +48,28 @@
     },
     {
       "claim": {
-        "claimed_value_raw": "29%",
-        "confidence": 1,
+        "gaap_classification": "gaap",
         "period": "Q3 2025",
-        "unit": "percent",
-        "quote_start_char": 6968,
-        "qualifiers": [],
         "speaker": "Vaibhav Taneja",
-        "claim_type": "absolute",
-        "claimed_value": 29,
-        "scale": null,
-        "quote_end_char": 7039,
-        "quote_text": "automotive revenues increased 29% in line with the growth in deliveries",
-        "claim_id": "claim_005",
-        "metric_type": "revenue",
-        "metric_context": "Automotive",
         "is_approximate": false,
-        "speaker_role": "cfo",
-        "gaap_classification": "gaap"
+        "quote_end_char": 7040,
+        "quote_start_char": 6919,
+        "unit": "percent",
+        "comparison_period": "Q3 2024",
+        "metric_context": "Automotive",
+        "speaker_role": "management",
+        "metric_type": "revenue",
+        "quote_text": "Now covering a little bit on the financial side, automotive revenues increased 29% in line with the growth in deliveries.",
+        "claimed_value": 29,
+        "claim_type": "yoy_growth",
+        "qualifiers": [],
+        "scale": null,
+        "claimed_value_raw": "29%",
+        "claim_id": "claim_002",
+        "confidence": 1
       },
       "verification": {
-        "claim_id": "claim_005",
+        "claim_id": "claim_002",
         "claimed_value": 29,
         "actual_value": null,
         "difference": null,
@@ -206,36 +84,36 @@
         ],
         "misleading_flags": [],
         "misleading_reasons": [],
-        "explanation": "This is a Automotive revenue claim. Our data only includes total company-level figures.",
+        "explanation": "This is a Automotive revenue growth claim. Our data only includes total company-level figures.",
         "verdict": "unverifiable"
       }
     },
     {
       "claim": {
-        "scale": null,
         "claim_type": "absolute",
-        "unit": "percent",
         "qualifiers": [
-          "marginally"
+          "excluding credits"
         ],
-        "metric_type": "gross_margin",
-        "claimed_value": 15.4,
-        "is_approximate": false,
-        "quote_start_char": 7176,
-        "metric_context": "Automotive",
-        "period": "Q3 2025",
-        "claimed_value_raw": "15.4%",
-        "quote_end_char": 7257,
-        "gaap_classification": "non_gaap",
+        "quote_text": "Our automotive margins, excluding credits, increased marginally from 15% to 15.4%.",
+        "claimed_value": 15,
         "confidence": 1,
+        "claim_id": "claim_003",
+        "scale": null,
+        "claimed_value_raw": "15%",
+        "quote_start_char": 7176,
         "speaker": "Vaibhav Taneja",
-        "claim_id": "claim_006",
-        "speaker_role": "cfo",
-        "quote_text": "Our automotive margins, excluding credits, increased marginally from 15% to 15.4%"
+        "period": "Q2 2025",
+        "gaap_classification": "non_gaap",
+        "quote_end_char": 7258,
+        "is_approximate": false,
+        "speaker_role": "management",
+        "metric_context": "Automotive",
+        "metric_type": "gross_margin",
+        "unit": "percent"
       },
       "verification": {
-        "claim_id": "claim_006",
-        "claimed_value": 15.4,
+        "claim_id": "claim_003",
+        "claimed_value": 15,
         "actual_value": null,
         "difference": null,
         "difference_pct": null,
@@ -255,29 +133,29 @@
     },
     {
       "claim": {
-        "claimed_value": 400,
-        "confidence": 1,
-        "period": "Q3 2025",
+        "unit": "dollars",
+        "speaker_role": "management",
+        "metric_context": "Total",
         "metric_type": "other",
-        "quote_text": "The total tariff impacts for Q3 for both businesses were in excess of $400 million, generally split evenly between them",
+        "speaker": "Vaibhav Taneja",
+        "period": "Q3 2025",
+        "gaap_classification": "gaap",
+        "quote_end_char": 8167,
+        "is_approximate": false,
         "quote_start_char": 8047,
         "scale": "millions",
-        "speaker": "Vaibhav Taneja",
-        "is_approximate": false,
-        "claim_id": "claim_007",
-        "quote_end_char": 8166,
+        "claimed_value_raw": "$400 million",
+        "confidence": 1,
+        "claim_id": "claim_005",
+        "quote_text": "The total tariff impacts for Q3 for both businesses were in excess of $400 million, generally split evenly between them.",
+        "claimed_value": 400,
         "claim_type": "absolute",
-        "unit": "dollars",
-        "metric_context": "Total",
-        "gaap_classification": "gaap",
         "qualifiers": [
           "in excess of"
-        ],
-        "claimed_value_raw": "$400 million",
-        "speaker_role": "cfo"
+        ]
       },
       "verification": {
-        "claim_id": "claim_007",
+        "claim_id": "claim_005",
         "claimed_value": 400,
         "actual_value": null,
         "difference": null,
@@ -296,29 +174,27 @@
     },
     {
       "claim": {
-        "qualifiers": [
-          "smaller gain"
-        ],
-        "metric_context": "BTC Holdings",
-        "claim_type": "absolute",
-        "quote_text": "other income decreased sequentially primarily from mark-to-market adjustments on BTC Holdings, which was a much smaller gain of $80 million in Q3 versus $284 million in Q2",
         "metric_type": "other",
-        "claim_id": "claim_008",
+        "speaker_role": "management",
+        "metric_context": "BTC Holdings mark-to-market",
         "unit": "dollars",
-        "scale": "millions",
-        "quote_start_char": 9189,
-        "claimed_value_raw": "$80 million",
+        "quote_start_char": 9240,
+        "quote_end_char": 9361,
         "is_approximate": false,
-        "claimed_value": 80,
-        "speaker_role": "cfo",
-        "gaap_classification": "gaap",
+        "gaap_classification": "non_gaap",
         "period": "Q3 2025",
         "speaker": "Vaibhav Taneja",
-        "quote_end_char": 9360,
-        "confidence": 1
+        "confidence": 1,
+        "claim_id": "claim_006",
+        "claimed_value_raw": "$80 million",
+        "scale": "millions",
+        "qualifiers": [],
+        "claim_type": "absolute",
+        "claimed_value": 80,
+        "quote_text": "mark-to-market adjustments on BTC Holdings, which was a much smaller gain of $80 million in Q3 versus $284 million in Q2."
       },
       "verification": {
-        "claim_id": "claim_008",
+        "claim_id": "claim_006",
         "claimed_value": 80,
         "actual_value": null,
         "difference": null,
@@ -328,39 +204,41 @@
         "computation_steps": [],
         "financial_facts_used": [],
         "evidence_source": null,
-        "flags": [],
+        "flags": [
+          "non_gaap_claim"
+        ],
         "misleading_flags": [],
         "misleading_reasons": [],
-        "explanation": "Metric 'other' not in verification catalog.",
+        "explanation": "This claim references a non-GAAP metric. Our data sources contain GAAP figures only. Non-GAAP metrics exclude items like stock-based compensation or restructuring charges.",
         "verdict": "unverifiable"
       }
     },
     {
       "claim": {
-        "quote_text": "Our free cash flow for the quarter was approximately $4 billion, which was yet another record",
+        "claim_id": "claim_008",
         "confidence": 1,
-        "speaker": "Vaibhav Taneja",
-        "claimed_value": 4,
         "scale": "billions",
-        "claim_type": "absolute",
-        "metric_context": "Total",
-        "claim_id": "claim_009",
         "claimed_value_raw": "$4 billion",
-        "period": "Q3 2025",
-        "quote_start_char": 9438,
-        "unit": "dollars",
-        "speaker_role": "cfo",
-        "quote_end_char": 9531,
-        "metric_type": "free_cash_flow",
+        "claim_type": "absolute",
         "qualifiers": [
           "approximately",
           "record"
         ],
-        "gaap_classification": "unknown",
-        "is_approximate": true
+        "quote_text": "Our free cash flow for the quarter was approximately $4 billion, which was yet another record.",
+        "claimed_value": 4,
+        "metric_context": "Total",
+        "speaker_role": "management",
+        "metric_type": "free_cash_flow",
+        "unit": "dollars",
+        "quote_start_char": 9438,
+        "period": "Q3 2025",
+        "gaap_classification": "gaap",
+        "speaker": "Vaibhav Taneja",
+        "is_approximate": true,
+        "quote_end_char": 9532
       },
       "verification": {
-        "claim_id": "claim_009",
+        "claim_id": "claim_008",
         "claimed_value": 4,
         "actual_value": 3990000000,
         "difference": 10000000,
@@ -393,70 +271,84 @@
     },
     {
       "claim": {
-        "scale": "billions",
-        "claim_id": "claim_010",
-        "gaap_classification": "gaap",
-        "claimed_value": 41,
-        "is_approximate": false,
-        "claim_type": "absolute",
+        "speaker_role": "management",
+        "metric_context": "Total cash and investments",
         "metric_type": "other",
-        "speaker_role": "cfo",
+        "unit": "dollars",
         "quote_start_char": 9533,
-        "metric_context": "Total",
+        "speaker": "Vaibhav Taneja",
+        "gaap_classification": "gaap",
         "period": "Q3 2025",
-        "quote_text": "Our total cash and investments at the end of the quarter were over $41 billion",
+        "quote_end_char": 9612,
+        "is_approximate": false,
+        "claim_id": "claim_009",
+        "confidence": 1,
+        "scale": "billions",
+        "claimed_value_raw": "$41 billion",
+        "claim_type": "absolute",
         "qualifiers": [
           "over"
         ],
-        "confidence": 1,
-        "speaker": "Vaibhav Taneja",
-        "unit": "dollars",
-        "quote_end_char": 9611,
-        "claimed_value_raw": "$41 billion"
+        "quote_text": "Our total cash and investments at the end of the quarter were over $41 billion.",
+        "claimed_value": 41
       },
       "verification": {
-        "claim_id": "claim_010",
+        "claim_id": "claim_009",
         "claimed_value": 41,
-        "actual_value": null,
-        "difference": null,
-        "difference_pct": null,
-        "tolerance_used": null,
-        "computation_detail": null,
-        "computation_steps": [],
-        "financial_facts_used": [],
-        "evidence_source": null,
+        "actual_value": 41647000000.0,
+        "difference": -647000000.0,
+        "difference_pct": 1.5535332677023557,
+        "tolerance_used": 0.01,
+        "computation_detail": "Claimed 41,000,000,000.00 vs Actual 41,647,000,000.00. Diff: 1.55% (threshold: 1.0%)",
+        "computation_steps": [
+          {
+            "step": "Absolute comparison",
+            "formula": "|41,000,000,000.00 - 41,647,000,000.00| / |41,647,000,000.00|",
+            "result": 0.015535332677023556,
+            "threshold": 0.01
+          }
+        ],
+        "financial_facts_used": [
+          {
+            "field": "cash_and_marketable_securities",
+            "fy": 2025,
+            "fq": 3,
+            "value": 41647000000.0
+          }
+        ],
+        "evidence_source": "sec_companyfacts",
         "flags": [],
         "misleading_flags": [],
         "misleading_reasons": [],
-        "explanation": "Metric 'other' not in verification catalog.",
-        "verdict": "unverifiable"
+        "explanation": "Close Match: claimed 41,000,000,000.00 vs actual 41,647,000,000.00 from sec_companyfacts.",
+        "verdict": "close_match"
       }
     },
     {
       "claim": {
         "metric_type": "capital_expenditures",
-        "scale": "billions",
+        "metric_context": "TotalCapEx",
+        "speaker_role": "management",
         "unit": "dollars",
         "quote_start_char": 9613,
         "is_approximate": true,
+        "quote_end_char": 9764,
+        "speaker": "Vaibhav Taneja",
+        "period": "FY 2025",
+        "gaap_classification": "gaap",
+        "claim_id": "claim_010",
+        "confidence": 1,
+        "claimed_value_raw": "$9 billion",
+        "scale": "billions",
         "qualifiers": [
           "around"
         ],
         "claim_type": "guidance",
-        "quote_text": "On the CapEx front, while we are expecting to be around $9 billion for the current year",
-        "period": "FY 2025",
         "claimed_value": 9,
-        "claimed_value_raw": "$9 billion",
-        "quote_end_char": 9700,
-        "speaker_role": "cfo",
-        "metric_context": "Total",
-        "speaker": "Vaibhav Taneja",
-        "claim_id": "claim_011",
-        "confidence": 1,
-        "gaap_classification": "gaap"
+        "quote_text": "On the CapEx front, while we are expecting to be around $9 billion for the current year, we're projecting the numbers to increase substantially in 2026"
       },
       "verification": {
-        "claim_id": "claim_011",
+        "claim_id": "claim_010",
         "claimed_value": 9,
         "actual_value": null,
         "difference": null,
@@ -477,11 +369,11 @@
     }
   ],
   "summary": {
-    "total": 11,
+    "total": 8,
     "verified": 1,
-    "close_match": 0,
+    "close_match": 1,
     "mismatch": 0,
     "misleading": 0,
-    "unverifiable": 10
+    "unverifiable": 6
   }
 }

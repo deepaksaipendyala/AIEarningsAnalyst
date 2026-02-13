@@ -3,6 +3,7 @@
 import json
 import html
 import streamlit as st
+import pandas as pd
 from pathlib import Path
 
 DATA_DIR = Path(__file__).parent.parent.parent / "data"
@@ -135,6 +136,25 @@ if not transcript_data:
     st.stop()
 
 transcript_text = transcript_data.get("text", "")
+claims_with_verdicts = verdict_data.get("claims_with_verdicts", []) if verdict_data else []
+summary = verdict_data.get("summary", {}) if verdict_data else {}
+
+# Build highlight metadata once for both transcript and visualizations
+highlights = []
+if claims_with_verdicts and transcript_text:
+    for cv in claims_with_verdicts:
+        claim = cv.get("claim", {})
+        verif = cv.get("verification", {})
+        start = claim.get("quote_start_char")
+        end = claim.get("quote_end_char")
+        if start is not None and end is not None and 0 <= start < end <= len(transcript_text):
+            highlights.append({
+                "start": start,
+                "end": end,
+                "verdict": verif.get("verdict", "unverifiable"),
+                "metric": claim.get("metric_type", ""),
+                "claim_type": claim.get("claim_type", "other"),
+            })
 
 # Two-column layout: transcript left, claims right
 left_col, right_col = st.columns([3, 2])
@@ -143,15 +163,48 @@ with right_col:
     st.subheader("Extracted Claims")
 
     if verdict_data:
-        claims_with_verdicts = verdict_data.get("claims_with_verdicts", [])
-        summary = verdict_data.get("summary", {})
-
         # Summary
         mc1, mc2, mc3, mc4 = st.columns(4)
         mc1.metric("Total", summary.get("total", 0))
         mc2.metric("Verified", summary.get("verified", 0) + summary.get("close_match", 0))
         mc3.metric("Flagged", summary.get("mismatch", 0) + summary.get("misleading", 0))
         mc4.metric("Unverifiable", summary.get("unverifiable", 0))
+
+        if claims_with_verdicts:
+            st.caption("Claim Visualizations")
+            vc1, vc2 = st.columns(2)
+
+            verdict_order = ["verified", "close_match", "mismatch", "misleading", "unverifiable"]
+            verdict_counts = pd.Series(
+                [cv.get("verification", {}).get("verdict", "unverifiable") for cv in claims_with_verdicts]
+            ).value_counts().reindex(verdict_order, fill_value=0)
+            with vc1:
+                st.caption("Verdict Distribution")
+                st.bar_chart(verdict_counts, use_container_width=True)
+                verdict_export = verdict_counts.rename_axis("verdict").reset_index(name="count")
+                st.download_button(
+                    "Download Verdict Data (CSV)",
+                    verdict_export.to_csv(index=False),
+                    f"{selected_key}_verdict_distribution.csv",
+                    "text/csv",
+                    key=f"{selected_key}_verdict_chart_csv",
+                )
+
+            claim_type_counts = pd.Series(
+                [cv.get("claim", {}).get("claim_type", "other") for cv in claims_with_verdicts]
+            ).value_counts()
+            claim_type_counts.index = claim_type_counts.index.str.replace("_", " ").str.title()
+            with vc2:
+                st.caption("Claim Types")
+                st.bar_chart(claim_type_counts, use_container_width=True)
+                claim_type_export = claim_type_counts.rename_axis("claim_type").reset_index(name="count")
+                st.download_button(
+                    "Download Claim Type Data (CSV)",
+                    claim_type_export.to_csv(index=False),
+                    f"{selected_key}_claim_types.csv",
+                    "text/csv",
+                    key=f"{selected_key}_claim_type_chart_csv",
+                )
 
         for cv in claims_with_verdicts:
             claim = cv.get("claim", {})
@@ -226,23 +279,31 @@ with right_col:
 with left_col:
     st.subheader("Transcript")
 
-    # Build highlighted transcript with all claim spans
-    highlights = []
-    if verdict_data and transcript_text:
-        claims_with_verdicts = verdict_data.get("claims_with_verdicts", [])
-        for cv in claims_with_verdicts:
-            claim = cv.get("claim", {})
-            verif = cv.get("verification", {})
-            start = claim.get("quote_start_char")
-            end = claim.get("quote_end_char")
-            if start is not None and end is not None and 0 <= start < end <= len(transcript_text):
-                highlights.append({
-                    "start": start, "end": end,
-                    "verdict": verif.get("verdict", "unverifiable"),
-                    "metric": claim.get("metric_type", ""),
-                })
-
     if transcript_text:
+        if highlights:
+            transcript_len = max(1, len(transcript_text))
+            bins = 8
+            bucket_counts = [0] * bins
+            for h in highlights:
+                bucket = min(int((h["start"] / transcript_len) * bins), bins - 1)
+                bucket_counts[bucket] += 1
+
+            bucket_labels = [
+                f"{int((i / bins) * 100)}-{int(((i + 1) / bins) * 100)}%"
+                for i in range(bins)
+            ]
+            density = pd.Series(bucket_counts, index=bucket_labels)
+            st.caption("Claim Density Across Transcript")
+            st.bar_chart(density, use_container_width=True)
+            density_export = density.rename_axis("transcript_position").reset_index(name="claim_count")
+            st.download_button(
+                "Download Density Data (CSV)",
+                density_export.to_csv(index=False),
+                f"{selected_key}_transcript_claim_density.csv",
+                "text/csv",
+                key=f"{selected_key}_density_chart_csv",
+            )
+
         highlighted_html = build_highlighted_html(transcript_text, highlights)
         st.markdown(
             f'<div style="background:#0f172a;padding:16px;border-radius:8px;'

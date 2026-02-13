@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from backend.api.analyst import router as analyst_router
 from backend.api.dashboard import router as dashboard_router
 
 app = FastAPI(
@@ -19,6 +20,7 @@ app.add_middleware(
 )
 
 app.include_router(dashboard_router, prefix="/api/v1", tags=["dashboard"])
+app.include_router(analyst_router, prefix="/api/v1", tags=["analyst"])
 
 
 @app.get("/")

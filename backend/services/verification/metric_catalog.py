@@ -92,6 +92,24 @@ METRIC_CATALOG = {
         "unit": "dollars",
         "computation": "direct",
     },
+    "cash_and_marketable_securities": {
+        "fmp_field": "cash_and_marketable_securities",
+        "statement": "balance_sheet",
+        "unit": "dollars",
+        "computation": "direct",
+    },
+    "total_debt": {
+        "fmp_field": "total_debt",
+        "statement": "balance_sheet",
+        "unit": "dollars",
+        "computation": "direct",
+    },
+    "net_cash": {
+        "fmp_field": "net_cash",
+        "statement": "balance_sheet",
+        "unit": "dollars",
+        "computation": "direct",
+    },
 }
 
 

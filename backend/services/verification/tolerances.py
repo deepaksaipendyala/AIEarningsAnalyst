@@ -8,12 +8,12 @@
 TOLERANCES = {
     "revenue":                  {"tight": 0.005, "loose": 0.02, "approx": 0.05},
     "net_income":               {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
-    "eps_basic":                {"tight": 0.01,  "loose": 0.02, "approx": 0.05},
-    "eps_diluted":              {"tight": 0.01,  "loose": 0.02, "approx": 0.05},
+    "eps_basic":                {"tight": 0.005, "loose": 0.02, "approx": 0.05},
+    "eps_diluted":              {"tight": 0.005, "loose": 0.02, "approx": 0.05},
     "gross_profit":             {"tight": 0.005, "loose": 0.02, "approx": 0.05},
-    "gross_margin":             {"tight": 0.003, "loose": 0.01, "approx": 0.02},  # pp as decimals
+    "gross_margin":             {"tight": 0.005, "loose": 0.01, "approx": 0.02},  # pp as decimals
     "operating_income":         {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
-    "operating_margin":         {"tight": 0.003, "loose": 0.01, "approx": 0.02},
+    "operating_margin":         {"tight": 0.005, "loose": 0.01, "approx": 0.02},
     "ebitda":                   {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
     "free_cash_flow":           {"tight": 0.02,  "loose": 0.05, "approx": 0.10},
     "operating_cash_flow":      {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
@@ -21,11 +21,14 @@ TOLERANCES = {
     "capital_expenditures":     {"tight": 0.02,  "loose": 0.05, "approx": 0.10},
     "operating_expenses":       {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
     "research_and_development": {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
+    "cash_and_marketable_securities": {"tight": 0.01, "loose": 0.03, "approx": 0.05},
+    "total_debt":               {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
+    "net_cash":                 {"tight": 0.01,  "loose": 0.03, "approx": 0.05},
     "other":                    {"tight": 0.02,  "loose": 0.05, "approx": 0.10},
 }
 
-# EPS absolute tolerance ($0.015 covers rounding)
-EPS_ABSOLUTE_TOLERANCE = 0.015
+# EPS absolute tolerance ($0.005)
+EPS_ABSOLUTE_TOLERANCE = 0.005
 
 # Growth rate tolerance in percentage points
 GROWTH_RATE_TOLERANCE_PP = 1.0

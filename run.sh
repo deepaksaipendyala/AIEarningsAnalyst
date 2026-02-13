@@ -24,8 +24,8 @@ if [ -z "$FMP_API_KEY" ]; then
     echo "WARNING: FMP_API_KEY not set. Financial data fetching will fail."
 fi
 
-if [ -z "$ANTHROPIC_API_KEY" ]; then
-    echo "WARNING: ANTHROPIC_API_KEY not set. Claim extraction will be skipped."
+if [ -z "$OPENROUTER_API_KEY" ]; then
+    echo "WARNING: OPENROUTER_API_KEY not set. Claim extraction will fail."
 fi
 
 # Install dependencies

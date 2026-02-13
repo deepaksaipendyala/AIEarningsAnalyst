@@ -41,6 +41,8 @@ def load_all_claims():
             all_claims.append({
                 "ticker": ticker,
                 "quarter": f"Q{quarter} {year}",
+                "year": year,
+                "quarter_num": quarter,
                 "key": key,
                 "speaker": claim.get("speaker", "Unknown"),
                 "metric": claim.get("metric_type", "other"),
@@ -111,6 +113,7 @@ filtered = [
     and c["metric"] in selected_metrics
     and c["verdict"] in selected_verdicts
 ]
+filtered_df = pd.DataFrame(filtered)
 
 # Summary row
 st.markdown(f"**{len(filtered)}** claims matching filters")
@@ -123,6 +126,71 @@ col4.metric("Misleading", sum(1 for c in filtered if c["verdict"] == "misleading
 col5.metric("Unverifiable", sum(1 for c in filtered if c["verdict"] == "unverifiable"))
 
 st.divider()
+
+if not filtered_df.empty:
+    st.subheader("Visualizations")
+
+    c1, c2 = st.columns(2)
+    verdict_order = ["verified", "close_match", "mismatch", "misleading", "unverifiable"]
+    verdict_counts = (
+        filtered_df["verdict"]
+        .value_counts()
+        .reindex(verdict_order, fill_value=0)
+    )
+    with c1:
+        st.caption("Verdict Distribution")
+        st.bar_chart(verdict_counts, use_container_width=True)
+        verdict_export = verdict_counts.rename_axis("verdict").reset_index(name="count")
+        st.download_button(
+            "Download Verdict Data (CSV)",
+            verdict_export.to_csv(index=False),
+            "claims_explorer_verdict_distribution.csv",
+            "text/csv",
+            key="claims_verdict_chart_csv",
+        )
+
+    metric_counts = filtered_df["metric"].value_counts().head(10)
+    metric_counts.index = metric_counts.index.str.replace("_", " ").str.title()
+    with c2:
+        st.caption("Top Metrics (Filtered)")
+        st.bar_chart(metric_counts, use_container_width=True)
+        metric_export = metric_counts.rename_axis("metric").reset_index(name="count")
+        st.download_button(
+            "Download Metric Data (CSV)",
+            metric_export.to_csv(index=False),
+            "claims_explorer_top_metrics.csv",
+            "text/csv",
+            key="claims_metric_chart_csv",
+        )
+
+    trend_df = filtered_df.copy()
+    trend_df["status_group"] = trend_df["verdict"].map({
+        "verified": "Verified",
+        "close_match": "Verified",
+        "mismatch": "Flagged",
+        "misleading": "Flagged",
+        "unverifiable": "Unverifiable",
+    })
+    trend = (
+        trend_df.groupby(["year", "quarter_num", "status_group"])
+        .size()
+        .unstack(fill_value=0)
+        .reindex(columns=["Verified", "Flagged", "Unverifiable"], fill_value=0)
+        .sort_index()
+    )
+    trend.index = [f"Q{q} {y}" for y, q in trend.index]
+    st.caption("Claims Trend by Quarter")
+    st.area_chart(trend, use_container_width=True)
+    trend_export = trend.rename_axis("quarter").reset_index()
+    st.download_button(
+        "Download Trend Data (CSV)",
+        trend_export.to_csv(index=False),
+        "claims_explorer_quarter_trend.csv",
+        "text/csv",
+        key="claims_trend_chart_csv",
+    )
+
+    st.divider()
 
 # Table view
 if filtered:
@@ -208,6 +276,8 @@ if filtered:
 
             if claim.get("evidence_source"):
                 st.caption(f"Data source: {claim['evidence_source']}")
+else:
+    st.info("No claims match the selected filters.")
 
 # Export
 st.divider()

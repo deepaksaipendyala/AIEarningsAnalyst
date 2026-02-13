@@ -4,6 +4,7 @@ import hashlib
 import json
 import time
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 import httpx
@@ -222,63 +223,118 @@ def parse_fmp_speakers(raw_text: str) -> list[dict]:
 
 
 def _extract_fiscal_year_quarter(stmt: dict) -> tuple[int, int] | None:
-    """Extract fiscal year and quarter from an FMP statement.
-
-    Uses fiscalYear + period (Q1-Q4) to create the key that matches
-    how transcripts and claims reference periods. For companies with
-    non-calendar fiscal years (AAPL ends Sep, MSFT ends Jun, etc.),
-    this correctly maps to the period the earnings call refers to.
-    """
+    """Extract the fiscal (year, quarter) key from an FMP statement."""
     period = stmt.get("period", "")
     if not period.startswith("Q"):
         return None
-    q = int(period[1])
+    try:
+        q = int(period[1])
+    except (TypeError, ValueError):
+        return None
 
-    # Try calendarYear first (v3 endpoint)
-    cal_year = stmt.get("calendarYear")
-    if cal_year:
-        return (int(cal_year), q)
-
-    # Use fiscalYear (stable endpoint)
+    # Stable endpoint provides fiscalYear for quarterly statements.
     fiscal_year = stmt.get("fiscalYear")
     if fiscal_year:
         return (int(fiscal_year), q)
 
+    # Fallback for v3-style payloads that expose calendarYear only.
+    cal_year = stmt.get("calendarYear")
+    if cal_year:
+        return (int(cal_year), q)
+
     return None
 
 
-def load_fmp_data(ticker: str) -> dict:
-    """Load and index FMP data by (year, quarter) -> {metric: value}."""
-    path = settings.financials_dir / f"{ticker}_fmp.json"
-    if not path.exists():
-        return {}
+def _extract_calendar_year_quarter_from_date(stmt: dict) -> tuple[int, int] | None:
+    """Extract calendar (year, quarter) from statement end date.
 
-    with open(path) as f:
-        raw = json.load(f)
+    This acts as an alias key so claims tagged with calendar quarters can
+    still map to the same statement for non-calendar fiscal-year companies.
+    """
+    raw_date = stmt.get("date")
+    if not raw_date or not isinstance(raw_date, str):
+        return None
+
+    # FMP dates are expected in YYYY-MM-DD format.
+    try:
+        year = int(raw_date[0:4])
+        month = int(raw_date[5:7])
+    except (TypeError, ValueError):
+        return None
+
+    if not (1 <= month <= 12):
+        return None
+
+    quarter = ((month - 1) // 3) + 1
+    return (year, quarter)
+
+
+def _extract_statement_period_keys(stmt: dict) -> list[tuple[int, int]]:
+    """Return all useful period keys for a statement.
+
+    Key order is intentional:
+    1) fiscal key (primary for transcript/claim alignment)
+    2) calendar key derived from the statement end date (alias)
+    """
+    keys: list[tuple[int, int]] = []
+    fiscal_key = _extract_fiscal_year_quarter(stmt)
+    if fiscal_key is not None:
+        keys.append(fiscal_key)
+
+    calendar_key = _extract_calendar_year_quarter_from_date(stmt)
+    if calendar_key is not None and calendar_key not in keys:
+        keys.append(calendar_key)
+
+    return keys
+
+
+def load_fmp_data(
+    ticker: str,
+    financials_dir: Path | None = None,
+    sec_dir: Path | None = None,
+    enable_sec_fallback: bool = True,
+) -> dict:
+    """Load and index FMP data by (year, quarter) -> {metric: value}."""
+    base_financials_dir = Path(financials_dir) if financials_dir else settings.financials_dir
+    path = base_financials_dir / f"{ticker}_fmp.json"
+    raw = {}
+    if path.exists():
+        with open(path) as f:
+            raw = json.load(f)
 
     indexed = {}
+    calendar_aliases: dict[tuple[int, int], tuple[int, int]] = {}
+    metric_sources: dict[tuple[int, int, str], str] = {}
 
     for stmt in raw.get("income_statement", []):
-        result = _extract_fiscal_year_quarter(stmt)
-        if result is None:
+        period_keys = _extract_statement_period_keys(stmt)
+        if not period_keys:
             continue
-        yq = result
 
+        # Fiscal key is always primary for verification.
+        yq = period_keys[0]
         if yq not in indexed:
             indexed[yq] = {}
 
         for metric, field in FMP_INCOME_MAP.items():
             if field in stmt and stmt[field] is not None:
                 indexed[yq][metric] = stmt[field]
+                metric_sources[(yq[0], yq[1], metric)] = "fmp"
 
         indexed[yq]["_raw_income"] = stmt
 
-    for stmt in raw.get("cash_flow", []):
-        result = _extract_fiscal_year_quarter(stmt)
-        if result is None:
-            continue
-        yq = result
+        # Keep calendar key as an explicit alias to fiscal key.
+        if len(period_keys) > 1:
+            cal_yq = period_keys[1]
+            if cal_yq != yq and cal_yq not in calendar_aliases:
+                calendar_aliases[cal_yq] = yq
 
+    for stmt in raw.get("cash_flow", []):
+        period_keys = _extract_statement_period_keys(stmt)
+        if not period_keys:
+            continue
+
+        yq = period_keys[0]
         if yq not in indexed:
             indexed[yq] = {}
 
@@ -289,11 +345,73 @@ def load_fmp_data(ticker: str) -> dict:
                 if metric in _SIGN_FLIP_FIELDS and val < 0:
                     val = abs(val)
                 indexed[yq][metric] = val
+                metric_sources[(yq[0], yq[1], metric)] = "fmp"
 
         # Alias: capital_expenditures -> capital_expenditure (extraction uses plural)
         if "capital_expenditure" in indexed[yq]:
             indexed[yq]["capital_expenditures"] = indexed[yq]["capital_expenditure"]
+            metric_sources[(yq[0], yq[1], "capital_expenditures")] = metric_sources.get(
+                (yq[0], yq[1], "capital_expenditure"), "fmp"
+            )
 
         indexed[yq]["_raw_cashflow"] = stmt
+
+        if len(period_keys) > 1:
+            cal_yq = period_keys[1]
+            if cal_yq != yq and cal_yq not in calendar_aliases:
+                calendar_aliases[cal_yq] = yq
+
+    if calendar_aliases:
+        indexed["_calendar_aliases"] = calendar_aliases
+
+    # Fill missing periods/metrics from SEC Company Facts when available.
+    # Keep FMP as primary source and only backfill missing metric-period points.
+    sec_fallback_metrics = {
+        # Income statement metrics
+        "revenue",
+        "net_income",
+        "gross_profit",
+        "operating_income",
+        "eps_basic",
+        "eps_diluted",
+        "cost_of_revenue",
+        "operating_expenses",
+        "sga_expenses",
+        "research_and_development",
+        # Cash flow metrics
+        "free_cash_flow",
+        "operating_cash_flow",
+        "capital_expenditure",
+        "capital_expenditures",
+        # Balance sheet metrics
+        "cash_and_marketable_securities",
+        "total_debt",
+        "net_cash",
+    }
+    if enable_sec_fallback:
+        try:
+            from backend.services.ingestion.sec_client import load_sec_data
+
+            sec_indexed = load_sec_data(ticker, sec_dir=sec_dir)
+            for yq, sec_vals in sec_indexed.items():
+                if yq not in indexed:
+                    indexed[yq] = {}
+                for metric, val in sec_vals.items():
+                    if val is None:
+                        continue
+                    if metric not in sec_fallback_metrics:
+                        continue
+                    if metric not in indexed[yq]:
+                        indexed[yq][metric] = val
+                        metric_sources[(yq[0], yq[1], metric)] = "sec_companyfacts"
+                    # Keep alias parity with FMP cash-flow normalization.
+                    if metric == "capital_expenditure" and "capital_expenditures" not in indexed[yq]:
+                        indexed[yq]["capital_expenditures"] = indexed[yq][metric]
+                        metric_sources[(yq[0], yq[1], "capital_expenditures")] = "sec_companyfacts"
+        except Exception:
+            pass
+
+    if metric_sources:
+        indexed["_metric_sources"] = metric_sources
 
     return indexed
