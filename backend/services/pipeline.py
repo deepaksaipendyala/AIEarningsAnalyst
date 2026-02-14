@@ -59,7 +59,7 @@ def run_ingestion(ticker: str = None):
         print(f"Ingesting {t} ({company['name']})")
         print(f"{'='*50}")
 
-        # Transcripts (earningscall → FMP fallback)
+        # Transcripts (earningscall -> fool -> FMP -> mlq.ai final hack)
         print("\n[Transcripts]")
         for year, quarter in quarters:
             fetch_transcript(t, year, quarter)

@@ -55,7 +55,7 @@ Transcripts (Multi-source)  →  Gemini Flash (Extraction)  →  Python (Verific
 | Source | Purpose | Access |
 |--------|---------|--------|
 | **earningscall.biz** (primary) | Earnings call transcripts | Python library |
-| **Motley Fool / FMP** (fallback) | Transcript fallback chain | API / scraping |
+| **Motley Fool / FMP / mlq.ai** (fallback chain) | Transcript recovery chain | Scraping / API |
 | **Financial Modeling Prep** | Quarterly income statements, cash flow | API key (250 req/day free) |
 | **Gemini 3 Flash** (via OpenRouter) | Claim extraction with function calling | API key |
 
@@ -101,7 +101,7 @@ The verification engine includes several heuristics to prevent false mismatches:
 
 ## Key Decisions
 
-1. **Multi-source transcript fallback**: earningscall.biz → mlq.ai → Motley Fool → FMP ensures high coverage across all 10 companies
+1. **Multi-source transcript fallback**: earningscall.biz → Motley Fool → FMP → mlq.ai (local + direct web hack) ensures high coverage across all 10 companies
 2. **FMP as primary financial source**: Clean quarterly data with consistent field names; 5-quarter lookback on free tier covers most verification needs
 3. **Quote anchoring with character offsets**: Every claim maps to exact transcript coordinates, enabling inline transcript highlighting and proving claims are grounded in actual text
 4. **GAAP-only verification by default**: SEC and FMP data is GAAP. Non-GAAP claims flagged as unverifiable rather than producing false mismatches
