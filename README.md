@@ -130,6 +130,7 @@ python --version
 # API keys (only needed for re-running pipeline, not for viewing pre-computed results)
 export FMP_API_KEY=your_key
 export OPENROUTER_API_KEY=your_key
+export ANALYST_APP_PASSWORD=your_password   # Optional: protect AI Analyst page
 ```
 
 ### Setup

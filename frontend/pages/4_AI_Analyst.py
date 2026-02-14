@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -13,6 +14,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+from backend.config import settings
 from backend.services.rag import AnalystChatbot, HybridRetriever, RAGIndexBuilder, get_index_status
 
 DATA_DIR = Path(__file__).parent.parent.parent / "data"
@@ -24,9 +26,47 @@ st.caption("Hybrid retrieval over transcripts, claims/verdicts, and financial sn
 
 
 @st.cache_resource
-def get_chatbot() -> AnalystChatbot:
-    retriever = HybridRetriever()
-    return AnalystChatbot(retriever=retriever)
+def get_retriever() -> HybridRetriever:
+    return HybridRetriever()
+
+
+def _read_secret_or_env(name: str) -> str:
+    try:
+        value = st.secrets.get(name, "")
+    except Exception:
+        value = ""
+    if value:
+        return str(value).strip()
+    return str(os.getenv(name, "")).strip()
+
+
+ANALYST_APP_PASSWORD = _read_secret_or_env("ANALYST_APP_PASSWORD")
+if not ANALYST_APP_PASSWORD:
+    ANALYST_APP_PASSWORD = str(getattr(settings, "analyst_app_password", "")).strip()
+DEFAULT_OPENROUTER_KEY = _read_secret_or_env("OPENROUTER_API_KEY") or settings.openrouter_api_key
+
+
+def _require_analyst_access() -> None:
+    """Optional password gate for AI Analyst page."""
+    if not ANALYST_APP_PASSWORD:
+        return
+    if (
+        st.session_state.get("analyst_authenticated")
+        and st.session_state.get("analyst_auth_password") == ANALYST_APP_PASSWORD
+    ):
+        return
+
+    st.warning("AI Analyst access is password protected.")
+    with st.form("analyst_unlock_form", clear_on_submit=False):
+        password = st.text_input("Enter Analyst Password", type="password")
+        unlock = st.form_submit_button("Unlock Analyst")
+    if unlock:
+        if password == ANALYST_APP_PASSWORD:
+            st.session_state["analyst_authenticated"] = True
+            st.session_state["analyst_auth_password"] = ANALYST_APP_PASSWORD
+            st.rerun()
+        st.error("Incorrect password.")
+    st.stop()
 
 
 @st.cache_data
@@ -84,7 +124,37 @@ def _render_source_card(source: dict) -> None:
             st.caption(f"Path: {source['source_path']}")
 
 
+_require_analyst_access()
+
+
 with st.sidebar:
+    if ANALYST_APP_PASSWORD:
+        st.caption("Access mode: protected")
+        if st.button("Lock Analyst", use_container_width=True):
+            st.session_state["analyst_authenticated"] = False
+            st.session_state["analyst_auth_password"] = ""
+            st.rerun()
+    else:
+        st.caption("Access mode: open")
+
+    st.subheader("Model Access")
+    st.caption(
+        "Use default `OPENROUTER_API_KEY` from secrets/env, or provide a session key below."
+    )
+    st.text_input(
+        "Session OpenRouter API Key",
+        type="password",
+        key="session_openrouter_api_key",
+        help="Optional per-session key. Leave blank to use configured default key.",
+    )
+    session_key = str(st.session_state.get("session_openrouter_api_key", "")).strip()
+    generation_enabled = bool(session_key or DEFAULT_OPENROUTER_KEY)
+    if generation_enabled:
+        st.caption("Generation mode: enabled")
+    else:
+        st.caption("Generation mode: extractive fallback only")
+
+    st.divider()
     st.subheader("Index")
     status = get_index_status()
     st.caption(f"DB: {status.get('db_path')}")
@@ -105,7 +175,7 @@ with st.sidebar:
     if st.button("Build / Rebuild Index", use_container_width=True):
         with st.spinner("Building RAG index..."):
             build_stats = RAGIndexBuilder().build(reset=True)
-            get_chatbot.clear()
+            get_retriever.clear()
         st.success(
             f"Indexed {build_stats.get('documents', 0)} docs and {build_stats.get('chunks', 0)} chunks."
         )
@@ -149,7 +219,9 @@ if prompt:
     with st.chat_message("user"):
         st.markdown(_render_chat_text(prompt))
 
-    chatbot = get_chatbot()
+    session_api_key = str(st.session_state.get("session_openrouter_api_key", "")).strip()
+    active_api_key = session_api_key or DEFAULT_OPENROUTER_KEY or None
+    chatbot = AnalystChatbot(retriever=get_retriever(), api_key=active_api_key)
     history = [
         {"role": m["role"], "content": m["content"]}
         for m in st.session_state.analyst_messages
